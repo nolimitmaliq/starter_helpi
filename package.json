@@ -1,6 +1,6 @@
 {
-  "homepage": "http://nolimitmaliq.github.io/starter_helpi",
   "name": "starter_helpi",
+  "homepage": "http://nolimitmaliq.github.io/starter_helpi",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
