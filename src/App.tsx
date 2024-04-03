@@ -28,11 +28,12 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Rahul Patel</h1>
+        <h1>Ujjwala Pothula</h1>
+        <h1>Maliq Adewale</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <h1 className = "Name"> Maliq Adewale </h1>
         <a
           className="App-link"
           href="https://reactjs.org"
