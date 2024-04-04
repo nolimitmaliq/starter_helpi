@@ -24,6 +24,12 @@ function App() {
   function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
     setKey(event.target.value);
   }
+  // function basicQuestion(){
+
+  // }
+  // .button-style{
+  //   background-color: 
+  // }
   return (
     <div className="App">
       <header className="App-header">
@@ -39,6 +45,18 @@ function App() {
           rel="noopener noreferrer"
         >
           Learn React
+        </a>
+      </header>
+
+      <header className="App-buttons">
+        <a href="https://reactjs.org/Basic"  target="_blank">
+          <button className="button-style">Take Quiz</button>
+        </a>
+        <a href="https://reactjs.org/Basic"  target="_blank">
+          <button className="button-style">Take Quiz</button>
+        </a>
+        <a href="https://reactjs.org/Basic"  target="_blank" rel="noreferrer">
+          <button className="button-style">View Tips</button>
         </a>
       </header>
       <Form>
