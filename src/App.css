@@ -36,3 +36,49 @@
     transform: rotate(360deg);
   }
 }
+.Image {
+  position: relative;
+  width: 500px; /* Set a fixed width for the container */
+  height: 500px; /* Set a fixed height for the container */
+}
+
+.Image img {
+  max-width: 100%; /* Limit image width to 100% of container */
+  max-height: 100%; /* Limit image height to 100% of container */
+}
+.NavigationButtonRight {
+  position: absolute;
+  top: 54%;
+  z-index: 1;
+  right: 38%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  border: none;
+}
+.NavigationButtonLeft {
+  position: absolute;
+  top: 54%;
+  z-index: 1;
+  left: 38%;
+  font-size: 30px;
+  color: white;
+  background: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 0;
+  border: none;
+}
+.NavigationButtonLeft:hover {
+  opacity: 0.4;
+}
+.NavigationButtonRight:hover {
+  opacity: 0.4;
+}
