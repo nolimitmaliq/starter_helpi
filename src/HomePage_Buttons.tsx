@@ -31,6 +31,7 @@ export function HomePage(): JSX.Element {
       <div>
         <h1>
           <Button onClick={handleButton} className="Basic-Quiz">
+            <FaArrowRight />
             Basic Quiz
           </Button>
           {displayText && (
