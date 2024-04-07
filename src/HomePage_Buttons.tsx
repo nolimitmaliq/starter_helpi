@@ -5,8 +5,12 @@ import { FaArrowRight } from "react-icons/fa";
 
 export function HomePage(): JSX.Element {
   const [displayText, setDisplayText] = useState<boolean>(false);
+  const [displayText2, setDisplayText2] = useState<boolean>(false);
   const handleButton = () => {
     setDisplayText(!displayText);
+  };
+  const handleButton2 = () => {
+    setDisplayText2(!displayText2);
   };
   return (
     <div className="App-buttons">
@@ -30,11 +34,11 @@ export function HomePage(): JSX.Element {
       </div>
       <div>
         <h1>
-          <Button onClick={handleButton} className="Basic-Quiz">
+          <Button onClick={handleButton2} className="Career-Quiz">
             <FaArrowRight />
             Basic Quiz
           </Button>
-          {displayText && (
+          {displayText2 && (
             <div className="Basic-QuizText">
               <p>
                 Basic Quiz offers a "Check All That Apply" questions. This
