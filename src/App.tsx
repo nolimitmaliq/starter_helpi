@@ -1,3 +1,4 @@
+
 // import React, { useState } from "react";
 import "./App.css";
 // import { Button, Form } from "react-bootstrap";
@@ -12,7 +13,12 @@ import { HomePage } from "./HomePage_Buttons";
 //   keyData = JSON.parse(prevKey);
 // }
 
+function openNewWindow() {
+  window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
+}
+
 function App() {
+
   // const [key, setKey] = useState<string>(keyData); //for api key input
 
   // // sets the local storage item to the api key the user inputed
