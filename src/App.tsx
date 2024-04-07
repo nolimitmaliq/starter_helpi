@@ -1,10 +1,8 @@
+import React, { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Button, Form } from "react-bootstrap";
 
-import React, { useState } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import { Button, Form, Modal} from 'react-bootstrap';
-import Popup from './popups';
-import Buttons from './Buttons';
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
 const saveKeyData = "MYKEY";
@@ -13,13 +11,13 @@ if (prevKey !== null) {
   keyData = JSON.parse(prevKey);
 }
 
-function openNewWindow(){
-  window.open('https://careerquizlo.org', '_blank', 'width=600,height=400');
+function openNewWindow() {
+  window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
 }
 
 function App() {
   const [key, setKey] = useState<string>(keyData); //for api key input
-  
+
   //sets the local storage item to the api key the user inputed
   function handleSubmit() {
     localStorage.setItem(saveKeyData, JSON.stringify(key));
@@ -48,12 +46,74 @@ function App() {
           Learn React
         </a>
       </header>
-      <Buttons></Buttons>
+
+      <header className="App-buttons">
+        <h1>Career Quizzes</h1>
+        <h3>
+          Have you ever wondered what you wanted to do in life, but could never
+          find a passionate career? Well, now you can, with the Basic Quiz and
+          Detailed Quiz, you can figure out your future. Anyone, from any age,
+          race, ethnicity, sex, and nationality can take this quiz.
+        </h3>
+        <body>
+          <header className="App-header2">
+            <h1>Basic Quiz</h1>
+          </header>
+          <p>
+            Basic Quiz offers a "Check All That Apply" questions. This allows
+            the user to choose multiple answers for each question to generate a
+            more accurate career result.
+          </p>
+        </body>
+        <a
+          href="https://Careerquizlo.org/Basic"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="button-style">Take Quiz</button>
+        </a>
+        <header className="App-header2">
+          <h1>Detailed Quiz</h1>
+        </header>
+        <p>
+          Detailed Quiz offers fill in the blank questions. This allows the user
+          to answer with their own freedom for each question to generate a more
+          accurate career result.
+        </p>
+        <a
+          href="https://Careerquizlo.org/Detailed"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="button-style">Take Quiz</button>
+        </a>
+        <header className="App-header2">
+          <h1>Career Tips</h1>
+        </header>
+        <p>
+          Career Tips allows users to learn how to get thier potential career.
+          This page will enlighten users about useful sites and the hiring
+          process.
+        </p>
+        <a
+          href="https://Careerquizlo.org/Tips"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="button-style">View Tips</button>
+        </a>
+      </header>
       <Form>
         <Form.Label>API Key:</Form.Label>
-        <Form.Control type="password" placeholder="Insert API Key Here" onChange={changeKey}></Form.Control>
+        <Form.Control
+          type="password"
+          placeholder="Insert API Key Here"
+          onChange={changeKey}
+        ></Form.Control>
         <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>Submit</Button>
+        <Button className="Submit-Button" onClick={handleSubmit}>
+          Submit
+        </Button>
       </Form>
     </div>
   );
