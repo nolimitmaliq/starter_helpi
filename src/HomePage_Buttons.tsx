@@ -36,7 +36,7 @@ export function HomePage(): JSX.Element {
           </Button>
           {displayText && (
             <div className="Basic-QuizText">
-              <p className="Basic-QuizText">
+              <p>
                 Basic Quiz offers a "Check All That Apply" questions. This
                 allows the user to choose multiple answers for each question to
                 generate a more accurate career result.
@@ -51,11 +51,6 @@ export function HomePage(): JSX.Element {
             <button className="button-style">Take Basic Quiz</button>
           </a>
         </h1>
-        <p className="Basic-QuizText">
-          Basic Quiz offers a "Check All That Apply" questions. This allows the
-          user to choose multiple answers for each question to generate a more
-          accurate career result.
-        </p>
       </div>
       {/* <div className="App-header2">
         <h1>Detailed Quiz</h1>
