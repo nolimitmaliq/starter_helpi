@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 export function ChangeImages(): JSX.Element {
   type Images =
@@ -50,10 +50,10 @@ export function ChangeImages(): JSX.Element {
         </CSSTransition>
       </TransitionGroup>
       <Button onClick={previousImage} className="NavigationButtonLeft">
-        <FaArrowLeft /> {/* Use left arrow icon */}
+        {/* <FaArrowLeft /> */}
       </Button>
       <Button onClick={nextImage} className="NavigationButtonRight">
-        <FaArrowRight /> {/* Use right arrow icon */}
+        {/* <FaArrowRight /> */}
       </Button>
     </div>
   );
