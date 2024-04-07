@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
-import { FaArrowRight } from "react-icons/fa";
+// import { FaArrowRight } from "react-icons/fa";
 
 export function HomePage(): JSX.Element {
   const [displayText, setDisplayText] = useState<boolean>(false);
@@ -18,7 +18,7 @@ export function HomePage(): JSX.Element {
       <div>
         <h1>
           <Button onClick={handleButton} className="Career-Quiz">
-            <FaArrowRight />
+            {/* <FaArrowRight /> */}
             Career Quizzes
           </Button>
           {displayText && (
@@ -35,7 +35,7 @@ export function HomePage(): JSX.Element {
       <div>
         <h1>
           <Button onClick={handleButton2} className="Career-Quiz">
-            <FaArrowRight />
+            {/* <FaArrowRight /> */}
             Basic Quiz
           </Button>
           {displayText2 && (
