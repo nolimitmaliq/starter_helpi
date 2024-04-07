@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { Button, Form } from "react-bootstrap";
 import { ChangeImages } from "./image2";
+import { HomePage } from "./HomePage_Buttons";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 let keyData = "";
@@ -25,25 +26,29 @@ function App() {
     setKey(event.target.value);
   }
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Welcome to Career Quiz</h1>
-        <ChangeImages></ChangeImages>
-      </header>
-
-      <Form>
-        <Form.Label>API Key:</Form.Label>
-        <Form.Control
-          type="password"
-          placeholder="Insert API Key Here"
-          onChange={changeKey}
-        ></Form.Control>
-        <br></br>
-        <Button className="Submit-Button" onClick={handleSubmit}>
-          Submit
-        </Button>
-      </Form>
-    </div>
+    <>
+      <div className="App">
+        <header className="App-header">
+          <h1>Welcome to Career Quiz</h1>
+          {/* <ChangeImages></ChangeImages> */}
+        </header>
+        <HomePage></HomePage>
+      </div>
+      <div>
+        {/* <Form className="Form">
+          <Form.Label>API Key:</Form.Label>
+          <Form.Control
+            type="password"
+            placeholder="Insert API Key Here"
+            onChange={changeKey}
+          ></Form.Control>
+          <br></br>
+          <Button className="Submit-Button" onClick={handleSubmit}>
+            Submit
+          </Button>
+        </Form> */}
+      </div>
+    </>
   );
 }
 
