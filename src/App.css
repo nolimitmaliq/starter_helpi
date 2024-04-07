@@ -29,28 +29,28 @@
 }
 /* background-color: rgb(47, 70, 11); */
 /* background-color: darkorchid; */
-.App-buttons{
-  background-color: rgb(0, 0, 0);
+
+
+/* .full-screen{
+  position:absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  background-color: rgba(0,0,0,0.8);
   color: white;
-  text-align: left;
-  text-indent: 5%;
-  position: relative;
 }
-.button-style{
-  background-color: darkorchid;
+
+.flex-container-center{
   display: flex;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  border: 1px solid white;
-  padding: 4px;
 }
-.App-header2{
-  color: yellow;
-  text-align: left;
-  
-}
+
+.hidden-popup{
+  display: none;
+} */
 
 @keyframes App-logo-spin {
   from {
