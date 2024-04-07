@@ -130,7 +130,9 @@
 }
 
 .Career-Quiz:hover,
-.Career-Quiz:focus {
+.Career-Quiz:focus,
+.Basic-Quiz:hover,
+.Basic-Quiz:focus {
   background-color: var(
     --accent-color
   ); /* Change background to blue on hover/focus */
@@ -138,7 +140,7 @@
   z-index: 1;
 }
 
-.Career-Quiz::before {
+.Career-Quiz::before .Basic-Quiz::before {
   content: "";
   position: absolute;
   top: 0;
@@ -149,9 +151,6 @@
   border-radius: var(
     --border-radius
   ); /* Ensure rounded corners match the button */
-}
-.Career-Quiz:hover::after {
-  background-color: var(--background-color);
 }
 .button-style {
   background-color: darkorchid;
@@ -168,19 +167,20 @@
   text-align: left;
   top: 200px;
 }
-.Basic-Quiz {
-  margin: 10rem auto;
-  display: inline;
-  padding: 80px;
+/* .Basic-Quiz {
+  --background-color: #e3e3e3
+  --accent-color: #0af; 
+  --border-radius: 20px; 
+  background-color: var(--background-color);
+  margin: 1rem auto;
+  display: inline-block;
+  padding: 100px;
   font-size: 75px;
   position: relative;
-  left: -65px;
-  background-color: #e3e3e3;
-  top: 100px;
-  color: green;
-  font-style: normal;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  border-radius: 20px;
+  left: -65px; 
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   font-family: "Courier New", Courier, monospace;
-  border: 2px solid black;
-}
+  top: 100px;
+} */
