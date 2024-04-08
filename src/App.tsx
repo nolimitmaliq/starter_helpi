@@ -12,10 +12,6 @@ import { HomePage } from "./HomePage_Buttons";
 //   keyData = JSON.parse(prevKey);
 // }
 
-// function openNewWindow() {
-//   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
-// }
-
 function App() {
   // const [key, setKey] = useState<string>(keyData); //for api key input
 
