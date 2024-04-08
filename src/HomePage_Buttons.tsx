@@ -5,9 +5,9 @@ import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
 // import { FaArrowRight } from "react-icons/fa";
 
 export function HomePage(): JSX.Element {
-  function openNewWindow() {
-    window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
-  }
+  // function openNewWindow() {
+  //   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
+  // }
   const [displayText, setDisplayText] = useState<boolean>(false);
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const [displayText3, setDisplayText3] = useState<boolean>(false);
