@@ -11,7 +11,7 @@ export function BasicQuiz() {
     <div>
       <div>
         <h1 className="App-buttons2">Basic Quiz</h1>
-        <p>
+        <p className="HomePage-text">
           Basic Quiz provides the option of "Check All That Apply" questions,
           letting users select various answers per question. This facilitates a
           more precise generation of career results.
@@ -19,7 +19,7 @@ export function BasicQuiz() {
       </div>
       <div>
         <h1>
-          <Button onClick={handleButton} className="Career-Quiz ">
+          <Button onClick={handleButton} className="Career-Quiz2">
             {/* <FaArrowRight /> */}
             Basic Quiz
           </Button>
@@ -43,7 +43,7 @@ export function DetailedQuiz() {
     <div>
       <div>
         <h1 className="App-buttons2">Detailed Quiz</h1>
-        <p>
+        <p className="HomePage-text">
           Detailed Quiz presents questions that require users to fill in the
           blank, providing them with the liberty to answer in their own unique
           way for each question. This method ensures a more precise
@@ -52,7 +52,7 @@ export function DetailedQuiz() {
       </div>
       <div>
         <h1>
-          <Button onClick={handleButton} className="Career-Quiz">
+          <Button onClick={handleButton} className="Career-Quiz2">
             {/* <FaArrowRight /> */}
             Detailed Quiz
           </Button>

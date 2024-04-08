@@ -27,7 +27,7 @@ export function HomePage(): JSX.Element {
       {/* <header className="App-buttons"> */}
       <div>
         <h1 className="App-buttons">Different Careers</h1>
-        <p>
+        <p className="HomePage-text">
           There are so many career options to choose from. One must first
           consider their strengths, interests, and passions. It's also important
           to think about job availability, growth opportunity, and salary
@@ -55,7 +55,7 @@ export function HomePage(): JSX.Element {
       </div>
       <div>
         <h1 className="App-buttons">Career Quizzes</h1>
-        <p>
+        <p className="HomePage-text">
           Ever pondered upon your life's direction and struggled to identify a
           career you'd feel passionate about? Now, thanks to our Basic and
           Detailed Quizzes, deciphering your future becomes possible. Our
