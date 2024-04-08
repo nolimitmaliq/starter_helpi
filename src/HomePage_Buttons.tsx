@@ -15,27 +15,17 @@ export function HomePage(): JSX.Element {
   return (
     <div className="App-buttons">
       {/* <header className="App-buttons"> */}
-      <div>
-        <h1>
-          <Button onClick={handleButton} className="Career-Quiz">
-            {/* <FaArrowRight /> */}
-            Career Quizzes
-          </Button>
-          {displayText && (
-            <div className="Text1Wrapper">
-              <p className="Text1">
-                Basic Quiz offers a "Check All That Apply" questions. This
-                allows the user to choose multiple answers for each question to
-                generate a more accurate career result.
-              </p>
-            </div>
-          )}
-        </h1>
+      <div className="TextWrapper">
+        <h1 className="Career-Quiz">Career Quizzes</h1>
+        <div className="Text1Wrapper">
+          Basic Quiz offers a "Check All That Apply" questions. This allows the
+          user to choose multiple answers for each question to generate a more
+          accurate career result.
+        </div>
       </div>
-      <div>
+      {/* <div>
         <h1>
-          <Button onClick={handleButton2} className="Career-Quiz">
-            {/* <FaArrowRight /> */}
+          <Button onClick={handleButton2} className="Career-Quiz1">
             Basic Quiz
           </Button>
           {displayText2 && (
@@ -55,7 +45,7 @@ export function HomePage(): JSX.Element {
             <button className="button-style">Take Basic Quiz</button>
           </a>
         </h1>
-      </div>
+      </div> */}
       {/* <div className="App-header2">
         <h1>Detailed Quiz</h1>
         <p>
