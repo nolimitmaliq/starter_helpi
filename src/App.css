@@ -32,10 +32,22 @@
 /* background-color: darkorchid; */
 
 .App-buttons {
-  color: white;
+  color: rgb(0, 170, 255);
   text-align: left;
   text-indent: 5%;
   position: relative;
+  font-size: 40px;
+  border-top: 3px solid rgb(0, 170, 255);
+  padding-top: 16px;
+}
+
+.App-buttons2 {
+  color: rgb(243, 73, 73);
+  text-align: left;
+  text-indent: 5%;
+  position: relative;
+  border-top: 2px solid rgb(243, 73, 73);
+  padding-top: 16px;
 }
 .button-style {
   background-color: darkorchid;
@@ -46,10 +58,6 @@
   align-items: center;
   border: 1px solid white;
   padding: 4px;
-}
-.App-header2 {
-  color: yellow;
-  text-align: left;
 }
 
 @keyframes App-logo-spin {
@@ -130,7 +138,7 @@
   text-align: left;
   text-indent: 5%;
   position: relative;
-  left: 10px;
+  text-align: center;
 }
 .Text1Wrapper {
   position: relative;
@@ -141,24 +149,26 @@
 .Career-Quiz {
   --background-color: #e3e3e3; /* Light grey background as the starting color */
   --accent-color: #0af; /* Blue color for hover/focus effect */
-  border-radius: 20px; /* Rounded corners */
+  --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
-  margin: 1rem auto;
-  padding: 45px;
-  font-size: px;
-  position: absolute;
-  left: 10px; /* Adjust as needed, or remove if not required */
+  /* margin: 1rem auto; */
+  padding: 16px;
+  font-size: 25px;
+  position: relative;
+  left: 50px;
   cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+  font-family: "Courier New", Courier, monospace;
+  align-items: center;
 }
 
-/* .Career-Quiz:hover,
-.Career-Quiz:focus,
+.Career-Quiz:hover,
+/* .Career-Quiz:focus, */
 .Basic-Quiz:hover,
 .Basic-Quiz:focus {
-  background-color: var(
-    --accent-color
-  );
-  color: white; 
+  background-color: var(--accent-color);
+  color: white;
   z-index: 1;
 }
 
@@ -172,20 +182,57 @@
   z-index: -1;
   border-radius: var(
     --border-radius
-  );
-} */
-.button-style {
-  background-color: darkorchid;
-  display: flex;
-  font-size: calc(10px + 2vmin);
-  color: blue;
-  cursor: pointer;
-  align-items: center;
-  border: 1px solid white;
-  padding: 4px;
+  ); /* Ensure rounded corners match the button */
 }
-.App-header2 {
+
+.Career-Quiz2 {
+  --background-color: #e3e3e3; /* Light grey background as the starting color */
+  --accent-color: rgb(243, 73, 73); /* Blue color for hover/focus effect */
+  --border-radius: 20px; /* Rounded corners */
+  background-color: var(--background-color); /* Initial background color */
+  margin: 1rem auto;
+  display: inline-block;
+  padding: 16px;
+  font-size: 25px;
+  position: relative;
+  left: 50px;
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out; /* Transition for background and text color */
+  font-family: "Courier New", Courier, monospace;
+  align-items: center;
+}
+
+.Career-Quiz2:hover,
+.Basic-Quiz:hover,
+.Basic-Quiz:focus {
+  background-color: var(
+    --accent-color
+  ); /* Change background to blue on hover/focus */
+  color: white; /* Change text color to white on hover/focus */
+  z-index: 1;
+}
+
+.Career-Quiz2::before .Basic-Quiz::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  border-radius: var(
+    --border-radius
+  ); /* Ensure rounded corners match the button */
+}
+
+.App-header3 {
   color: black;
   text-align: left;
   top: 200px;
+}
+
+.HomePage-text {
+  margin-left: 20%;
+  margin-right: 20%;
 }
