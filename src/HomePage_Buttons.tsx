@@ -8,13 +8,13 @@ export function HomePage(): JSX.Element {
   // function openNewWindow() {
   //   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
   // }
-  const [displayText, setDisplayText] = useState<boolean>(false);
+  //   const [displayText, setDisplayText] = useState<boolean>(false);
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const [displayText3, setDisplayText3] = useState<boolean>(false);
 
-  const handleButton = () => {
-    setDisplayText(!displayText);
-  };
+  //   const handleButton = () => {
+  //     setDisplayText(!displayText);
+  //   };
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
     //openNewWindow();
@@ -40,10 +40,9 @@ export function HomePage(): JSX.Element {
           option.
         </p>
       </div>
-      <div>
+      {/* <div>
         <h1>
           <Button onClick={handleButton} className="Career-Quiz ">
-            {/* <FaArrowRight /> */}
             View Careers
           </Button>
           {displayText && (
@@ -52,7 +51,7 @@ export function HomePage(): JSX.Element {
             </div>
           )}
         </h1>
-      </div>
+      </div> */}
       <div>
         <h1 className="App-buttons">Career Quizzes</h1>
         <p className="HomePage-text">
@@ -65,8 +64,7 @@ export function HomePage(): JSX.Element {
       </div>
       <div>
         <div>
-          <Button onClick={handleButton2} className="Career-Quiz ">
-            {/* <FaArrowRight /> */}
+          <Button onClick={handleButton2} className="Career-Quiz2 ">
             View Quizzes
           </Button>
           {displayText2 && (
@@ -88,7 +86,6 @@ export function HomePage(): JSX.Element {
       <div>
         <h1>
           <Button onClick={handleButton3} className="Career-Quiz ">
-            {/* <FaArrowRight /> */}
             View Tips
           </Button>
           {displayText3 && (

@@ -133,39 +133,32 @@
   opacity: 0.4;
 }
 
-.App-button {
+.App-buttons {
   color: black;
   text-align: left;
   text-indent: 5%;
   position: relative;
-  left: 10px;
-}
-.Text1Wrapper,
-.Basic-QuizText {
   text-align: center;
-  position: absolute;
-  text-align: right;
-  max-width: 500px;
-  font-size: 20px;
-  font-weight: lighter;
-  display: block;
-  margin: 0 auto;
-  width: 100%;
+}
+.Text1Wrapper {
+  position: relative;
+  overflow: hidden;
+  top: 190px;
+  right: 70px;
 }
 .Career-Quiz {
   --background-color: #e3e3e3; /* Light grey background as the starting color */
   --accent-color: #0af; /* Blue color for hover/focus effect */
   --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
-  margin: 1rem auto;
-  display: inline-block;
-  padding: 25px;
+  /* margin: 1rem auto; */
+  padding: 16px;
   font-size: 25px;
   position: relative;
-  left: -65px; /* Adjust as needed, or remove if not required */
+  left: 50px;
   cursor: pointer;
   border-radius: var(--border-radius);
-  transition: background-color 300ms ease-in-out, color 300ms ease-in-out; /* Transition for background and text color */
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   font-family: "Courier New", Courier, monospace;
   align-items: center;
 }
@@ -174,10 +167,8 @@
 /* .Career-Quiz:focus, */
 .Basic-Quiz:hover,
 .Basic-Quiz:focus {
-  background-color: var(
-    --accent-color
-  ); /* Change background to blue on hover/focus */
-  color: white; /* Change text color to white on hover/focus */
+  background-color: var(--accent-color);
+  color: white;
   z-index: 1;
 }
 
@@ -201,10 +192,10 @@
   background-color: var(--background-color); /* Initial background color */
   margin: 1rem auto;
   display: inline-block;
-  padding: 25px;
+  padding: 16px;
   font-size: 25px;
   position: relative;
-  left: -65px; /* Adjust as needed, or remove if not required */
+  left: 50px;
   cursor: pointer;
   border-radius: var(--border-radius);
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out; /* Transition for background and text color */
@@ -213,7 +204,6 @@
 }
 
 .Career-Quiz2:hover,
-/* .Career-Quiz:focus, */
 .Basic-Quiz:hover,
 .Basic-Quiz:focus {
   background-color: var(
