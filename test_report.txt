@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (44 ms)
+  ✕ renders learn react link (38 ms)
 
   ● renders learn react link
 
@@ -22,38 +22,69 @@ FAIL src/App.test.tsx
               [0mWelcome to Career Quiz[0m
             [36m</h1>[39m
           [36m</header>[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"App-buttons"[39m
-          [36m>[39m
+          [36m<div>[39m
             [36m<div>[39m
-              [36m<h1>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"Career-Quiz btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mCareer Quizzes[0m
-                [36m</button>[39m
+              [36m<h1[39m
+                [33mclass[39m=[32m"App-buttons"[39m
+              [36m>[39m
+                [0mDifferent Careers[0m
               [36m</h1>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"HomePage-text"[39m
+              [36m>[39m
+                [0mThere are so many career options to choose from. One must first consider their strengths, interests, and passions. It's also important to think about job availability, growth opportunity, and salary expectations. But ultimately, choosing a career is a personal decision that should reflect one's own goals, values and ambitions. It can be helpful to speak to professionals in fields of interest or work with a career coach to gain more clarity and make an informed decision. Remember, this choice isn't set in stone, people often change careers in their lifetime, so don't feel pressured to find the "perfect" option.[0m
+              [36m</p>[39m
             [36m</div>[39m
             [36m<div>[39m
               [36m<h1>[39m
                 [36m<button[39m
-                  [33mclass[39m=[32m"Career-Quiz btn btn-primary"[39m
+                  [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
                   [33mtype[39m=[32m"button"[39m
                 [36m>[39m
-                  [0mBasic Quiz[0m
+                  [0mView Careers[0m
                 [36m</button>[39m
-                [36m<a[39m
-                  [33mhref[39m=[32m"https://Careerquizlo.org/Basic"[39m
-                  [33mrel[39m=[32m"noreferrer"[39m
-                  [33mtarget[39m=[32m"_blank"[39m
+              [36m</h1>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<h1[39m
+                [33mclass[39m=[32m"App-buttons"[39m
+              [36m>[39m
+                [0mCareer Quizzes[0m
+              [36m</h1>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"HomePage-text"[39m
+              [36m>[39m
+                [0mEver pondered upon your life's direction and struggled to identify a career you'd feel passionate about? Now, thanks to our Basic and Detailed Quizzes, deciphering your future becomes possible. Our quizzes are designed for everyone, irrespective of your age, race, ethnicity, gender, or nationality.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<div>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
+                  [33mtype[39m=[32m"button"[39m
                 [36m>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"button-style"[39m
-                  [36m>[39m
-                    [0mTake Basic Quiz[0m
-                  [36m</button>[39m
-                [36m</a>[39m
+                  [0mView Quizzes[0m
+                [36m</button>[39m
+              [36m</div>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<h1[39m
+                [33mclass[39m=[32m"App-buttons"[39m
+              [36m>[39m
+                [0mCareer Tips[0m
+              [36m</h1>[39m
+              [36m<p>[39m
+                [0mCareer Tips is a resource designed to guide users on how to pursue their potential career. This platform educates users about various useful websites and provides an insight into the hiring process.[0m
+              [36m</p>[39m
+            [36m</div>[39m
+            [36m<div>[39m
+              [36m<h1>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mView Tips[0m
+                [36m</button>[39m
               [36m</h1>[39m
             [36m</div>[39m
           [36m</div>[39m
@@ -83,19 +114,20 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   17.64 |       20 |   14.28 |   17.64 |                   
+All files             |   19.04 |    21.42 |   11.76 |   19.04 |                   
  App.tsx              |     100 |      100 |     100 |     100 |                   
- Buttons.tsx          |       0 |      100 |       0 |       0 | 6-22              
- HomePage_Buttons.tsx |   71.42 |       50 |   33.33 |   71.42 | 10,13             
+ Buttons.tsx          |       0 |      100 |       0 |       0 | 6-26              
+ CareerQuiz.tsx       |       0 |        0 |       0 |       0 | 6-42              
+ HomePage_Buttons.tsx |      70 |       50 |      25 |      70 | 16,19,23          
  image2.tsx           |       0 |      100 |       0 |       0 | 13-40             
  index.tsx            |       0 |      100 |     100 |       0 | 7-19              
- popups.tsx           |       0 |        0 |       0 |       0 | 4-13              
+ popups.tsx           |       0 |      100 |       0 |       0 | 6                 
  reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.019 s
+Time:        3.087 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
