@@ -4,6 +4,9 @@ import "./App.css";
 // import { FaArrowRight } from "react-icons/fa";
 
 export function HomePage(): JSX.Element {
+  function openNewWindow() {
+    window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
+  }
   const [displayText, setDisplayText] = useState<boolean>(false);
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const handleButton = () => {
@@ -11,6 +14,7 @@ export function HomePage(): JSX.Element {
   };
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
+    openNewWindow();
   };
   return (
     <div className="App-buttons">
