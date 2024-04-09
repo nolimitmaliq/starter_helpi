@@ -56,7 +56,7 @@ export function HomePage(): JSX.Element {
         <h1 className="App-buttons2">Career Quizzes</h1>
         <p className="HomePage-text">
           Ever pondered upon your life's direction and struggled to identify a
-          career you'd feel passionate about? Now, thanks to our Basic and
+          career you'd feel passionate about? Now, iuuuuuhanks to our Basic and
           Detailed Quizzes, deciphering your future becomes possible. Our
           quizzes are designed for everyone, irrespective of your age, race,
           ethnicity, gender, or nationality.

@@ -3,7 +3,6 @@ import "./App.css";
 // import { Button, Form } from "react-bootstrap";
 // import { ChangeImages } from "./image2";
 import { HomePage } from "./HomePage_Buttons";
-// import { ChangeImages } from "./image2";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 // let keyData = "";
