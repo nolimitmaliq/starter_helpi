@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (44 ms)
+  ✕ renders learn react link (40 ms)
 
   ● renders learn react link
 
@@ -38,6 +38,16 @@ FAIL src/App.test.tsx
               [36m</p>[39m
             [36m</div>[39m
             [36m<div>[39m
+              [36m<h1>[39m
+                [36m<button[39m
+                  [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
+                  [33mtype[39m=[32m"button"[39m
+                [36m>[39m
+                  [0mView Careers[0m
+                [36m</button>[39m
+              [36m</h1>[39m
+            [36m</div>[39m
+            [36m<div>[39m
               [36m<h1[39m
                 [33mclass[39m=[32m"App-buttons2"[39m
               [36m>[39m
@@ -65,7 +75,9 @@ FAIL src/App.test.tsx
               [36m>[39m
                 [0mCareer Tips[0m
               [36m</h1>[39m
-              [36m<p>[39m
+              [36m<p[39m
+                [33mclass[39m=[32m"HomePage-text"[39m
+              [36m>[39m
                 [0mCareer Tips is a resource designed to guide users on how to pursue their potential career. This platform educates users about various useful websites and provides an insight into the hiring process.[0m
               [36m</p>[39m
             [36m</div>[39m
@@ -81,50 +93,6 @@ FAIL src/App.test.tsx
             [36m</div>[39m
           [36m</div>[39m
           [36m<hr />[39m
-          [36m<div[39m
-            [33mclass[39m=[32m"ImageContainer"[39m
-          [36m>[39m
-            [36m<img[39m
-              [33malt[39m=[32m"Career Photos"[39m
-              [33msrc[39m=[32m"https://shorturl.at/lmrC9"[39m
-            [36m/>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"NavigationButtonLeft btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [36m<svg[39m
-                [33mfill[39m=[32m"currentColor"[39m
-                [33mheight[39m=[32m"1em"[39m
-                [33mstroke[39m=[32m"currentColor"[39m
-                [33mstroke-width[39m=[32m"0"[39m
-                [33mviewBox[39m=[32m"0 0 448 512"[39m
-                [33mwidth[39m=[32m"1em"[39m
-                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
-              [36m>[39m
-                [36m<path[39m
-                  [33md[39m=[32m"M257.5 445.1l-22.2 22.2c-9.4 9.4-24.6 9.4-33.9 0L7 273c-9.4-9.4-9.4-24.6 0-33.9L201.4 44.7c9.4-9.4 24.6-9.4 33.9 0l22.2 22.2c9.5 9.5 9.3 25-.4 34.3L136.6 216H424c13.3 0 24 10.7 24 24v32c0 13.3-10.7 24-24 24H136.6l120.5 114.8c9.8 9.3 10 24.8.4 34.3z"[39m
-                [36m/>[39m
-              [36m</svg>[39m
-            [36m</button>[39m
-            [36m<button[39m
-              [33mclass[39m=[32m"NavigationButtonRight btn btn-primary"[39m
-              [33mtype[39m=[32m"button"[39m
-            [36m>[39m
-              [36m<svg[39m
-                [33mfill[39m=[32m"currentColor"[39m
-                [33mheight[39m=[32m"1em"[39m
-                [33mstroke[39m=[32m"currentColor"[39m
-                [33mstroke-width[39m=[32m"0"[39m
-                [33mviewBox[39m=[32m"0 0 448 512"[39m
-                [33mwidth[39m=[32m"1em"[39m
-                [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
-              [36m>[39m
-                [36m<path[39m
-                  [33md[39m=[32m"M190.5 66.9l22.2-22.2c9.4-9.4 24.6-9.4 33.9 0L441 239c9.4 9.4 9.4 24.6 0 33.9L246.6 467.3c-9.4 9.4-24.6 9.4-33.9 0l-22.2-22.2c-9.5-9.5-9.3-25 .4-34.3L311.4 296H24c-13.3 0-24-10.7-24-24v-32c0-13.3 10.7-24 24-24h287.4L190.9 101.2c-9.8-9.3-10-24.8-.4-34.3z"[39m
-                [36m/>[39m
-              [36m</svg>[39m
-            [36m</button>[39m
-          [36m</div>[39m
         [36m</div>[39m
         [36m<div />[39m
       [36m</div>[39m
@@ -151,12 +119,12 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   25.64 |    16.66 |   18.75 |   25.64 |                   
+All files             |   19.04 |    21.42 |   11.76 |   19.04 |                   
  App.tsx              |     100 |      100 |     100 |     100 |                   
  Buttons.tsx          |       0 |      100 |       0 |       0 | 6-26              
  CareerQuiz.tsx       |       0 |        0 |       0 |       0 | 6-42              
- HomePage_Buttons.tsx |   71.42 |       50 |   33.33 |   71.42 | 18,22             
- image2.tsx           |      50 |      100 |   33.33 |      50 | 30-36             
+ HomePage_Buttons.tsx |      70 |       50 |      25 |      70 | 16,19,23          
+ image2.tsx           |       0 |      100 |       0 |       0 | 12-39             
  index.tsx            |       0 |      100 |     100 |       0 | 7-19              
  popups.tsx           |       0 |      100 |       0 |       0 | 6                 
  reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
@@ -164,7 +132,7 @@ All files             |   25.64 |    16.66 |   18.75 |   25.64 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.047 s
+Time:        3.274 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
