@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
-// import { FaArrowRight } from "react-icons/fa";
 
 export function HomePage(): JSX.Element {
   // function openNewWindow() {
@@ -23,10 +22,9 @@ export function HomePage(): JSX.Element {
     setDisplayText3(!displayText3);
   };
   return (
-    <div>
-      {/* <header className="App-buttons"> */}
+    <div className="Body">
       <div>
-        <h1 className="App-buttons">Different Careers</h1>
+        <h1 className="App-buttons2">Different Careers</h1>
         <p className="HomePage-text">
           There are so many career options to choose from. One must first
           consider their strengths, interests, and passions. It's also important
@@ -53,7 +51,7 @@ export function HomePage(): JSX.Element {
         </h1>
       </div> */}
       <div>
-        <h1 className="App-buttons">Career Quizzes</h1>
+        <h1 className="App-buttons2">Career Quizzes</h1>
         <p className="HomePage-text">
           Ever pondered upon your life's direction and struggled to identify a
           career you'd feel passionate about? Now, thanks to our Basic and
@@ -76,7 +74,7 @@ export function HomePage(): JSX.Element {
         </div>
       </div>
       <div>
-        <h1 className="App-buttons">Career Tips</h1>
+        <h1 className="App-buttons2">Career Tips</h1>
         <p>
           Career Tips is a resource designed to guide users on how to pursue
           their potential career. This platform educates users about various

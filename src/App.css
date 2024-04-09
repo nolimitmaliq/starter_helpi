@@ -1,6 +1,7 @@
 .App {
   text-align: center;
   background-color: white;
+  margin-bottom: 25rem;
 }
 
 .App-logo {
@@ -31,22 +32,12 @@
 /* background-color: rgb(47, 70, 11); */
 /* background-color: darkorchid; */
 
-.App-buttons {
-  color: rgb(0, 170, 255);
-  text-align: left;
-  text-indent: 5%;
-  position: relative;
-  font-size: 40px;
-  border-top: 3px solid rgb(0, 170, 255);
-  padding-top: 16px;
-}
-
 .App-buttons2 {
-  color: rgb(243, 73, 73);
-  text-align: left;
+  color: black;
+  text-align: center;
   text-indent: 5%;
   position: relative;
-  border-top: 2px solid rgb(243, 73, 73);
+  border-top: 3px solid rgb(0, 170, 255);
   padding-top: 16px;
 }
 .button-style {
@@ -70,60 +61,47 @@
 }
 .ImageContainer {
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 60%;
+  height: auto;
+  max-width: 300px;
+  margin: auto;
 }
 
-.Image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.ImageContainer img {
+  height: 500px; /* Fixed height */
+  width: 500px; /* Width adjusts to maintain the aspect ratio */
 }
 
-.Image img {
+/* .Image img {
   max-width: 100%;
   max-height: 100%;
 
-  /* opacity: 1;
-  transition: opacity 500ms; */
-}
-
-.Image img {
-  max-width: 100%; /* Limit image width to 100% of container */
-  max-height: 100%; /* Limit image height to 100% of container */
-
   position: absolute;
-}
-.NavigationButtonRight {
-  position: absolute;
-  top: 54%;
-  z-index: 1;
-  right: 10%;
-  font-size: 30px;
-  color: white;
-  cursor: pointer;
-  background: none;
+} */
+.Images-Pages {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  height: 100vh;
+}
+.NavigationButtonRight {
+  position: relative;
+  top: 20px;
+  right: 200%;
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+  background: none;
   border: none;
 }
 .NavigationButtonLeft {
-  position: absolute;
-  top: 54%;
-  z-index: 1;
-  left: 10%;
+  position: relative;
+  top: 20px;
+  left: 200%;
   font-size: 30px;
-  color: white;
-  background: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: red;
   cursor: pointer;
-  padding: 0;
+  background: none;
   border: none;
 }
 .NavigationButtonLeft:hover {
