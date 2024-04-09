@@ -58,13 +58,12 @@
   }
 }
 .ImageContainer {
-  /* position: relative;
-  width: 60%;
+  position: relative;
+  /* width: 60%; */
   height: auto;
-  max-width: 300px;
+  /* max-width: 300px; */
   margin: auto;
   align-items: center;
-  right: 300px; */
 }
 
 .ImageContainer img {
@@ -78,23 +77,13 @@
 
   position: absolute;
 } */
-/* .Images-Pages {
+.Images-Pages {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-} */
-.NavigationButtonRight {
-  position: relative;
-  top: 20px;
-  right: 200%;
-  font-size: 30px;
-  color: red;
-  cursor: pointer;
-  background: none;
-  border: none;
 }
-.NavigationButtonLeft {
+.NavigationButtonRight {
   position: relative;
   top: 20px;
   left: 200%;
@@ -103,6 +92,21 @@
   cursor: pointer;
   background: none;
   border: none;
+}
+/* .NavigationButtonLeft {
+  position: relative;
+  top: 20px;
+  left: 200%;
+  font-size: 30px;
+  color: red;
+  cursor: pointer;
+  background: none;
+  border: none;
+} */
+.NavigationButtonLeft {
+  position: relative;
+  bottom: 50px;
+  right: 200%;
 }
 .NavigationButtonLeft:hover {
   opacity: 0.4;

@@ -40,10 +40,10 @@ export function ChangeImages(): JSX.Element {
     <div className="ImageContainer">
       <img src={currImage} alt="Career Photos" />
       <Button onClick={nextImage} className="NavigationButtonRight">
-        {<FaArrowLeft />}
+        {<FaArrowRight />}
       </Button>
       <Button onClick={previousImage} className="NavigationButtonLeft">
-        {<FaArrowRight />}
+        {<FaArrowLeft />}
       </Button>
     </div>
   );
