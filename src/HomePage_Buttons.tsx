@@ -2,18 +2,19 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
+import { ChangeImages } from "./image2";
 
 export function HomePage(): JSX.Element {
   // function openNewWindow() {
   //   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
   // }
-  //   const [displayText, setDisplayText] = useState<boolean>(false);
+  const [displayText, setDisplayText] = useState<boolean>(false);
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const [displayText3, setDisplayText3] = useState<boolean>(false);
 
-  //   const handleButton = () => {
-  //     setDisplayText(!displayText);
-  //   };
+  const handleButton = () => {
+    setDisplayText(!displayText);
+  };
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
     //openNewWindow();
@@ -38,18 +39,19 @@ export function HomePage(): JSX.Element {
           option.
         </p>
       </div>
-      {/* <div>
+      <div>
         <h1>
           <Button onClick={handleButton} className="Career-Quiz ">
             View Careers
           </Button>
           {displayText && (
             <div className="Basic-QuizText">
+              <ChangeImages></ChangeImages>
               <p></p>
             </div>
           )}
         </h1>
-      </div> */}
+      </div>
       <div>
         <h1 className="App-buttons2">Career Quizzes</h1>
         <p className="HomePage-text">
@@ -75,7 +77,7 @@ export function HomePage(): JSX.Element {
       </div>
       <div>
         <h1 className="App-buttons2">Career Tips</h1>
-        <p>
+        <p className="HomePage-text">
           Career Tips is a resource designed to guide users on how to pursue
           their potential career. This platform educates users about various
           useful websites and provides an insight into the hiring process.
@@ -93,37 +95,6 @@ export function HomePage(): JSX.Element {
           )}
         </h1>
       </div>
-      {/* <div className="App-header2">
-        <h1>Detailed Quiz</h1>
-        <p>
-          Detailed Quiz offers fill in the blank questions. This allows the user
-          to answer with their own freedom for each question to generate a more
-          accurate career result.
-        </p>
-        <a
-          href="https://Careerquizlo.org/Detailed"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="button-style">Take Quiz</button>
-        </a>
-      </div>
-      <div className="App-header2">
-        <h1>Career Tips</h1>
-        <p>
-          Career Tips allows users to learn how to get thier potential career.
-          This page will enlighten users about useful sites and the hiring
-          process.
-        </p>
-        <a
-          href="https://Careerquizlo.org/Tips"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="button-style">View Tips</button>
-        </a>
-      </div> */}
-      {/* </header> */}
     </div>
   );
 }

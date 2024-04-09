@@ -35,7 +35,6 @@ function App() {
         </header>
         <HomePage></HomePage>
         <hr></hr>
-        <ChangeImages></ChangeImages>
       </div>
       <div>
         {/* <Form className="Form">
