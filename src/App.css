@@ -33,22 +33,20 @@
 /* background-color: darkorchid; */
 
 .App-buttons2 {
-  color: black;
+  color: rgb(243, 73, 73);
   text-align: center;
-  text-indent: 5%;
+  /* text-indent: 5%; */
   position: relative;
   border-top: 3px solid rgb(0, 170, 255);
   padding-top: 16px;
 }
-.button-style {
-  background-color: darkorchid;
-  display: flex;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  cursor: pointer;
-  align-items: center;
-  border: 1px solid white;
-  padding: 4px;
+.App-buttons4 {
+  color: rgb(0, 170, 255);
+  text-align: center;
+  /* text-indent: 5%; */
+  position: relative;
+  border-top: 3px solid rgb(243, 73, 73);
+  padding-top: 16px;
 }
 
 @keyframes App-logo-spin {
@@ -60,11 +58,13 @@
   }
 }
 .ImageContainer {
-  position: relative;
+  /* position: relative;
   width: 60%;
   height: auto;
   max-width: 300px;
   margin: auto;
+  align-items: center;
+  right: 300px; */
 }
 
 .ImageContainer img {
@@ -78,12 +78,12 @@
 
   position: absolute;
 } */
-.Images-Pages {
+/* .Images-Pages {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
+} */
 .NavigationButtonRight {
   position: relative;
   top: 20px;
@@ -129,11 +129,10 @@
   --accent-color: #0af; /* Blue color for hover/focus effect */
   --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
-  /* margin: 1rem auto; */
+  margin: 1rem auto;
   padding: 16px;
   font-size: 25px;
   position: relative;
-  left: 50px;
   cursor: pointer;
   border-radius: var(--border-radius);
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
@@ -169,14 +168,12 @@
   --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
   margin: 1rem auto;
-  display: inline-block;
   padding: 16px;
   font-size: 25px;
   position: relative;
-  left: 50px;
   cursor: pointer;
   border-radius: var(--border-radius);
-  transition: background-color 300ms ease-in-out, color 300ms ease-in-out; /* Transition for background and text color */
+  transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
   font-family: "Courier New", Courier, monospace;
   align-items: center;
 }
@@ -211,6 +208,16 @@
 }
 
 .HomePage-text {
+  border: 2px solid rgb(0, 170, 255);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.Career-Quiz-text {
+  border: 2px solid rgb(243, 73, 73);
+  border-radius: 10px;
+  padding: 10px;
   margin-left: 20%;
   margin-right: 20%;
 }
