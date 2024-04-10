@@ -57,6 +57,30 @@ export function HomePage(): JSX.Element {
       </div>
       <div></div>
       <div id="careerQuizzes">
+      <div>
+        <h1>
+          <Button onClick={handleButton} className="Career-Quiz ">
+            View Careers
+          </Button>
+          {displayText && (
+            <div className="Basic-QuizText">
+              <ChangeImages></ChangeImages>
+              <p></p>
+            </div>
+          )}
+        </h1>
+      </div>
+      <div>
+        <h1 className="App-buttons2">Career Quizzes</h1>
+        <p className="HomePage-text">
+          Ever pondered upon your life's direction and struggled to identify a
+          career you'd feel passionate about? Now, iuuuuuhanks to our Basic and
+          Detailed Quizzes, deciphering your future becomes possible. Our
+          quizzes are designed for everyone, irrespective of your age, race,
+          ethnicity, gender, or nationality.
+        </p>
+      </div>
+      <div>
         <div>
           <h1>
             <Button onClick={handleButton} className="Career-Quiz ">
