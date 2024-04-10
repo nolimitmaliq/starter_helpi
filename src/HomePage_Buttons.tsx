@@ -57,6 +57,13 @@ export function HomePage(): JSX.Element {
   const handleButton3 = () => {
     setDisplayText3(!displayText3);
   };
+  /*
+  buttonContainer {
+    display: flex;
+    flex-direction: row;
+  }
+  SURROUND EACH <a> TAG WITH <div>
+  */
   return (
     <div className="Body">
       <div className="buttonContainer">
