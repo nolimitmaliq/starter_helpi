@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 function Popup() {
-  const [showModal, setShowModal] = useState(false);
+  // const [showModal, setShowModal] = useState(false);
 
   return (
     <div>
-      <button onClick={() => setShowModal(true)}>Open Modal</button>
+      {/* <button onClick={() => setShowModal(true)}>Open Modal</button>
 
       {showModal && (
         <div className="modal">
@@ -15,7 +15,15 @@ function Popup() {
             <p>This is a popup window.</p>
           </div>
         </div>
-      )}
+      )} */}
+
+      <body>
+        <div className="modal" id="modal">
+          <div className="modal-header"></div>
+          <button className="close-button">&times;</button>
+        </div>
+        <div id="overlay"></div>
+      </body>
     </div>
   );
 }

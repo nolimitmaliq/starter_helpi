@@ -1,92 +1,128 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
-// import { FaArrowRight } from "react-icons/fa";
+import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
+import { ChangeImages } from "./image2";
+//import Menubar from "./Menubar";
 
 export function HomePage(): JSX.Element {
+  // function openNewWindow() {
+  //   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
+  // }
   const [displayText, setDisplayText] = useState<boolean>(false);
   const [displayText2, setDisplayText2] = useState<boolean>(false);
+  const [displayText3, setDisplayText3] = useState<boolean>(false);
+
   const handleButton = () => {
     setDisplayText(!displayText);
   };
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
+    //openNewWindow();
+  };
+  const handleButton3 = () => {
+    setDisplayText3(!displayText3);
   };
   return (
-    <div className="App-buttons">
-      {/* <header className="App-buttons"> */}
-      <div>
-        <h1>
-          <Button onClick={handleButton} className="Career-Quiz">
-            {/* <FaArrowRight /> */}
-            Career Quizzes
-          </Button>
-          {displayText && (
-            <div className="Text1Wrapper">
-              <p className="Text1">
-                Basic Quiz offers a "Check All That Apply" questions. This
-                allows the user to choose multiple answers for each question to
-                generate a more accurate career result.
-              </p>
-            </div>
-          )}
-        </h1>
-      </div>
-      <div>
-        <h1>
-          <Button onClick={handleButton2} className="Career-Quiz">
-            {/* <FaArrowRight /> */}
-            Basic Quiz
-          </Button>
-          {displayText2 && (
-            <div className="Basic-QuizText">
-              <p>
-                Basic Quiz offers a "Check All That Apply" questions. This
-                allows the user to choose multiple answers for each question to
-                generate a more accurate career result.
-              </p>
-            </div>
-          )}
-          <a
-            href="https://Careerquizlo.org/Basic"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <button className="button-style">Take Basic Quiz</button>
-          </a>
-        </h1>
-      </div>
-      {/* <div className="App-header2">
-        <h1>Detailed Quiz</h1>
-        <p>
-          Detailed Quiz offers fill in the blank questions. This allows the user
-          to answer with their own freedom for each question to generate a more
-          accurate career result.
-        </p>
-        <a
-          href="https://Careerquizlo.org/Detailed"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="button-style">Take Quiz</button>
+    <div className="Body">
+      <div className="buttonContainer">
+        <a href="#differentCareers" className="button differentCareers">
+          Different Careers
+        </a>
+        <a href="#careerQuizzes" className="button careerQuizzes">
+          Career Quizzes
+        </a>
+        <a href="#careerTips" className="button careerTips">
+          Career Tips
+        </a>
+        <a href="#aboutUs" className="button aboutUs">
+          About Us
         </a>
       </div>
-      <div className="App-header2">
-        <h1>Career Tips</h1>
-        <p>
-          Career Tips allows users to learn how to get thier potential career.
-          This page will enlighten users about useful sites and the hiring
-          process.
+
+      <div id="differentCareers">
+        <h1 className="App-buttons2">Different Careers</h1>
+        <p className="HomePage-text">
+          There are so many career options to choose from. One must first
+          consider their strengths, interests, and passions. It's also important
+          to think about job availability, growth opportunity, and salary
+          expectations. But ultimately, choosing a career is a personal decision
+          that should reflect one's own goals, values and ambitions. It can be
+          helpful to speak to professionals in fields of interest or work with a
+          career coach to gain more clarity and make an informed decision.
+          Remember, this choice isn't set in stone, people often change careers
+          in their lifetime, so don't feel pressured to find the "perfect"
+          option.
         </p>
-        <a
-          href="https://Careerquizlo.org/Tips"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <button className="button-style">View Tips</button>
-        </a>
-      </div> */}
-      {/* </header> */}
+      </div>
+      <div></div>
+      <div id="careerQuizzes">
+        <div>
+          <h1>
+            <Button onClick={handleButton} className="Career-Quiz ">
+              View Careers
+            </Button>
+            {displayText && (
+              <div className="Basic-QuizText">
+                <ChangeImages></ChangeImages>
+                <p></p>
+              </div>
+            )}
+          </h1>
+        </div>
+        <div>
+          <h1 className="App-buttons2">Career Quizzes</h1>
+          <p className="HomePage-text">
+            Ever pondered upon your life's direction and struggled to identify a
+            career you'd feel passionate about? Now, thanks to our Basic and
+            Detailed Quizzes, deciphering your future becomes possible. Our
+            quizzes are designed for everyone, irrespective of your age, race,
+            ethnicity, gender, or nationality.
+          </p>
+        </div>
+        <div>
+          <div>
+            <Button onClick={handleButton2} className="Career-Quiz2 ">
+              View Quizzes
+            </Button>
+            {displayText2 && (
+              <>
+                <BasicQuiz></BasicQuiz>
+                <DetailedQuiz></DetailedQuiz>
+              </>
+            )}
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div id="careerTips">
+        <div>
+          <h1 className="App-buttons2">Career Tips</h1>
+          <p className="HomePage-text">
+            Career Tips is a resource designed to guide users on how to pursue
+            their potential career. This platform educates users about various
+            useful websites and provides an insight into the hiring process.
+          </p>
+        </div>
+        <div>
+          <h1>
+            <Button onClick={handleButton3} className="Career-Quiz ">
+              View Tips
+            </Button>
+            {displayText3 && (
+              <div className="Basic-QuizText">
+                <p></p>
+              </div>
+            )}
+          </h1>
+        </div>
+        <div id="aboutUs">
+          <div>
+            <h1 className="App-buttons2">About Us</h1>
+            <p className="HomePage-text">Click Here to Learn More About Us!</p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
