@@ -96,15 +96,16 @@
     transform: rotate(360deg);
   }
 }
+/*
 .ImageContainer {
-  /* position: relative;
+ position: relative;
   width: 60%;
   height: auto;
   max-width: 300px;
   margin: auto;
   align-items: center;
-  right: 300px; */
-}
+  right: 300px; 
+}*/
 
 .ImageContainer img {
   height: 500px; /* Fixed height */
