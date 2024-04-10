@@ -5,6 +5,40 @@ import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
 import { ChangeImages } from "./image2";
 //import Menubar from "./Menubar";
 
+function Footer() {
+  const [email, setEmail] = useState<string>("");
+
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    console.log("Submitted email:", email);
+  };
+
+  return (
+    <div className="footer">
+      <h1 className="footer">
+        <h2>Sign Up to get more advice on Careers!</h2>
+        <div className="signup-box">
+          <form onSubmit={handleSubmit}>
+            <label htmlFor="email">Email:</label>
+            <input
+              type="email"
+              id="email"
+              value={email}
+              onChange={handleInputChange}
+              required
+            />
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </h1>
+    </div>
+  );
+}
+
 export function HomePage(): JSX.Element {
   // function openNewWindow() {
   //   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
@@ -41,7 +75,7 @@ export function HomePage(): JSX.Element {
       </div>
 
       <div id="differentCareers">
-        <h1 className="App-buttons2">Different Careers</h1>
+        <h1 className="App-differentcareersbutton">Different Careers</h1>
         <p className="HomePage-text">
           There are so many career options to choose from. One must first
           consider their strengths, interests, and passions. It's also important
@@ -122,6 +156,7 @@ export function HomePage(): JSX.Element {
             <p className="HomePage-text">Click Here to Learn More About Us!</p>
           </div>
         </div>
+        <Footer />
       </div>
     </div>
   );
