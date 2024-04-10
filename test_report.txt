@@ -2,8 +2,49 @@
 > starter_helpi@0.1.0 test
 > react-scripts test --coverage
 
+  console.error
+    Warning: validateDOMNesting(...): <h2> cannot appear as a child of <h1>.
+        at h2
+        at h1
+        at div
+        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:9:37)
+        at div
+        at div
+        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:46:49)
+        at div
+        at App
+
+      4 |
+      5 | test("renders learn react link", () => {
+    > 6 |   render(<App />);
+        |         ^
+      7 |   const linkElement = screen.getByText(/learn react/i);
+      8 |   expect(linkElement).toBeInTheDocument();
+      9 | });
+
+      at printWarning (node_modules/react-dom/cjs/react-dom.development.js:86:30)
+      at error (node_modules/react-dom/cjs/react-dom.development.js:60:7)
+      at validateDOMNesting (node_modules/react-dom/cjs/react-dom.development.js:10847:7)
+      at createInstance (node_modules/react-dom/cjs/react-dom.development.js:10930:5)
+      at completeWork (node_modules/react-dom/cjs/react-dom.development.js:22187:28)
+      at completeUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26593:16)
+      at performUnitOfWork (node_modules/react-dom/cjs/react-dom.development.js:26568:5)
+      at workLoopSync (node_modules/react-dom/cjs/react-dom.development.js:26466:5)
+      at renderRootSync (node_modules/react-dom/cjs/react-dom.development.js:26434:7)
+      at performConcurrentWorkOnRoot (node_modules/react-dom/cjs/react-dom.development.js:25738:74)
+      at flushActQueue (node_modules/react/cjs/react.development.js:2667:24)
+      at act (node_modules/react/cjs/react.development.js:2582:11)
+      at node_modules/@testing-library/react/dist/act-compat.js:63:25
+      at renderRoot (node_modules/@testing-library/react/dist/pure.js:159:26)
+      at render (node_modules/@testing-library/react/dist/pure.js:246:10)
+      at Object.<anonymous> (src/App.test.tsx:6:9)
+      at TestScheduler.scheduleTests (node_modules/@jest/core/build/TestScheduler.js:333:13)
+      at runJest (node_modules/@jest/core/build/runJest.js:404:19)
+      at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
+      at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
+
 FAIL src/App.test.tsx
-  ✕ renders learn react link (38 ms)
+  ✕ renders learn react link (90 ms)
 
   ● renders learn react link
 
@@ -19,15 +60,45 @@ FAIL src/App.test.tsx
             [33mclass[39m=[32m"App-header"[39m
           [36m>[39m
             [36m<h1>[39m
-              [0mWelcome to Career Quiz[0m
+              [0mWelcome to Career Quiz![0m
             [36m</h1>[39m
           [36m</header>[39m
           [36m<div[39m
             [33mclass[39m=[32m"Body"[39m
           [36m>[39m
-            [36m<div>[39m
+            [36m<div[39m
+              [33mclass[39m=[32m"buttonContainer"[39m
+            [36m>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"button differentCareers"[39m
+                [33mhref[39m=[32m"#differentCareers"[39m
+              [36m>[39m
+                [0mDifferent Careers[0m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"button careerQuizzes"[39m
+                [33mhref[39m=[32m"#careerQuizzes"[39m
+              [36m>[39m
+                [0mCareer Quizzes[0m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"button careerTips"[39m
+                [33mhref[39m=[32m"#careerTips"[39m
+              [36m>[39m
+                [0mCareer Tips[0m
+              [36m</a>[39m
+              [36m<a[39m
+                [33mclass[39m=[32m"button aboutUs"[39m
+                [33mhref[39m=[32m"#aboutUs"[39m
+              [36m>[39m
+                [0mAbout Us[0m
+              [36m</a>[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mid[39m=[32m"differentCareers"[39m
+            [36m>[39m
               [36m<h1[39m
-                [33mclass[39m=[32m"App-buttons2"[39m
+                [33mclass[39m=[32m"App-differentcareersbutton"[39m
               [36m>[39m
                 [0mDifferent Careers[0m
               [36m</h1>[39m
@@ -37,68 +108,126 @@ FAIL src/App.test.tsx
                 [0mThere are so many career options to choose from. One must first consider their strengths, interests, and passions. It's also important to think about job availability, growth opportunity, and salary expectations. But ultimately, choosing a career is a personal decision that should reflect one's own goals, values and ambitions. It can be helpful to speak to professionals in fields of interest or work with a career coach to gain more clarity and make an informed decision. Remember, this choice isn't set in stone, people often change careers in their lifetime, so don't feel pressured to find the "perfect" option.[0m
               [36m</p>[39m
             [36m</div>[39m
-            [36m<div>[39m
-              [36m<h1>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mView Careers[0m
-                [36m</button>[39m
-              [36m</h1>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h1[39m
-                [33mclass[39m=[32m"App-buttons2"[39m
-              [36m>[39m
-                [0mCareer Quizzes[0m
-              [36m</h1>[39m
-              [36m<p[39m
-                [33mclass[39m=[32m"HomePage-text"[39m
-              [36m>[39m
-                [0mEver pondered upon your life's direction and struggled to identify a career you'd feel passionate about? Now, iuuuuuhanks to our Basic and Detailed Quizzes, deciphering your future becomes possible. Our quizzes are designed for everyone, irrespective of your age, race, ethnicity, gender, or nationality.[0m
-              [36m</p>[39m
-            [36m</div>[39m
-            [36m<div>[39m
+            [36m<div />[39m
+            [36m<div[39m
+              [33mid[39m=[32m"careerQuizzes"[39m
+            [36m>[39m
               [36m<div>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"Career-Quiz2  btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
+                [36m<h1>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mView Careers[0m
+                  [36m</button>[39m
+                [36m</h1>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<h1[39m
+                  [33mclass[39m=[32m"App-buttons2"[39m
                 [36m>[39m
-                  [0mView Quizzes[0m
-                [36m</button>[39m
+                  [0mCareer Quizzes[0m
+                [36m</h1>[39m
+                [36m<p[39m
+                  [33mclass[39m=[32m"HomePage-text"[39m
+                [36m>[39m
+                  [0mEver pondered upon your life's direction and struggled to identify a career you'd feel passionate about? Now, thanks to our Basic and Detailed Quizzes, deciphering your future becomes possible. Our quizzes are designed for everyone, irrespective of your age, race, ethnicity, gender, or nationality.[0m
+                [36m</p>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<div>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"Career-Quiz2  btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mView Quizzes[0m
+                  [36m</button>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div />[39m
+            [36m</div>[39m
+            [36m<div[39m
+              [33mid[39m=[32m"careerTips"[39m
+            [36m>[39m
+              [36m<div>[39m
+                [36m<h1[39m
+                  [33mclass[39m=[32m"App-buttons2"[39m
+                [36m>[39m
+                  [0mCareer Tips[0m
+                [36m</h1>[39m
+                [36m<p[39m
+                  [33mclass[39m=[32m"HomePage-text"[39m
+                [36m>[39m
+                  [0mCareer Tips is a resource designed to guide users on how to pursue their potential career. This platform educates users about various useful websites and provides an insight into the hiring process.[0m
+                [36m</p>[39m
+              [36m</div>[39m
+              [36m<div>[39m
+                [36m<h1>[39m
+                  [36m<button[39m
+                    [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
+                    [33mtype[39m=[32m"button"[39m
+                  [36m>[39m
+                    [0mView Tips[0m
+                  [36m</button>[39m
+                [36m</h1>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mid[39m=[32m"aboutUs"[39m
+              [36m>[39m
+                [36m<div>[39m
+                  [36m<h1[39m
+                    [33mclass[39m=[32m"App-buttons2"[39m
+                  [36m>[39m
+                    [0mAbout Us[0m
+                  [36m</h1>[39m
+                  [36m<p[39m
+                    [33mclass[39m=[32m"HomePage-text"[39m
+                  [36m>[39m
+                    [0mClick Here to Learn More About Us![0m
+                  [36m</p>[39m
+                [36m</div>[39m
+              [36m</div>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"footer"[39m
+              [36m>[39m
+                [36m<h1[39m
+                  [33mclass[39m=[32m"footer"[39m
+                [36m>[39m
+                  [36m<h2>[39m
+                    [0mSign Up to get more advice on Careers![0m
+                  [36m</h2>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"signup-box"[39m
+                  [36m>[39m
+                    [36m<form>[39m
+                      [36m<label[39m
+                        [33mfor[39m=[32m"email"[39m
+                      [36m>[39m
+                        [0mEmail:[0m
+                      [36m</label>[39m
+                      [36m<input[39m
+                        [33mid[39m=[32m"email"[39m
+                        [33mrequired[39m=[32m""[39m
+                        [33mtype[39m=[32m"email"[39m
+                        [33mvalue[39m=[32m""[39m
+                      [36m/>[39m
+                      [36m<button[39m
+                        [33mtype[39m=[32m"submit"[39m
+                      [36m>[39m
+                        [0mSign Up[0m
+                      [36m</button>[39m
+                    [36m</form>[39m
+                  [36m</div>[39m
+                [36m</h1>[39m
               [36m</div>[39m
             [36m</div>[39m
-            [36m<div>[39m
-              [36m<h1[39m
-                [33mclass[39m=[32m"App-buttons2"[39m
-              [36m>[39m
-                [0mCareer Tips[0m
-              [36m</h1>[39m
-              [36m<p[39m
-                [33mclass[39m=[32m"HomePage-text"[39m
-              [36m>[39m
-                [0mCareer Tips is a resource designed to guide users on how to pursue their potential career. This platform educates users about various useful websites and provides an insight into the hiring process.[0m
-              [36m</p>[39m
-            [36m</div>[39m
-            [36m<div>[39m
-              [36m<h1>[39m
-                [36m<button[39m
-                  [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
-                  [33mtype[39m=[32m"button"[39m
-                [36m>[39m
-                  [0mView Tips[0m
-                [36m</button>[39m
-              [36m</h1>[39m
-            [36m</div>[39m
           [36m</div>[39m
-          [36m<hr />[39m
         [36m</div>[39m
         [36m<div />[39m
       [36m</div>[39m
     [36m</body>[39m
 
-       5 | test('renders learn react link', () => {
+       5 | test("renders learn react link", () => {
        6 |   render(<App />);
     >  7 |   const linkElement = screen.getByText(/learn react/i);
          |                              ^
@@ -119,20 +248,20 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   19.04 |    21.42 |   11.76 |   19.04 |                   
+All files             |   24.48 |    21.42 |      15 |   24.48 |                   
  App.tsx              |     100 |      100 |     100 |     100 |                   
- Buttons.tsx          |       0 |      100 |       0 |       0 | 6-26              
+ Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27              
  CareerQuiz.tsx       |       0 |        0 |       0 |       0 | 6-42              
- HomePage_Buttons.tsx |      70 |       50 |      25 |      70 | 16,19,23          
+ HomePage_Buttons.tsx |    64.7 |       50 |   28.57 |    64.7 | 12,16-17,51,54,58 
  image2.tsx           |       0 |      100 |       0 |       0 | 12-39             
- index.tsx            |       0 |      100 |     100 |       0 | 7-19              
+ index.tsx            |       0 |      100 |     100 |       0 | 8-22              
  popups.tsx           |       0 |      100 |       0 |       0 | 6                 
  reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10              
 ----------------------|---------|----------|---------|---------|-------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.071 s
+Time:        3.117 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
