@@ -179,6 +179,7 @@
   margin: auto;
 }
 
+/*added*/
 .ImageContainer img {
   height: 500px; /* Fixed height */
   width: 500px; /* Width adjusts to maintain the aspect ratio */
