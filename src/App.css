@@ -1,7 +1,7 @@
 .App {
   text-align: center;
   background-color: white;
-  margin-bottom: 25rem;
+  margin-bottom: 0rem;
 }
 
 .buttonContainer {
@@ -48,7 +48,7 @@
 }
 
 .App-header {
-  min-height: 2vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +65,68 @@
   );
 }
 
+.footer {
+  min-height: 2vh;
+  margin-top: auto; /* Push the footer to the bottom */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(2px + 2vmin);
+  font-size: 28px;
+  color: rgb(240, 240, 240);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    #0c2455 20%,
+    #0c2455 50%,
+    #0c2455 79%,
+    transparent
+  );
+}
+
+.signup-box {
+  background-color: #233f73;
+  border: 10px solid #716f6f;
+  border-radius: 0px;
+  padding: 20px;
+  margin-bottom: 10px;
+}
+
+.signup-box h2 {
+  margin-top: 0;
+}
+
+.signup-box form {
+  display: flex;
+  flex-direction: row;
+}
+
+.signup-box label {
+  margin-bottom: 7px;
+}
+
+.signup-box input[type="email"] {
+  font-size: smaller;
+  padding: 5px;
+  border: 1px solid #6f6868;
+  border-radius: 0px;
+  margin-bottom: 0px;
+}
+
+.signup-box button {
+  background-color: #bdc3c9;
+  color: #f6f3f3;
+  border: none;
+  padding: 10px 10px;
+  border-radius: 0px;
+  cursor: pointer;
+}
+
+.signup-box button:hover {
+  background-color: #a6a8ab;
+}
+
 .App-link {
   color: #61dafb;
 }
@@ -79,6 +141,16 @@
   border-top: 3px solid rgb(0, 170, 255);
   padding-top: 16px;
 }
+
+.App-differentcareersbutton {
+  color: rgb(243, 73, 73);
+  text-align: center;
+  /* text-indent: 5%; */
+  position: relative;
+  border-top: 0px solid rgb(0, 170, 255);
+  padding-top: 0px;
+}
+
 .App-buttons4 {
   color: rgb(0, 170, 255);
   text-align: center;
@@ -96,12 +168,18 @@
     transform: rotate(360deg);
   }
 }
+
 .ImageContainer {
   position: relative;
   align-items: center;
-  right: -25px;
+  right: 300px;
+  width: 60%;
+  height: auto;
+  max-width: 300px;
+  margin: auto;
 }
 
+/*added*/
 .ImageContainer img {
   height: 500px; /* Fixed height */
   width: 500px; /* Width adjusts to maintain the aspect ratio */

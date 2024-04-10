@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+//import React, { useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { Button, Form } from "react-bootstrap";
-import { ChangeImages } from "./image2";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { Button, Form } from "react-bootstrap";
 import { HomePage } from "./HomePage_Buttons";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
