@@ -4,6 +4,38 @@
   margin-bottom: 25rem;
 }
 
+.buttonContainer {
+  display: flex;
+  justify-content: space-around; /* Adjust as needed */
+  align-items: center; /* Center align buttons vertically */
+  margin-bottom: 0px; /* Add some space between buttons and content */
+}
+
+.button {
+  font-size: 18px; /* Increase font size */
+  padding: 7px 132px; /* Increase padding to make the buttons bigger */
+  border-radius: 0px; /* Add rounded corners */
+}
+
+.button.differentCareers {
+  background-color: #7f2556; /* Change background color for Different Careers button */
+  color: #fff; /* Change text color */
+}
+
+.button.careerQuizzes {
+  background-color: #a53923; /* Change background color for Different Careers button */
+  color: #fff; /* Change text color */
+}
+
+.button.careerTips {
+  background-color: #32cd32; /* Change background color for Career Tips button */
+  color: #fff; /* Change text color */
+}
+
+.button.aboutUs {
+  background-color: #2867ab; /* Change background color for Career Tips button */
+  color: #fff; /* Change text color */
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -16,14 +48,21 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 2vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-size: calc(14px + 3vmin);
+  color: rgb(240, 240, 240);
+  background: linear-gradient(
+    45deg,
+    transparent,
+    #0c2455 20%,
+    #0c2455 50%,
+    #0c2455 79%,
+    transparent
+  );
 }
 
 .App-link {
@@ -188,7 +227,7 @@
 .App-header3 {
   color: black;
   text-align: left;
-  top: 200px;
+  top: 700px;
 }
 
 .HomePage-text {
