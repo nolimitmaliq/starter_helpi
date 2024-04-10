@@ -205,3 +205,8 @@
   margin-left: 20%;
   margin-right: 20%;
 }
+.slide-right-enter {
+  transition: translateX(100%);
+}
+.slide-right-enter-active {
+}

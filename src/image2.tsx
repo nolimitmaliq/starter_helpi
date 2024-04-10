@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
 export function ChangeImages(): JSX.Element {
   type Images =
     | "https://shorturl.at/lmrC9"
@@ -38,10 +39,14 @@ export function ChangeImages(): JSX.Element {
   }
   return (
     <div className="ImageContainer">
-      <img src={currImage} alt="Career Photos" />
       <Button onClick={nextImage} className="NavigationButtonRight">
         {<FaArrowRight />}
       </Button>
+      <TransitionGroup>
+        <CSSTransition key={currImage} timeout={1000} classNames="slide-right">
+          <img src={currImage} alt="Career Photos" />
+        </CSSTransition>
+      </TransitionGroup>
       <Button onClick={previousImage} className="NavigationButtonLeft">
         {<FaArrowLeft />}
       </Button>
