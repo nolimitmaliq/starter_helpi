@@ -13,8 +13,10 @@
 
 .button {
   font-size: 18px; /* Increase font size */
-  padding: 7px 132px; /* Increase padding to make the buttons bigger */
+  padding: 7px 138.2px; /* Increase padding to make the buttons bigger */
   border-radius: 0px; /* Add rounded corners */
+  text-decoration: none;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 .button.differentCareers {
