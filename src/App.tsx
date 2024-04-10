@@ -1,11 +1,11 @@
-// import React, { useState } from "react";
+//import React, { useState } from "react";
 import "./App.css";
-// import { Button, Form } from "react-bootstrap";
-// import { ChangeImages } from "./image2";
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//import { Button, Form } from "react-bootstrap";
 import { HomePage } from "./HomePage_Buttons";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
-// let keyData = "";
+//let keyData = "";
 // const saveKeyData = "MYKEY";
 // const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
 // if (prevKey !== null) {
@@ -29,12 +29,12 @@ function App() {
     <>
       <div className="App">
         <header className="App-header">
-          <h1>Welcome to Career Quiz</h1>
+          <h1>Welcome to Career Quiz!</h1>
           {/* <ChangeImages></ChangeImages> */}
         </header>
         <HomePage></HomePage>
-        <hr></hr>
       </div>
+
       <div>
         {/* <Form className="Form">
           <Form.Label>API Key:</Form.Label>
