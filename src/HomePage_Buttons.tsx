@@ -159,8 +159,22 @@ export function HomePage(): JSX.Element {
         </div>
         <div id="aboutUs">
           <div>
+            {" "}
             <h1 className="App-buttons2">About Us</h1>
-            <p className="HomePage-text">Click Here to Learn More About Us!</p>
+            <Button onClick={handleButton2} className="Career-Quiz2 ">
+              Click Here to Learn More About Us!
+            </Button>
+            {displayText2 && (
+              <>
+                <p className="HomePage-text">
+                  Our mission is to help people of all ages find the right
+                  career for them. All information on the website is credible
+                  and please stay connected if you would like to receive updates
+                  on the website and newer features. We are working towards
+                  improving the website to help everyone.
+                </p>
+              </>
+            )}
           </div>
         </div>
         <Footer />
