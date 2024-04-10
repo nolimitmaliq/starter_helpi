@@ -173,37 +173,41 @@
 
 .ImageContainer {
   position: relative;
-  align-items: center;
-  right: 300px;
   width: 60%;
   height: auto;
   max-width: 300px;
-  margin: auto;
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center inline elements */
 }
 
 /*added*/
 .ImageContainer img {
-  height: 500px; /* Fixed height */
-  width: 500px; /* Width adjusts to maintain the aspect ratio */
+  display: block;
+  margin: 0 auto; /* This centers the image horizontally */
+  max-width: 100%; /* Ensure the image doesn't exceed its container's width */
+  height: 275px; /* Fixed height */
+  width: 300px; /* Width adjusts to maintain the aspect ratio */
+  border-radius: 20px; /* Adjust border radius for curved corners */
 }
 
-.NavigationButtonRight {
-  position: relative;
+.NavigationButtonLeft {
+  position: center;
   bottom: 225px;
-  left: -34px;
+  right: 34px;
   font-size: 30px;
-  color: red;
+  color: rgb(130, 124, 124);
   cursor: pointer;
   background: none;
   border: none;
 }
-.NavigationButtonLeft {
-  position: relative;
+
+.NavigationButtonRight {
+  position: center;
   bottom: 225px;
-  right: 550px;
+  left: -34px;
   font-size: 30px;
-  color: red;
-  cursor: pointer;
+  color: rgb(130, 124, 124);
+  cursor: zoom-in;
   background: none;
   border: none;
 }
