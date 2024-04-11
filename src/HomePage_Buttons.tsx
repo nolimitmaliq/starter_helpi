@@ -23,7 +23,7 @@ export function HomePage(): JSX.Element {
     setDisplayText3(!displayText3);
   };
   return (
-    <div className="Body">
+    <div>
       <div>
         <h1 className="App-buttons2">Different Careers</h1>
         <p className="HomePage-text">

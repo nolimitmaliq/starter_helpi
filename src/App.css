@@ -49,6 +49,41 @@
   padding-top: 16px;
 }
 
+.Background {
+  background: linear-gradient(to right, rgb(243, 73, 73), rgb(0, 170, 255));
+}
+/*row*/
+.Border {
+  border-top: 2px solid white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.Text-Border {
+  border: 3px solid white;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 39%;
+  margin-right: 39%;
+}
+
+.Basic-Question-Border {
+  border: 3px solid white;
+  border-radius: 10px;
+  width: 100%;
+}
+
+.App-buttons5 {
+  background: linear-gradient(to right, rgb(243, 73, 73), rgb(0, 170, 255));
+  color: white;
+  /* text-align: center; */
+  /* text-indent: 5%; */
+  /* position: relative; */
+  border-top: 3px solid rgb(0, 170, 255);
+  padding-top: 16px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
