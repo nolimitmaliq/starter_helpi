@@ -7,10 +7,10 @@
         at h2
         at h1
         at div
-        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:9:37)
+        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:10:37)
         at div
         at div
-        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:46:49)
+        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:47:49)
         at div
         at App
 
@@ -44,7 +44,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (107 ms)
+  ✕ renders learn react link (117 ms)
 
   ● renders learn react link
 
@@ -250,11 +250,12 @@ FAIL src/App.test.tsx
 ----------------------|---------|----------|---------|---------|-------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
 ----------------------|---------|----------|---------|---------|-------------------
-All files             |   24.48 |       25 |      15 |   24.48 |                   
+All files             |   21.42 |       25 |      12 |   21.42 |                   
  App.tsx              |     100 |      100 |     100 |     100 |                   
+ BasicQuiz.tsx        |       0 |      100 |       0 |       0 | 5-102             
  Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27              
- CareerQuiz.tsx       |       0 |        0 |       0 |       0 | 6-42              
- HomePage_Buttons.tsx |    64.7 |       50 |   28.57 |    64.7 | 12,16-17,51,54,58 
+ CareerQuiz.tsx       |       0 |        0 |       0 |       0 | 7-42              
+ HomePage_Buttons.tsx |    64.7 |       50 |   28.57 |    64.7 | 13,17-18,52,55,59 
  image2.tsx           |       0 |      100 |       0 |       0 | 12-39             
  index.tsx            |       0 |      100 |     100 |       0 | 8-22              
  popups.tsx           |       0 |      100 |       0 |       0 | 6                 
@@ -263,7 +264,7 @@ All files             |   24.48 |       25 |      15 |   24.48 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.178 s
+Time:        3.212 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
