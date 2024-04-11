@@ -3,28 +3,29 @@ import { Button } from "react-bootstrap";
 import "./App.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
+import image1 from "./image 1.jpg";
+import image3 from "./image 2.jpg";
+import image4 from "./image 4.jpg";
+import image5 from "./image 5.jpg";
+import { Image } from "openai/resources";
 export function ChangeImages(): JSX.Element {
-  type Images =
-    | "https://shorturl.at/lmrC9"
-    | "https://shorturl.at/hzHQ7"
-    | "https://shorturl.at/ahoCO"
-    | "https://shorturl.at/lpzN2"
-    | "https://rb.gy/64cext";
+  type Images = "image 1.jpg" | "image 2.jpg" | "image 4.jpg" | "image 5.jpg";
+
   const photoTransitionForward: Record<Images, Images> = {
-    "https://shorturl.at/lmrC9": "https://shorturl.at/hzHQ7",
-    "https://shorturl.at/hzHQ7": "https://shorturl.at/ahoCO",
-    "https://shorturl.at/ahoCO": "https://shorturl.at/lpzN2",
-    "https://shorturl.at/lpzN2": "https://rb.gy/64cext",
-    "https://rb.gy/64cext": "https://shorturl.at/lmrC9",
+    "image 1.jpg": "image 2.jpg",
+    "image 2.jpg": "image 4.jpg",
+    "image 4.jpg": "image 5.jpg",
+    "image 5.jpg": "image 1.jpg",
+    // "https://rb.gy/64cext": "https://shorturl.at/lmrC9",
   };
   const photoTransitionBackward: Record<Images, Images> = {
-    "https://rb.gy/64cext": "https://shorturl.at/lpzN2",
-    "https://shorturl.at/lpzN2": "https://shorturl.at/ahoCO",
-    "https://shorturl.at/ahoCO": "https://shorturl.at/hzHQ7",
-    "https://shorturl.at/hzHQ7": "https://shorturl.at/lmrC9",
-    "https://shorturl.at/lmrC9": "https://rb.gy/64cext",
+    "image 5.jpg": "image 4.jpg",
+    "image 4.jpg": "image 2.jpg",
+    "image 2.jpg": "image 1.jpg",
+    "image 1.jpg": "image 5.jpg",
+    // "https://shorturl.at/lmrC9": "https://rb.gy/64cext",
   };
-  const [currImage, setImage] = useState<Images>("https://shorturl.at/lmrC9");
+  const [currImage, setImage] = useState<Images>("image 1.jpg");
   //const [direction, setDirection] = useState<"forward" | "backward">();
 
   function nextImage() {
@@ -39,16 +40,12 @@ export function ChangeImages(): JSX.Element {
   }
   return (
     <div className="ImageContainer">
+      <img src={currImage} alt="Career Photos" />
       <Button onClick={nextImage} className="NavigationButtonRight">
-        {<FaArrowRight />}
-      </Button>
-      <TransitionGroup>
-        <CSSTransition key={currImage} timeout={1000} classNames="slide-right">
-          <img src={currImage} alt="Career Photos" />
-        </CSSTransition>
-      </TransitionGroup>
-      <Button onClick={previousImage} className="NavigationButtonLeft">
         {<FaArrowLeft />}
+      </Button>
+      <Button onClick={previousImage} className="NavigationButtonLeft">
+        {<FaArrowRight />}
       </Button>
     </div>
   );
