@@ -1,4 +1,4 @@
-/* .App-buttons {
+/*.App-buttons {
   background-color: rgb(0, 0, 0);
   color: white;
   text-align: left;
@@ -20,4 +20,13 @@
 .App-header2 {
   color: yellow;
   text-align: left;
-} */
+}
+*/
+.horizontalButtons {
+  display: flex;
+}
+
+.button {
+  /* Your button styles */
+  margin-right: 10px; /* Optional: Add spacing between buttons */
+}
