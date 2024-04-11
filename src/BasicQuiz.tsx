@@ -1,6 +1,5 @@
-import { string } from "prop-types";
 import { useState } from "react";
-import { Col, Container, Form, Row } from "react-bootstrap";
+import { Form } from "react-bootstrap";
 
 function Q1() {
   const [choices, setChoices] = useState<string>();
