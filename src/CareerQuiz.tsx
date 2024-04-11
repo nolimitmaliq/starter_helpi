@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
+import { BasicQuizInfo } from "./BasicQuiz";
 import "./App.css";
 
 export function BasicQuiz() {
@@ -20,13 +21,12 @@ export function BasicQuiz() {
       <div>
         <h1>
           <Button onClick={handleButton} className="Career-Quiz2">
-            {/* <FaArrowRight /> */}
             Basic Quiz
           </Button>
           {displayText && (
-            <div className="Basic-QuizText">
-              <p></p>
-            </div>
+            <>
+              <BasicQuizInfo></BasicQuizInfo>
+            </>
           )}
         </h1>
       </div>
