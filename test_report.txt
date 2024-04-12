@@ -44,7 +44,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (117 ms)
+  ✕ renders learn react link (109 ms)
 
   ● renders learn react link
 
@@ -56,43 +56,47 @@ FAIL src/App.test.tsx
         [36m<div[39m
           [33mclass[39m=[32m"App"[39m
         [36m>[39m
-          [36m<header[39m
-            [33mclass[39m=[32m"App-header"[39m
-          [36m>[39m
-            [36m<h1>[39m
-              [0mWelcome to Career Quiz![0m
-            [36m</h1>[39m
-          [36m</header>[39m
           [36m<div[39m
             [33mclass[39m=[32m"Body"[39m
           [36m>[39m
             [36m<div[39m
-              [33mclass[39m=[32m"buttonContainer"[39m
+              [33mclass[39m=[32m"Header-Background"[39m
             [36m>[39m
-              [36m<a[39m
-                [33mclass[39m=[32m"button differentCareers"[39m
-                [33mhref[39m=[32m"#differentCareers"[39m
+              [36m<header[39m
+                [33mclass[39m=[32m"App-header"[39m
               [36m>[39m
-                [0mDifferent Careers[0m
-              [36m</a>[39m
-              [36m<a[39m
-                [33mclass[39m=[32m"button careerQuizzes"[39m
-                [33mhref[39m=[32m"#careerQuizzes"[39m
+                [36m<h1>[39m
+                  [0mWelcome to Career Quiz![0m
+                [36m</h1>[39m
+              [36m</header>[39m
+              [36m<div[39m
+                [33mclass[39m=[32m"buttonContainer"[39m
               [36m>[39m
-                [0mCareer Quizzes[0m
-              [36m</a>[39m
-              [36m<a[39m
-                [33mclass[39m=[32m"button careerTips"[39m
-                [33mhref[39m=[32m"#careerTips"[39m
-              [36m>[39m
-                [0mCareer Tips[0m
-              [36m</a>[39m
-              [36m<a[39m
-                [33mclass[39m=[32m"button aboutUs"[39m
-                [33mhref[39m=[32m"#aboutUs"[39m
-              [36m>[39m
-                [0mAbout Us[0m
-              [36m</a>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"button "[39m
+                  [33mhref[39m=[32m"#differentCareers"[39m
+                [36m>[39m
+                  [0mDifferent Careers[0m
+                [36m</a>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"button"[39m
+                  [33mhref[39m=[32m"#careerQuizzes"[39m
+                [36m>[39m
+                  [0mCareer Quizzes[0m
+                [36m</a>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"button"[39m
+                  [33mhref[39m=[32m"#careerTips"[39m
+                [36m>[39m
+                  [0mCareer Tips[0m
+                [36m</a>[39m
+                [36m<a[39m
+                  [33mclass[39m=[32m"button"[39m
+                  [33mhref[39m=[32m"#aboutUs"[39m
+                [36m>[39m
+                  [0mAbout Us[0m
+                [36m</a>[39m
+              [36m</div>[39m
             [36m</div>[39m
             [36m<div[39m
               [33mid[39m=[32m"differentCareers"[39m
@@ -109,9 +113,7 @@ FAIL src/App.test.tsx
               [36m</p>[39m
             [36m</div>[39m
             [36m<div />[39m
-            [36m<div[39m
-              [33mid[39m=[32m"careerQuizzes"[39m
-            [36m>[39m
+            [36m<div>[39m
               [36m<div>[39m
                 [36m<h1>[39m
                   [36m<button[39m
@@ -122,7 +124,9 @@ FAIL src/App.test.tsx
                   [36m</button>[39m
                 [36m</h1>[39m
               [36m</div>[39m
-              [36m<div>[39m
+              [36m<div[39m
+                [33mid[39m=[32m"careerQuizzes"[39m
+              [36m>[39m
                 [36m<h1[39m
                   [33mclass[39m=[32m"App-buttons2"[39m
                 [36m>[39m
@@ -264,7 +268,7 @@ All files             |   21.42 |       25 |      12 |   21.42 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.212 s
+Time:        3.13 s
 Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
