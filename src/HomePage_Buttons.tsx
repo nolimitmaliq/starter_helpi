@@ -67,19 +67,24 @@ export function HomePage(): JSX.Element {
   */
   return (
     <div className="Body">
-      <div className="buttonContainer">
-        <a href="#differentCareers" className="button differentCareers">
-          Different Careers
-        </a>
-        <a href="#careerQuizzes" className="button careerQuizzes">
-          Career Quizzes
-        </a>
-        <a href="#careerTips" className="button careerTips">
-          Career Tips
-        </a>
-        <a href="#aboutUs" className="button aboutUs">
-          About Us
-        </a>
+      <div className="Header-Background">
+        <header className="App-header">
+          <h1>Welcome to Career Quiz!</h1>
+        </header>
+        <div className="buttonContainer">
+          <a href="#differentCareers" className="button ">
+            Different Careers
+          </a>
+          <a href="#careerQuizzes" className="button">
+            Career Quizzes
+          </a>
+          <a href="#careerTips" className="button">
+            Career Tips
+          </a>
+          <a href="#aboutUs" className="button">
+            About Us
+          </a>
+        </div>
       </div>
 
       <div id="differentCareers">
@@ -98,7 +103,7 @@ export function HomePage(): JSX.Element {
         </p>
       </div>
       <div></div>
-      <div id="careerQuizzes">
+      <div>
         <div>
           <h1>
             <Button onClick={handleButton} className="Career-Quiz ">
@@ -112,7 +117,7 @@ export function HomePage(): JSX.Element {
             )}
           </h1>
         </div>
-        <div>
+        <div id="careerQuizzes">
           <h1 className="App-buttons2">Career Quizzes</h1>
           <p className="HomePage-text">
             Ever pondered upon your life's direction and struggled to identify a
