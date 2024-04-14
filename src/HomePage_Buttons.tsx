@@ -6,6 +6,17 @@ import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
 import { ChangeImages } from "./image2";
 //import Menubar from "./Menubar";
 
+import career1 from "./image 1.jpg";
+import career2 from "./image 2.jpg";
+import career3 from "./image 4.jpg";
+import career4 from "./image 5.jpg";
+const Images = [
+  { url: career1, alt: "Lawyer" },
+  { url: career2, alt: "Personal Trainer" },
+  { url: career3, alt: "Doctor" },
+  { url: career4, alt: "Professor" },
+];
+
 function Footer() {
   const [email, setEmail] = useState<string>("");
 
@@ -98,8 +109,15 @@ export function HomePage(): JSX.Element {
               View Careers
             </Button>
             {displayText && (
-              <div className="Basic-QuizText">
-                <ChangeImages></ChangeImages>
+              <div
+                style={{
+                  maxWidth: "1200px",
+                  width: "100%",
+                  aspectRatio: "10/6",
+                  margin: "0 auto",
+                }}
+              >
+                <ChangeImages images={Images}></ChangeImages>
                 <p></p>
               </div>
             )}

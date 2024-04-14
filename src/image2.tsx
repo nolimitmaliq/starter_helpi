@@ -1,52 +1,96 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 import "./App.css";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import image1 from "./image 1.jpg";
-import image3 from "./image 2.jpg";
-import image4 from "./image 4.jpg";
-import image5 from "./image 5.jpg";
-import { Image } from "openai/resources";
-export function ChangeImages(): JSX.Element {
-  type Images = "image 1.jpg" | "image 2.jpg" | "image 4.jpg" | "image 5.jpg";
-
-  const photoTransitionForward: Record<Images, Images> = {
-    "image 1.jpg": "image 2.jpg",
-    "image 2.jpg": "image 4.jpg",
-    "image 4.jpg": "image 5.jpg",
-    "image 5.jpg": "image 1.jpg",
-    // "https://rb.gy/64cext": "https://shorturl.at/lmrC9",
-  };
-  const photoTransitionBackward: Record<Images, Images> = {
-    "image 5.jpg": "image 4.jpg",
-    "image 4.jpg": "image 2.jpg",
-    "image 2.jpg": "image 1.jpg",
-    "image 1.jpg": "image 5.jpg",
-    // "https://shorturl.at/lmrC9": "https://rb.gy/64cext",
-  };
-  const [currImage, setImage] = useState<Images>("image 1.jpg");
-  //const [direction, setDirection] = useState<"forward" | "backward">();
-
-  function nextImage() {
-    const image = photoTransitionForward[currImage];
-    setImage(image);
-    //setDirection("forward");
+// import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+// import { url } from "inspector";
+import { ArrowBigLeft, ArrowBigRight, Circle, CircleDot } from "lucide-react";
+type ChangeImagesProps = {
+  images: {
+    url: string;
+    alt: string;
+  }[];
+};
+export function ChangeImages({ images }: ChangeImagesProps): JSX.Element {
+  const [imageIndex, setImageIndex] = useState(0);
+  function showNextImage() {
+    setImageIndex((index) => {
+      if (index === images.length - 1) return 0;
+      return index + 1;
+    });
   }
-  function previousImage() {
-    const image = photoTransitionBackward[currImage];
-    setImage(image);
-    //setDirection("backward");
+  function showPrevImage() {
+    setImageIndex((index) => {
+      if (index === 0) return images.length - 1;
+      return index - 1;
+    });
   }
   return (
-    <div className="ImageContainer">
-      <img src={currImage} alt="Career Photos" />
-      <Button onClick={nextImage} className="NavigationButtonRight">
-        {<FaArrowLeft />}
-      </Button>
-      <Button onClick={previousImage} className="NavigationButtonLeft">
-        {<FaArrowRight />}
-      </Button>
-    </div>
+    <section
+      aria-label="Image Slider"
+      style={{ width: "100%", height: "100%", position: "relative" }}
+    >
+      <div
+        style={{
+          width: "70%",
+          height: "70%",
+          display: "flex",
+          overflow: "hidden",
+          margin: "0 auto",
+          textAlign: "center",
+        }}
+      >
+        {images.map(({ url, alt }, index) => (
+          <img
+            key={url}
+            src={url}
+            alt={alt}
+            aria-hidden={imageIndex !== index}
+            className="img-slider-img"
+            style={{ translate: `${-100 * imageIndex}%` }}
+          />
+        ))}
+      </div>
+      <button
+        onClick={showPrevImage}
+        className="img-slider-btn"
+        style={{ left: 170, bottom: 150 }}
+        aria-label="Previous Image"
+      >
+        <ArrowBigLeft aria-hidden />
+      </button>
+      <button
+        onClick={showNextImage}
+        className="img-slider-btn"
+        style={{ right: 170, bottom: 150 }}
+        aria-label="Next Image"
+      >
+        <ArrowBigRight aria-hidden />
+      </button>
+      <div
+        style={{
+          position: "absolute",
+          bottom: "13.5rem",
+          left: "50%",
+          translate: "-50%",
+          display: "flex",
+          gap: ".25rem",
+        }}
+      >
+        {images.map((_, index) => (
+          <button
+            key={index}
+            className="img-slider-dot-btn"
+            aria-label={`Previous Image ${index + 1}`}
+            onClick={() => setImageIndex(index)}
+          >
+            {index === imageIndex ? (
+              <CircleDot aria-hidden />
+            ) : (
+              <Circle aria-hidden />
+            )}
+          </button>
+        ))}
+      </div>
+    </section>
   );
 }
