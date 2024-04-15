@@ -46,11 +46,11 @@ export function BasicQuiz() {
           >
             Basic Quiz
           </Button>
-          {displayText && (
+          {/* {displayText && (
             <>
               <BasicQuizInfo></BasicQuizInfo>
             </>
-          )}
+          )} */}
         </h1>
       </div>
     </div>
