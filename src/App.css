@@ -408,3 +408,7 @@
 .Body {
   background: linear-gradient(to top, #7a2048, #1e2761);
 }
+
+.window {
+  align-items: center;
+}
