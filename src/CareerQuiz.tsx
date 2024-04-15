@@ -39,8 +39,8 @@ export function BasicQuiz() {
         <h1>
           <Button
             onClick={() => {
-              openPopup();
-              handleButton;
+              openPopup;
+              // handleButton;
             }}
             className="Career-Quiz2"
           >
