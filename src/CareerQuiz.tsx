@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 // import { BasicQuizInfo } from "./BasicQuiz";
-import { BasicQuestion } from "./BasicQuiz2";
+// import { BasicQuestion } from "./BasicQuiz2";
 import "./App.css";
 
 export function BasicQuiz() {
@@ -38,25 +38,19 @@ export function BasicQuiz() {
       </div>
       <div>
         <h1>
-          <Button
-            onClick={() => {
-              // openPopup;
-              handleButton;
-            }}
-            className="Career-Quiz2"
-          >
+          <Button onClick={handleButton} className="Career-Quiz2">
             Basic Quiz
           </Button>
           {displayText && (
             <>
               {/* <BasicQuizInfo></BasicQuizInfo> */}
-              <BasicQuestion
+              {/* <BasicQuestion
                 questions={""}
                 answers={[]}
                 userAnswer={undefined}
                 questionNr={0}
                 totalQuestions={0}
-              ></BasicQuestion>
+              ></BasicQuestion> */}
             </>
           )}
         </h1>
