@@ -6,7 +6,6 @@ interface Props {
   userAnswer: any;
   questionNr: number;
   totalQuestions: number;
-  callback: Function;
 }
 
 const Questions = () => {};
@@ -17,7 +16,6 @@ export function BasicQuestion({
   userAnswer,
   questionNr,
   totalQuestions,
-  callback,
 }: Props): JSX.Element {
   return (
     <div>
