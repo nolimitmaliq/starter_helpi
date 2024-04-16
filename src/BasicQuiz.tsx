@@ -1,117 +1,78 @@
-import { useState } from "react";
-import { Form } from "react-bootstrap";
+import React from "react";
+import { Form, Button } from "react-bootstrap";
+import "./BasicInfoStyle.css"; // Add CSS file for styling
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 function Q1() {
-  const [choices, setChoices] = useState<string>();
-  function updateChoice(event: React.ChangeEvent<HTMLInputElement>) {
-    setChoices(event.target.value);
-  }
   return (
     <div>
+      <h1>What level of education are you in right now?</h1>;
       <Form.Check
         type="radio"
         id="choices"
         label="a"
         name="choices"
-        value="a"
-        checked={choices === "a"}
-        onChange={updateChoice}
-      />
-      <Form.Check
-        type="radio"
-        id="choices"
-        label="b"
-        name="choices"
-        value="b"
-        checked={choices === "b"}
-        onChange={updateChoice}
-      />
-      <Form.Check
-        type="radio"
-        id="choices"
-        label="c"
-        name="choices"
-        value="c"
-        checked={choices === "c"}
-        onChange={updateChoice}
-      />
-      <Form.Check
-        type="radio"
-        id="choices"
-        label="d"
-        name="choices"
-        value="d"
-        checked={choices === "d"}
-        onChange={updateChoice}
-      />
-    </div>
-  );
-}
-function Q2() {
-  const [choices, setChoices] = useState<string>();
-  function updateChoice(event: React.ChangeEvent<HTMLInputElement>) {
-    setChoices(event.target.value);
-  }
-  return (
-    <div>
-      <Form.Check
-        type="radio"
-        id="choices"
-        label="a"
-        name="choices"
-        value="a"
-        checked={choices === "a"}
-        onChange={updateChoice}
-      />
-      <Form.Check
-        type="radio"
-        id="choices"
-        label="b"
-        name="choices"
-        value="b"
-        checked={choices === "b"}
-        onChange={updateChoice}
-      />
-      <Form.Check
-        type="radio"
-        id="choices"
-        label="c"
-        name="choices"
-        value="c"
-        checked={choices === "c"}
-        onChange={updateChoice}
-      />
-      <Form.Check
-        type="radio"
-        id="choices"
-        label="d"
-        name="choices"
-        value="d"
-        checked={choices === "d"}
-        onChange={updateChoice}
+        value="A: High School"
       />
     </div>
   );
 }
 
-export function BasicQuizInfo() {
-  // const [choices, setChoices] = useState<string>();
-  // function updateChoice(event: React.ChangeEvent<HTMLInputElement>) {
-  //   setChoices(event.target.value);
-  // }
+// function Q2() {
+//   return (
+//     <div>
+//       <Form.Check
+//         type="radio"
+//         id="choices"
+//         label="a"
+//         name="choices"
+//         value="a"
+//       />
+//       <Form.Check
+//         type="radio"
+//         id="choices"
+//         label="b"
+//         name="choices"
+//         value="b"
+//       />
+//       <Form.Check
+//         type="radio"
+//         id="choices"
+//         label="c"
+//         name="choices"
+//         value="c"
+//       />
+//       <Form.Check
+//         type="radio"
+//         id="choices"
+//         label="d"
+//         name="choices"
+//         value="d"
+//       />
+//     </div>
+//   );
+// }
+
+function popup() {
+  <h1>Question 1</h1>;
+  //setDirection("forward");
+}
+
+function BasicQuizInfo({ onClose }: { onClose: () => void }) {
   return (
-    <div className="App-buttons5">
-      <h1 className="Text-Border">Basic Quiz</h1>
-      <div className="Border">
-        <div className="Basic-Question-Border">
-          <h3>1.</h3>
-          <Q1></Q1>
-        </div>
-        <div className="Basic-Question-Border">
-          <h3>2.</h3>
-          <Q2></Q2>
-        </div>
+    <div className="popup">
+      <div className="App-buttons5">
+        <h1 className="Text-Border">Basic Quiz</h1>
+        <Button onClick={popup} className="NavigationButtonRight">
+          {<FaArrowLeft />}
+        </Button>
+        <Button onClick={popup} className="NavigationButtonLeft">
+          {<FaArrowRight />}
+        </Button>
+        <Q1 />
       </div>
     </div>
   );
 }
+
+export default BasicQuizInfo;

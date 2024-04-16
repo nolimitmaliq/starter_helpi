@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { BasicQuizInfo } from "./BasicQuiz";
+//import { BasicQuizInfo } from "./BasicQuiz";
+import BasicQuizInfo from "./BasicQuiz";
 import "./App.css";
 
 export function BasicQuiz() {
@@ -25,7 +26,11 @@ export function BasicQuiz() {
           </Button>
           {displayText && (
             <>
-              <BasicQuizInfo></BasicQuizInfo>
+              <BasicQuizInfo
+                onClose={function (): void {
+                  throw new Error("Function not implemented.");
+                }}
+              ></BasicQuizInfo>
             </>
           )}
         </h1>
