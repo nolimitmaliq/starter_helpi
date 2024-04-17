@@ -6,6 +6,17 @@ import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
 import { ChangeImages } from "./image2";
 //import Menubar from "./Menubar";
 
+import career1 from "./image 1.jpg";
+import career2 from "./image 2.jpg";
+import career3 from "./image 4.jpg";
+import career4 from "./image 5.jpg";
+const Images = [
+  { url: career1, alt: "Lawyer" },
+  { url: career2, alt: "Personal Trainer" },
+  { url: career3, alt: "Doctor" },
+  { url: career4, alt: "Professor" },
+];
+
 function Footer() {
   const [email, setEmail] = useState<string>("");
 
@@ -47,39 +58,39 @@ export function HomePage(): JSX.Element {
   const [displayText, setDisplayText] = useState<boolean>(false);
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const [displayText3, setDisplayText3] = useState<boolean>(false);
+  //const [displayHomepage4, setDisplayText4] = useState<boolean>(false);
 
   const handleButton = () => {
     setDisplayText(!displayText);
   };
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
+    //setDisplayText4(!displayHomepage4);
     //openNewWindow();
   };
   const handleButton3 = () => {
     setDisplayText3(!displayText3);
   };
-  /*
-  buttonContainer {
-    display: flex;
-    flex-direction: row;
-  }
-  SURROUND EACH <a> TAG WITH <div>
-  */
   return (
     <div className="Body">
-      <div className="buttonContainer">
-        <a href="#differentCareers" className="button differentCareers">
-          Different Careers
-        </a>
-        <a href="#careerQuizzes" className="button careerQuizzes">
-          Career Quizzes
-        </a>
-        <a href="#careerTips" className="button careerTips">
-          Career Tips
-        </a>
-        <a href="#aboutUs" className="button aboutUs">
-          About Us
-        </a>
+      <div className="Header-Background">
+        <header className="App-header">
+          <h1>Welcome to Career Quiz!</h1>
+        </header>
+        <div className="buttonContainer">
+          <a href="#differentCareers" className="button ">
+            Different Careers
+          </a>
+          <a href="#careerQuizzes" className="button">
+            Career Quizzes
+          </a>
+          <a href="#careerTips" className="button">
+            Career Tips
+          </a>
+          <a href="#aboutUs" className="button">
+            About Us
+          </a>
+        </div>
       </div>
 
       <div id="differentCareers">
@@ -98,21 +109,28 @@ export function HomePage(): JSX.Element {
         </p>
       </div>
       <div></div>
-      <div id="careerQuizzes">
+      <div>
         <div>
           <h1>
             <Button onClick={handleButton} className="Career-Quiz ">
               View Careers
             </Button>
             {displayText && (
-              <div className="Basic-QuizText">
-                <ChangeImages></ChangeImages>
+              <div
+                style={{
+                  maxWidth: "1200px",
+                  width: "100%",
+                  aspectRatio: "10/6",
+                  margin: "0 auto",
+                }}
+              >
+                <ChangeImages images={Images}></ChangeImages>
                 <p></p>
               </div>
             )}
           </h1>
         </div>
-        <div>
+        <div id="careerQuizzes">
           <h1 className="App-buttons2">Career Quizzes</h1>
           <p className="HomePage-text">
             Ever pondered upon your life's direction and struggled to identify a

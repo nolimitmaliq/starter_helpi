@@ -1,10 +1,27 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 //import { BasicQuizInfo } from "./BasicQuiz";
-import BasicQuizInfo from "./BasicQuiz";
 import "./App.css";
+import { BasicQuest } from "./BasicQuiz";
 
 export function BasicQuiz() {
+  // function openPopup(): void {
+  //   const screenLeft = window.screenLeft ? window.screenLeft : window.screenX;
+  //   const screenTop = window.screenTop ? window.screenTop : window.screenY;
+  //   const width = window.innerWidth;
+  //   const height = window.innerHeight;
+  //   const left = screenLeft + (width - 500) / 2;
+  //   const top = screenTop + (height - 500) / 2;
+  //   const openWindow = window.open(
+  //     "",
+  //     "popup",
+  //     `width=500,height=500,left=${left},top=${top}`
+  //   );
+  //   if (openWindow) {
+  //     openWindow.document.write(`<div>${BasicQuestion}</div>`);
+  //   }
+  //   handleButton();
+  // }
   const [displayText, setDisplayText] = useState(false);
   const handleButton = () => {
     setDisplayText(!displayText);
@@ -26,11 +43,7 @@ export function BasicQuiz() {
           </Button>
           {displayText && (
             <>
-              <BasicQuizInfo
-                onClose={function (): void {
-                  throw new Error("Function not implemented.");
-                }}
-              ></BasicQuizInfo>
+              <BasicQuest></BasicQuest>
             </>
           )}
         </h1>

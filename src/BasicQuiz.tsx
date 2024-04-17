@@ -1,19 +1,48 @@
-import React from "react";
+import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap";
-import "./BasicInfoStyle.css"; // Add CSS file for styling
+//import "./BasicInfoStyle.css";  Add CSS file for styling later
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
-function Q1() {
+export function BasicQuest(): JSX.Element {
+  // This is the State (Model)
+  const [options, setOptions] = useState<string>("Middle School");
+
+  // This is the Control
+  function updateEmotion(event: React.ChangeEvent<HTMLInputElement>) {
+    setOptions(event.target.value);
+  }
+
+  // This is the View
   return (
     <div>
-      <h1>What level of education are you in right now?</h1>;
       <Form.Check
         type="radio"
-        id="choices"
-        label="a"
-        name="choices"
-        value="A: High School"
+        name="emotions"
+        onChange={updateEmotion}
+        id="emotion-check-happy"
+        label="Middle School"
+        value="Middle School"
+        checked={options === "Middle School"}
       />
+      <Form.Check
+        type="radio"
+        name="emotions"
+        onChange={updateEmotion}
+        id="emotion-check-sad"
+        label="Sad"
+        value="sad"
+        checked={options === "High School"}
+      />
+      <Form.Check
+        type="radio"
+        name="emotions"
+        onChange={updateEmotion}
+        id="emotion-check-angry"
+        label="Angry"
+        value="angry"
+        checked={options === "Undergraduate College"}
+      />
+      <div>The user is feeling {options}.</div>
     </div>
   );
 }
@@ -53,26 +82,13 @@ function Q1() {
 //   );
 // }
 
-function popup() {
-  <h1>Question 1</h1>;
-  //setDirection("forward");
-}
+// function BasicQuizInfo() {
+//   return (
+//     <div className="App-buttons5">
+//     <h1 className="Text-Border">Basic Quiz</h1>
+//     <Basix
+//     //</div>
+//   );
+// }
 
-function BasicQuizInfo({ onClose }: { onClose: () => void }) {
-  return (
-    <div className="popup">
-      <div className="App-buttons5">
-        <h1 className="Text-Border">Basic Quiz</h1>
-        <Button onClick={popup} className="NavigationButtonRight">
-          {<FaArrowLeft />}
-        </Button>
-        <Button onClick={popup} className="NavigationButtonLeft">
-          {<FaArrowRight />}
-        </Button>
-        <Q1 />
-      </div>
-    </div>
-  );
-}
-
-export default BasicQuizInfo;
+export default BasicQuest;
