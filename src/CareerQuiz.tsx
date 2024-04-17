@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+// import { Button } from "react-bootstrap";
 // import { BasicQuizInfo } from "./BasicQuiz";
 // import { BasicQuestion } from "./BasicQuiz2";
 import "./App.css";
 
 export function BasicQuiz() {
-  const [displayText, setDisplayText] = useState(false);
+  // const [displayText, setDisplayText] = useState(false);
   return (
     <div>
       <div>
@@ -16,15 +16,13 @@ export function BasicQuiz() {
           more precise generation of career results.
         </p>
       </div>
-      <div>
-        <h1>{displayText}</h1>
-      </div>
+      <div>{/* <h1>{displayText}</h1> */}</div>
     </div>
   );
 }
 
 export function DetailedQuiz() {
-  const [displayText, setDisplayText] = useState(false);
+  // const [displayText, setDisplayText] = useState(false);
   return (
     <div>
       <div>
@@ -38,11 +36,11 @@ export function DetailedQuiz() {
       </div>
       <div>
         <h1>
-          {displayText && (
+          {/* {displayText && (
             <div className="Basic-QuizText">
               <p></p>
             </div>
-          )}
+          )} */}
         </h1>
       </div>
     </div>
