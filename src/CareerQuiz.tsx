@@ -5,23 +5,6 @@ import { Button } from "react-bootstrap";
 import "./App.css";
 
 export function BasicQuiz() {
-  // function openPopup(): void {
-  //   const screenLeft = window.screenLeft ? window.screenLeft : window.screenX;
-  //   const screenTop = window.screenTop ? window.screenTop : window.screenY;
-  //   const width = window.innerWidth;
-  //   const height = window.innerHeight;
-  //   const left = screenLeft + (width - 500) / 2;
-  //   const top = screenTop + (height - 500) / 2;
-  //   const openWindow = window.open(
-  //     "",
-  //     "popup",
-  //     `width=500,height=500,left=${left},top=${top}`
-  //   );
-  //   if (openWindow) {
-  //     openWindow.document.write(`<div>${BasicQuestion}</div>`);
-  //   }
-  //   handleButton();
-  // }
   const [displayText, setDisplayText] = useState(false);
   const handleButton = () => {
     setDisplayText(!displayText);
@@ -37,23 +20,7 @@ export function BasicQuiz() {
         </p>
       </div>
       <div>
-        <h1>
-          <Button onClick={handleButton} className="Career-Quiz2">
-            Basic Quiz
-          </Button>
-          {displayText && (
-            <>
-              {/* <BasicQuizInfo></BasicQuizInfo> */}
-              {/* <BasicQuestion
-                questions={""}
-                answers={[]}
-                userAnswer={undefined}
-                questionNr={0}
-                totalQuestions={0}
-              ></BasicQuestion> */}
-            </>
-          )}
-        </h1>
+        <h1>{displayText}</h1>
       </div>
     </div>
   );
@@ -77,10 +44,6 @@ export function DetailedQuiz() {
       </div>
       <div>
         <h1>
-          <Button onClick={handleButton} className="Career-Quiz2">
-            {/* <FaArrowRight /> */}
-            Detailed Quiz
-          </Button>
           {displayText && (
             <div className="Basic-QuizText">
               <p></p>
