@@ -12,11 +12,25 @@
 }
 
 .button {
+  width: 300px;
+  height: 30px;
   font-size: 18px; /* Increase font size */
-  padding: 7px 138.2px; /* Increase padding to make the buttons bigger */
-  border-radius: 0px; /* Add rounded corners */
+  /* padding: 7px 100.2px; Increase padding to make the buttons bigger */
+  border-radius: 50px; /* Add rounded corners */
   text-decoration: none;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  border-top: 2px solid white;
+  background-color: #1e2761;
+  position: relative;
+  text-align: center;
+  justify-content: space-evenly;
+  box-shadow: inset 0 0 0 0 white;
+  transition: ease-out 0.3s;
+  outline: none;
+}
+.button:hover {
+  box-shadow: inset 300px 0 0 0 #7a2048;
 }
 
 .button.differentCareers {
@@ -38,6 +52,10 @@
   background-color: #2867ab; /* Change background color for Career Tips button */
   color: #fff; /* Change text color */
 }
+
+.Header-Background {
+  background: linear-gradient(45deg, #1e2761 10%, #7a2048 50%, #1e2761 10%);
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -57,6 +75,8 @@
   justify-content: center;
   font-size: calc(14px + 3vmin);
   color: rgb(240, 240, 240);
+}
+.App-header.background {
   background: linear-gradient(
     45deg,
     transparent,
@@ -75,20 +95,11 @@
   align-items: center;
   justify-content: center;
   font-size: calc(2px + 2vmin);
-  font-size: 28px;
   color: rgb(240, 240, 240);
-  background: linear-gradient(
-    45deg,
-    transparent,
-    #0c2455 20%,
-    #0c2455 50%,
-    #0c2455 79%,
-    transparent
-  );
+  background: linear-gradient(45deg, #1e2761 10%, #7a2048 50%, #1e2761 10%);
 }
 
 .signup-box {
-  background-color: #233f73;
   border: 10px solid #716f6f;
   border-radius: 0px;
   padding: 20px;
@@ -136,16 +147,16 @@
 /* background-color: darkorchid; */
 
 .App-buttons2 {
-  color: rgb(243, 73, 73);
+  color: #408ec6;
   text-align: center;
   /* text-indent: 5%; */
   position: relative;
-  border-top: 3px solid rgb(0, 170, 255);
+  border-top: 3px solid #408ec6;
   padding-top: 16px;
 }
 
 .App-differentcareersbutton {
-  color: rgb(243, 73, 73);
+  color: #408ec6;
   text-align: center;
   /* text-indent: 5%; */
   position: relative;
@@ -154,11 +165,11 @@
 }
 
 .App-buttons4 {
-  color: rgb(0, 170, 255);
+  color: #408ec6;
   text-align: center;
   /* text-indent: 5%; */
   position: relative;
-  border-top: 3px solid rgb(243, 73, 73);
+  border-top: 3px solid #408ec6;
   padding-top: 16px;
 }
 
@@ -206,81 +217,79 @@
   }
 }
 
-.ImageContainer {
+/* .ImageContainer {
   position: relative;
   width: 60%;
   height: auto;
   max-width: 300px;
-  margin: 0 auto; /* Center horizontally */
-  text-align: center; /* Center inline elements */
-}
-/* .swiper {
-  box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-  border: none;
-  width: 40%;
-  min-width: auto;
-  overflow: hidden;
-}
-
-.swiper .swiper-button-prev,
-.swiper .swiper-button-next {
-  color: #222;
-  --swiper-navigation-size: 1.5rem;
-}
-
-.swiper .swiper-pagination-bullet-active {
-  background: #222;
+  margin: 0 auto; Center horizontally
+  text-align: center; Center inline elements
 } */
 
-.ImageContainer img {
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.img-slider-img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
   display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: 275px;
-  width: 300px;
-  border-radius: 20px;
+  flex-shrink: 0; /* makes sure image retains its original size */
+  flex-grow: 0; /* makes sure image retains its original size */
+  transition: translate 300ms ease-in-out;
+}
+.img-slider-btn {
+  all: unset;
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 1rem;
+  cursor: pointer;
+  /* transition: background-color 100ms ease-in-out; */
+}
+/* .img-slider-btn:hover {
+  background-color: rgb(0, 0, 0, 0.2);
+} */
+.img-slider-btn:hover > *,
+.img-slider-btn:focus-visible > * {
+  animation: squish 200ms ease-in-out;
+}
+.img-slider-btn > * {
+  stroke: white;
+  fill: black;
+  width: 2rem;
+  height: 2rem;
+}
+@keyframes squish {
+  50% {
+    scale: 1.4 0.6;
+  }
+}
+.img-slider-dot-btn {
+  all: unset;
+  display: block;
+  cursor: pointer;
+  width: 1rem;
+  transition: scale 100ms ease-in-out;
+  color: transparent;
+}
+.img-slider-dot-btn:hover,
+.img-slider-btn:focus-visible {
+  scale: 1.2;
+}
+.img-slider-dot-btn > * {
+  stroke: white;
+  fill: black;
+  height: 100%;
+  width: 100%;
 }
 
-.NavigationButtonRight {
-  position: center;
-  bottom: 225px;
-  left: -34px;
-  font-size: 30px;
-  color: rgb(130, 124, 124);
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-.NavigationButtonLeft {
-  position: center;
-  bottom: 225px;
-  right: 34px;
-  font-size: 30px;
-  color: rgb(130, 124, 124);
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-
-<<<<<<< HEAD
-.NavigationButtonRight {
-  position: center;
-  bottom: 225px;
-  left: -34px;
-  font-size: 30px;
-  color: rgb(130, 124, 124);
-  cursor: pointer;
-  background: none;
-  border: none;
-}
-=======
->>>>>>> 26af810e5ee2b45638cb420ae95aaa905be8ca89
-.NavigationButtonLeft:hover {
-  opacity: 0.4;
-}
-.NavigationButtonRight:hover {
-  opacity: 0.4;
+.img-slider-dot-btn:focus-visible,
+.img-slider-btn:focus-visible {
+  outline: auto;
 }
 
 .App-buttons {
@@ -298,7 +307,7 @@
 }
 .Career-Quiz {
   --background-color: #e3e3e3; /* Light grey background as the starting color */
-  --accent-color: #0af; /* Blue color for hover/focus effect */
+  --accent-color: #408ec6; /* Blue color for hover/focus effect */
   --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
   margin: 1rem auto;
@@ -336,7 +345,7 @@
 
 .Career-Quiz2 {
   --background-color: #e3e3e3; /* Light grey background as the starting color */
-  --accent-color: rgb(243, 73, 73); /* Blue color for hover/focus effect */
+  --accent-color: #408ec6; /* Blue color for hover/focus effect */
   --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
   margin: 1rem auto;
@@ -380,21 +389,26 @@
 }
 
 .HomePage-text {
-  border: 2px solid rgb(0, 170, 255);
+  border: 4px solid #408ec6;
   border-radius: 10px;
   padding: 10px;
   margin-left: 20%;
   margin-right: 20%;
+  color: white;
 }
 .Career-Quiz-text {
-  border: 2px solid rgb(243, 73, 73);
+  border: 2px solid #408ec6;
   border-radius: 10px;
   padding: 10px;
   margin-left: 20%;
   margin-right: 20%;
+  color: white;
 }
-/* .slide-right-enter {
-  transition: translateX(100%);
+
+.Body {
+  background: linear-gradient(to top, #7a2048, #1e2761);
 }
-.slide-right-enter-active {
-} */
+
+.window {
+  align-items: center;
+}

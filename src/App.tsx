@@ -25,13 +25,10 @@ function App() {
   // function changeKey(event: React.ChangeEvent<HTMLInputElement>) {
   //   setKey(event.target.value);
   // }
+
   return (
     <>
       <div className="App">
-        <header className="App-header">
-          <h1>Welcome to Career Quiz!</h1>
-          {/* <ChangeImages></ChangeImages> */}
-        </header>
         <HomePage></HomePage>
       </div>
 

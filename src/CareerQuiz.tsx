@@ -1,9 +1,27 @@
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
-import { BasicQuizInfo } from "./BasicQuiz";
+// import { BasicQuizInfo } from "./BasicQuiz";
+// import { BasicQuestion } from "./BasicQuiz2";
 import "./App.css";
 
 export function BasicQuiz() {
+  // function openPopup(): void {
+  //   const screenLeft = window.screenLeft ? window.screenLeft : window.screenX;
+  //   const screenTop = window.screenTop ? window.screenTop : window.screenY;
+  //   const width = window.innerWidth;
+  //   const height = window.innerHeight;
+  //   const left = screenLeft + (width - 500) / 2;
+  //   const top = screenTop + (height - 500) / 2;
+  //   const openWindow = window.open(
+  //     "",
+  //     "popup",
+  //     `width=500,height=500,left=${left},top=${top}`
+  //   );
+  //   if (openWindow) {
+  //     openWindow.document.write(`<div>${BasicQuestion}</div>`);
+  //   }
+  //   handleButton();
+  // }
   const [displayText, setDisplayText] = useState(false);
   const handleButton = () => {
     setDisplayText(!displayText);
@@ -25,7 +43,14 @@ export function BasicQuiz() {
           </Button>
           {displayText && (
             <>
-              <BasicQuizInfo></BasicQuizInfo>
+              {/* <BasicQuizInfo></BasicQuizInfo> */}
+              {/* <BasicQuestion
+                questions={""}
+                answers={[]}
+                userAnswer={undefined}
+                questionNr={0}
+                totalQuestions={0}
+              ></BasicQuestion> */}
             </>
           )}
         </h1>
