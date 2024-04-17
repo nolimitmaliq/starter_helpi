@@ -409,6 +409,11 @@
   background: linear-gradient(to top, #7a2048, #1e2761);
 }
 
+.QuizBody {
+  background: radial-gradient(#7a2048, #1e2761);
+  color: white;
+}
+
 .window {
   align-items: center;
 }

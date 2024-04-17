@@ -19,7 +19,7 @@ const Images = [
   { url: career4, alt: "Professor" },
 ];
 
-function Footer() {
+export function Footer() {
   const [email, setEmail] = useState<string>("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
