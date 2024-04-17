@@ -6,9 +6,6 @@ import "./App.css";
 
 export function BasicQuiz() {
   const [displayText, setDisplayText] = useState(false);
-  const handleButton = () => {
-    setDisplayText(!displayText);
-  };
   return (
     <div>
       <div>
@@ -28,9 +25,6 @@ export function BasicQuiz() {
 
 export function DetailedQuiz() {
   const [displayText, setDisplayText] = useState(false);
-  const handleButton = () => {
-    setDisplayText(!displayText);
-  };
   return (
     <div>
       <div>
