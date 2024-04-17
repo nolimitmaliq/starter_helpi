@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
-import image1 from "./image 1.jpg";
-import image3 from "./image 2.jpg";
-import image4 from "./image 4.jpg";
-import image5 from "./image 5.jpg";
-import { Image } from "openai/resources";
+// import { TransitionGroup, CSSTransition } from "react-transition-group";
+// import image1 from "./image 1.jpg";
+// import image3 from "./image 2.jpg";
+// import image4 from "./image 4.jpg";
+// import image5 from "./image 5.jpg";
+// import { Image } from "openai/resources";
 export function ChangeImages(): JSX.Element {
   type Images = "image 1.jpg" | "image 2.jpg" | "image 4.jpg" | "image 5.jpg";
 
