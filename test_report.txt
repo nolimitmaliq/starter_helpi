@@ -7,10 +7,10 @@
         at h2
         at h1
         at div
-        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:23:37)
+        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:24:37)
         at div
         at div
-        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:57:33)
+        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:58:33)
         at div
         at App
 
@@ -44,7 +44,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (82 ms)
+  ✕ renders learn react link (78 ms)
 
   ● renders learn react link
 
@@ -66,7 +66,12 @@ FAIL src/App.test.tsx
                 [33mclass[39m=[32m"App-header"[39m
               [36m>[39m
                 [36m<h1>[39m
-                  [0mWelcome to Career Quiz![0m
+                  [0mWelcome to the Career Quiz![0m
+                [36m</h1>[39m
+                [36m<h1[39m
+                  [33mclass[39m=[32m"caption"[39m
+                [36m>[39m
+                  [0mDiscover Your Dream Here...[0m
                 [36m</h1>[39m
               [36m</header>[39m
               [36m<div[39m
@@ -167,12 +172,14 @@ FAIL src/App.test.tsx
               [36m</div>[39m
               [36m<div>[39m
                 [36m<h1>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mView Tips[0m
-                  [36m</button>[39m
+                  [36m<div>[39m
+                    [36m<button[39m
+                      [33mclass[39m=[32m"Career-Quiz2 btn btn-primary"[39m
+                      [33mtype[39m=[32m"button"[39m
+                    [36m>[39m
+                      [0mView Tips[0m
+                    [36m</button>[39m
+                  [36m</div>[39m
                 [36m</h1>[39m
               [36m</div>[39m
               [36m<div[39m
@@ -251,6 +258,27 @@ FAIL src/App.test.tsx
       at _run10000 (node_modules/@jest/core/build/cli/index.js:320:7)
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
+----------------------|---------|----------|---------|---------|------------------------------
+File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s            
+----------------------|---------|----------|---------|---------|------------------------------
+All files             |   22.53 |       20 |    9.37 |   23.52 |                              
+ App.tsx              |     100 |      100 |     100 |     100 |                              
+ BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 6-20                         
+ Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27                         
+ CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                        
+ CareerTips.tsx       |       0 |        0 |       0 |       0 | 9-20                         
+ DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 6-20                         
+ HomePage_Buttons.tsx |    62.5 |    42.85 |      20 |    62.5 | 27,31-32,68,71,76,84,172-179 
+ image2.tsx           |       0 |        0 |       0 |       0 | 14-84                        
+ index.tsx            |       0 |      100 |     100 |       0 | 8-22                         
+ popups.tsx           |       0 |      100 |       0 |       0 | 6                            
+ reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10                         
+----------------------|---------|----------|---------|---------|------------------------------
+Test Suites: 1 failed, 1 total
+Tests:       1 failed, 1 total
+Snapshots:   0 total
+Time:        3.18 s
+Ran all test suites.
 [0;33mOne of your dependencies, babel-preset-react-app, is importing the
 "@babel/plugin-proposal-private-property-in-object" package without
 declaring it in its dependencies. This is currently working because
@@ -263,23 +291,3 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
-----------------------|---------|----------|---------|---------|---------------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s         
-----------------------|---------|----------|---------|---------|---------------------------
-All files             |   24.13 |    23.07 |   10.34 |      25 |                           
- App.tsx              |     100 |      100 |     100 |     100 |                           
- BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 6-20                      
- Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27                      
- CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 9-26                      
- DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 6-20                      
- HomePage_Buttons.tsx |    61.9 |       50 |   22.22 |    61.9 | 26,30-31,66,69,73,160-167 
- image2.tsx           |       0 |        0 |       0 |       0 | 14-84                     
- index.tsx            |       0 |      100 |     100 |       0 | 8-22                      
- popups.tsx           |       0 |      100 |       0 |       0 | 6                         
- reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10                      
-----------------------|---------|----------|---------|---------|---------------------------
-Test Suites: 1 failed, 1 total
-Tests:       1 failed, 1 total
-Snapshots:   0 total
-Time:        3.31 s
-Ran all test suites.
