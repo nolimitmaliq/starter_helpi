@@ -12,11 +12,30 @@ import career1 from "./image 1.jpg";
 import career2 from "./image 2.jpg";
 import career3 from "./image 4.jpg";
 import career4 from "./image 5.jpg";
+import career5 from "./Accountant.jpg";
+import career6 from "./police officer.jpg";
+import career7 from "./engineer.jpg";
+import career8 from "./psychologist.jpg";
+
 const Images = [
   { url: career1, alt: "Lawyer" },
-  { url: career2, alt: "Personal Trainer" },
-  { url: career3, alt: "Doctor" },
+  { url: career2, alt: "Doctor" },
+  { url: career3, alt: "Personal Trainer" },
   { url: career4, alt: "Professor" },
+  { url: career5, alt: "Accountant" },
+  { url: career6, alt: "Police Office" },
+  { url: career7, alt: "Engineer" },
+  { url: career8, alt: "Psychologist" },
+];
+const profession = [
+  "Lawyer",
+  "Doctor",
+  "Personal Trainer",
+  "Professor",
+  "Accountant",
+  "Police Officer",
+  "Engineer",
+  "Psychologist",
 ];
 
 export function Footer() {
@@ -58,13 +77,9 @@ export function HomePage(): JSX.Element {
   // function openNewWindow() {
   //   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
   // }
-  const [displayText, setDisplayText] = useState<boolean>(false);
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const [displayText3, setDisplayText3] = useState<boolean>(false);
 
-  const handleButton = () => {
-    setDisplayText(!displayText);
-  };
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
     //openNewWindow();
@@ -120,22 +135,20 @@ export function HomePage(): JSX.Element {
           <div>
             <div>
               <h1>
-                <Button onClick={handleButton} className="Career-Quiz ">
-                  View Careers
-                </Button>
-                {displayText && (
-                  <div
-                    style={{
-                      maxWidth: "1200px",
-                      width: "100%",
-                      aspectRatio: "10/6",
-                      margin: "0 auto",
-                    }}
-                  >
-                    <ChangeImages images={Images}></ChangeImages>
-                    <p></p>
-                  </div>
-                )}
+                <div
+                  style={{
+                    maxWidth: "1200px",
+                    width: "100%",
+                    aspectRatio: "10/6",
+                    margin: "0 auto",
+                  }}
+                >
+                  <ChangeImages
+                    images={Images}
+                    profession={profession}
+                  ></ChangeImages>
+                  <p></p>
+                </div>
               </h1>
             </div>
             <div id="careerQuizzes">
