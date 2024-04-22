@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HomePage, Footer } from "./HomePage_Buttons";
-import { Button } from "react-bootstrap";
+import { Button, Form } from "react-bootstrap";
 
 const QUESTIONS = 11;
 
@@ -52,7 +52,7 @@ const questions: Question[] = [
   },
   {
     question: "What type of environments do you prefer to spend more time in?",
-    type: "textbox",
+    type: "checkbox",
     options: [
       "Office",
       "Hospital Settings",
@@ -126,57 +126,130 @@ const questions: Question[] = [
 
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectedOptions, setSelectedOptions] = useState<string[]>([]);
+  const [selectedOptions, setSelectedOptions] = useState<string[]>(
+    new Array(questions.length).fill("")
+  );
   const NextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
+  };
+  const PrevQuestion = () => {
+    setCurrentQuestion(currentQuestion - 1);
+  };
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newAnswer = [...selectedOptions];
+    newAnswer[currentQuestion] = e.target.value;
+    setSelectedOptions(newAnswer);
+  };
+  const handleInputChange2 = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const option = e.target.value;
+    let newOptions = [...selectedOptions];
+    newOptions[currentQuestion] = e.target.value;
+    if (selectedOptions.includes(option)) {
+      setSelectedOptions(newOptions.filter((item) => item !== option));
+    } else {
+      setSelectedOptions([...newOptions, option]);
+    }
+  };
+  const handleInputChange3 = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const newAnswer = [...selectedOptions];
+    newAnswer[currentQuestion] = e.target.value;
+    setSelectedOptions(newAnswer);
   };
 
   return (
     <div>
       <h1>{questions[currentQuestion].question}</h1>
       {questions[currentQuestion].type === "multipleChoice" && (
-        <div>
+        <div className="Basic-Multiple">
           {questions[currentQuestion].options.map((option) => (
-            <div key={option}>
-              <input
-                type="radio"
-                id={option}
-                name={option}
-                value={option}
-                onChange={(e) => setSelectedOptions([e.target.value])}
-              />
-              <label htmlFor={option}>{option}</label>
-            </div>
+            <Form.Check
+              key={option}
+              type="radio"
+              id="Choices"
+              name="choices"
+              value={option}
+              onChange={handleInputChange}
+              label={option}
+              checked={selectedOptions[currentQuestion] === option}
+              style={{
+                width: "200px",
+                border: "1px solid gray",
+                backgroundColor: "#1e2761",
+                color: "white",
+                fontSize: "30",
+              }}
+            ></Form.Check>
           ))}
         </div>
       )}
       {questions[currentQuestion].type === "checkbox" && (
         <div>
           {questions[currentQuestion].options.map((option) => (
-            <div key={option}>
-              <input
-                type="checkbox"
-                id={option}
-                name={option}
-                value={option}
-                onChange={(e) =>
-                  setSelectedOptions((prev) => [...prev, e.target.value])
-                }
-              />
-              <label htmlFor={option}>{option}</label>
-            </div>
+            <Form.Check
+              key={option}
+              type="checkbox"
+              id="Choices-checkbox"
+              name="choices-chsckbox"
+              value={option}
+              onChange={handleInputChange2}
+              label={option}
+              checked={selectedOptions.includes(option)}
+            ></Form.Check>
           ))}
         </div>
       )}
       {questions[currentQuestion].type === "textbox" && (
-        <div>
-          <input
-            type="text"
-            onChange={(e) => setSelectedOptions([e.target.value])}
+        <Form.Group controlId={`Question-${currentQuestion}`}>
+          <Form.Label
+            style={{
+              display: "block",
+              marginBottom: "10px",
+              color: "white",
+              fontSize: "25px",
+              textAlign: "center",
+              margin: "0 auto",
+              maxWidth: "80%",
+            }}
+          >
+            {questions[currentQuestion].options}
+          </Form.Label>
+          <Form.Control
+            as="textarea"
+            value={selectedOptions[currentQuestion]}
+            onChange={handleInputChange}
+            style={{
+              margin: "20px auto",
+              height: "200px",
+              width: "700px",
+              border: "1px solid gray",
+              backgroundColor: "#1e2761",
+              color: "white",
+              fontSize: "30",
+            }}
           />
-        </div>
+        </Form.Group>
       )}
-      <button onClick={NextQuestion}>Next</button>
+      <Button
+        onClick={PrevQuestion}
+        disabled={currentQuestion === 0}
+        className="button"
+        style={{
+          right: "20px",
+        }}
+      >
+        Previous
+      </Button>
+      <Button
+        onClick={NextQuestion}
+        disabled={currentQuestion === questions.length - 1}
+        className="button"
+        style={{
+          left: "20px",
+          margin: "24px auto",
+        }}
+      >
+        Next
+      </Button>
     </div>
   );
 }
