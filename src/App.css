@@ -451,10 +451,16 @@
 }
 
 .QuizBody {
-  background: radial-gradient(#7a2048, #1e2761);
+  background: #7a2048;
   color: white;
 }
 
 .window {
   align-items: center;
+}
+
+.Basic-Multiple {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
