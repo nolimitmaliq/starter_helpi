@@ -7,10 +7,10 @@
         at h2
         at h1
         at div
-        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:24:37)
+        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:42:37)
         at div
         at div
-        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:58:33)
+        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:76:33)
         at div
         at App
 
@@ -44,7 +44,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (83 ms)
+  ✕ renders learn react link (117 ms)
 
   ● renders learn react link
 
@@ -121,125 +121,82 @@ FAIL src/App.test.tsx
             [36m<div>[39m
               [36m<div>[39m
                 [36m<h1>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"Career-Quiz  btn btn-primary"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mView Careers[0m
-                  [36m</button>[39m
-                [36m</h1>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mid[39m=[32m"careerQuizzes"[39m
-              [36m>[39m
-                [36m<h1[39m
-                  [33mclass[39m=[32m"App-buttons2"[39m
-                  [33mstyle[39m=[32m"margin: 1px auto;"[39m
-                [36m>[39m
-                  [0mCareer Quizzes[0m
-                [36m</h1>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"HomePage-text"[39m
-                [36m>[39m
-                  [0mEver pondered upon your life's direction and struggled to identify a career you'd feel passionate about? Now, thanks to our Basic and Detailed Quizzes, deciphering your future becomes possible. Our quizzes are designed for everyone, irrespective of your age, race, ethnicity, gender, or nationality.[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div>[39m
-                [36m<div>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"Career-Quiz2  btn btn-primary"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mView Quizzes[0m
-                  [36m</button>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div />[39m
-            [36m</div>[39m
-            [36m<div[39m
-              [33mid[39m=[32m"careerTips"[39m
-            [36m>[39m
-              [36m<div>[39m
-                [36m<h1[39m
-                  [33mclass[39m=[32m"App-buttons2"[39m
-                [36m>[39m
-                  [0mCareer Tips[0m
-                [36m</h1>[39m
-                [36m<p[39m
-                  [33mclass[39m=[32m"HomePage-text"[39m
-                [36m>[39m
-                  [0mCareer Tips is a resource designed to guide users on how to pursue their potential career. This platform educates users about various useful websites and provides an insight into the hiring process.[0m
-                [36m</p>[39m
-              [36m</div>[39m
-              [36m<div>[39m
-                [36m<h1>[39m
-                  [36m<div>[39m
-                    [36m<button[39m
-                      [33mclass[39m=[32m"Career-Quiz2 btn btn-primary"[39m
-                      [33mtype[39m=[32m"button"[39m
-                    [36m>[39m
-                      [0mView Tips[0m
-                    [36m</button>[39m
-                  [36m</div>[39m
-                [36m</h1>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mid[39m=[32m"aboutUs"[39m
-              [36m>[39m
-                [36m<div>[39m
-                  [0m [0m
-                  [36m<h1[39m
-                    [33mclass[39m=[32m"App-buttons2"[39m
-                  [36m>[39m
-                    [0mAbout Us[0m
-                  [36m</h1>[39m
-                  [36m<button[39m
-                    [33mclass[39m=[32m"Career-Quiz2  btn btn-primary"[39m
-                    [33mtype[39m=[32m"button"[39m
-                  [36m>[39m
-                    [0mClick Here to Learn More About Us![0m
-                  [36m</button>[39m
-                [36m</div>[39m
-              [36m</div>[39m
-              [36m<div[39m
-                [33mclass[39m=[32m"footer"[39m
-              [36m>[39m
-                [36m<h1[39m
-                  [33mclass[39m=[32m"footer"[39m
-                [36m>[39m
-                  [36m<h2>[39m
-                    [0mSign Up to get more advice on Careers![0m
-                  [36m</h2>[39m
                   [36m<div[39m
-                    [33mclass[39m=[32m"signup-box"[39m
+                    [33mstyle[39m=[32m"max-width: 1200px; width: 100%; margin: 0px auto;"[39m
                   [36m>[39m
-                    [36m<form>[39m
-                      [36m<label[39m
-                        [33mfor[39m=[32m"email"[39m
+                    [36m<section[39m
+                      [33maria-label[39m=[32m"Image Slider"[39m
+                      [33mstyle[39m=[32m"width: 100%; height: 100%; position: relative;"[39m
+                    [36m>[39m
+                      [36m<div[39m
+                        [33mstyle[39m=[32m"width: 70%; height: 70%; display: flex; overflow: hidden; margin: 0px auto; text-align: center;"[39m
                       [36m>[39m
-                        [0mEmail:[0m
-                      [36m</label>[39m
-                      [36m<input[39m
-                        [33mid[39m=[32m"email"[39m
-                        [33mrequired[39m=[32m""[39m
-                        [33mtype[39m=[32m"email"[39m
-                        [33mvalue[39m=[32m""[39m
-                      [36m/>[39m
+                        [36m<img[39m
+                          [33malt[39m=[32m"Lawyer"[39m
+                          [33maria-hidden[39m=[32m"false"[39m
+                          [33mclass[39m=[32m"img-slider-img"[39m
+                          [33msrc[39m=[32m"image 1.jpg"[39m
+                        [36m/>[39m
+                        [36m<img[39m
+                          [33malt[39m=[32m"Doctor"[39m
+                          [33maria-hidden[39m=[32m"true"[39m
+                          [33mclass[39m=[32m"img-slider-img"[39m
+                          [33msrc[39m=[32m"image 2.jpg"[39m
+                        [36m/>[39m
+                        [36m<img[39m
+                          [33malt[39m=[32m"Personal Trainer"[39m
+                          [33maria-hidden[39m=[32m"true"[39m
+                          [33mclass[39m=[32m"img-slider-img"[39m
+                          [33msrc[39m=[32m"image 4.jpg"[39m
+                        [36m/>[39m
+                        [36m<img[39m
+                          [33malt[39m=[32m"Professor"[39m
+                          [33maria-hidden[39m=[32m"true"[39m
+                          [33mclass[39m=[32m"img-slider-img"[39m
+                          [33msrc[39m=[32m"image 5.jpg"[39m
+                        [36m/>[39m
+                        [36m<img[39m
+                          [33malt[39m=[32m"Accountant"[39m
+                          [33maria-hidden[39m=[32m"true"[39m
+                          [33mclass[39m=[32m"img-slider-img"[39m
+                          [33msrc[39m=[32m"Accountant.jpg"[39m
+                        [36m/>[39m
+                        [36m<img[39m
+                          [33malt[39m=[32m"Police Office"[39m
+                          [33maria-hidden[39m=[32m"true"[39m
+                          [33mclass[39m=[32m"img-slider-img"[39m
+                          [33msrc[39m=[32m"police officer.jpg"[39m
+                        [36m/>[39m
+                        [36m<img[39m
+                          [33malt[39m=[32m"Engineer"[39m
+                          [33maria-hidden[39m=[32m"true"[39m
+                          [33mclass[39m=[32m"img-slider-img"[39m
+                          [33msrc[39m=[32m"engineer.jpg"[39m
+                        [36m/>[39m
+                        [36m<img[39m
+                          [33malt[39m=[32m"Psychologist"[39m
+                          [33maria-hidden[39m=[32m"true"[39m
+                          [33mclass[39m=[32m"img-slider-img"[39m
+                          [33msrc[39m=[32m"psychologist.jpg"[39m
+                        [36m/>[39m
+                      [36m</div>[39m
                       [36m<button[39m
-                        [33mtype[39m=[32m"submit"[39m
+                        [33maria-label[39m=[32m"Previous Image"[39m
+                        [33mclass[39m=[32m"img-slider-btn"[39m
+                        [33mstyle[39m=[32m"left: 170px; bottom: 150px;"[39m
                       [36m>[39m
-                        [0mSign Up[0m
-                      [36m</button>[39m
-                    [36m</form>[39m
-                  [36m</div>[39m
-                [36m</h1>[39m
-              [36m</div>[39m
-            [36m</div>[39m
-          [36m</div>[39m
-        [36m</div>[39m
-        [36m<div />[39m
-      [36m</div>[39m
-    [36m</body>[39m
+                        [36m<svg[39m
+                          [33maria-hidden[39m=[32m"true"[39m
+                          [33mclass[39m=[32m"lucide lucide-arrow-big-left "[39m
+                          [33mfill[39m=[32m"none"[39m
+                          [33mheight[39m=[32m"24"[39m
+                          [33mstroke[39m=[32m"currentColor"[39m
+                          [33mstroke-linecap[39m=[32m"round"[39m
+                          [33mstroke-linejoin[39m=[32m"round"[39m
+                          [33mstroke-width[39m=[32m"2"[39m
+                          [33mviewBox[39m=[32m"0 0 24 24"[39m
+                          [33mwidth[39m=[32m"24"[39m
+                          [33mxmlns[39m=[32m"http://www.w3.org/2...
 
        5 | test("renders learn react link", () => {
        6 |   render(<App />);
@@ -271,25 +228,25 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
-----------------------|---------|----------|---------|---------|------------------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s            
-----------------------|---------|----------|---------|---------|------------------------------
-All files             |   20.48 |       20 |    8.33 |   21.25 |                              
- App.tsx              |     100 |      100 |     100 |     100 |                              
- BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 6-20                         
- Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27                         
- CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                        
- CareerTips.tsx       |       0 |        0 |       0 |       0 | 9-20                         
- DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 6-27                         
- HomePage_Buttons.tsx |    62.5 |    42.85 |      20 |    62.5 | 27,31-32,68,71,76,84,179-186 
- detailedQues.tsx     |    8.33 |      100 |       0 |    8.33 | 14-33                        
- image2.tsx           |       0 |        0 |       0 |       0 | 14-88                        
- index.tsx            |       0 |      100 |     100 |       0 | 8-22                         
- popups.tsx           |       0 |      100 |       0 |       0 | 6                            
- reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10                         
-----------------------|---------|----------|---------|---------|------------------------------
+----------------------|---------|----------|---------|---------|---------------------------
+File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s         
+----------------------|---------|----------|---------|---------|---------------------------
+All files             |   22.34 |    21.87 |   14.63 |   23.59 |                           
+ App.tsx              |     100 |      100 |     100 |     100 |                           
+ BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 6-20                      
+ Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27                      
+ CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                     
+ CareerTips.tsx       |       0 |        0 |       0 |       0 | 9-20                      
+ DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 6-27                      
+ HomePage_Buttons.tsx |   63.63 |    41.66 |   22.22 |   63.63 | 45,49-50,85,90,98,191-198 
+ detailedQues.tsx     |    8.33 |      100 |       0 |    8.33 | 14-33                     
+ image2.tsx           |   19.23 |       20 |   21.42 |   22.72 | 22-51,124                 
+ index.tsx            |       0 |      100 |     100 |       0 | 8-22                      
+ popups.tsx           |       0 |      100 |       0 |       0 | 6                         
+ reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10                      
+----------------------|---------|----------|---------|---------|---------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.306 s
+Time:        3.582 s
 Ran all test suites.
