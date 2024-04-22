@@ -1,5 +1,5 @@
-// import React, { useState } from "react";
-// import { Button } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button } from "react-bootstrap";
 // import { BasicQuizInfo } from "./BasicQuiz";
 // import { BasicQuestion } from "./BasicQuiz2";
 import "./App.css";
@@ -37,7 +37,11 @@ export function DetailedQuiz() {
       </div>
       <div>
         <h1>
-          {/* {displayText && (
+          {/* <Button onClick={handleButton} className="Career-Quiz2">
+            <FaArrowRight />
+            Detailed Quiz
+          </Button>
+          {displayText && (
             <div className="Basic-QuizText">
               <p></p>
             </div>

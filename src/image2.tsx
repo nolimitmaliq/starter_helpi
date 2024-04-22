@@ -27,7 +27,11 @@ export function ChangeImages({ images }: ChangeImagesProps): JSX.Element {
   return (
     <section
       aria-label="Image Slider"
-      style={{ width: "100%", height: "100%", position: "relative" }}
+      style={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+      }}
     >
       <div
         style={{

@@ -151,7 +151,14 @@ export function HomePage(): JSX.Element {
               </h1>
             </div>
             <div id="careerQuizzes">
-              <h1 className="App-buttons2">Career Quizzes</h1>
+              <h1
+                className="App-buttons2"
+                style={{
+                  margin: "1px auto",
+                }}
+              >
+                Career Quizzes
+              </h1>
               <p className="HomePage-text">
                 Ever pondered upon your life's direction and struggled to
                 identify a career you'd feel passionate about? Now, thanks to
