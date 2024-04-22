@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Button } from "react-bootstrap";
+// import React, { useState } from "react";
+// import { Button } from "react-bootstrap";
 // import { BasicQuizInfo } from "./BasicQuiz";
 // import { BasicQuestion } from "./BasicQuiz2";
 import "./App.css";
