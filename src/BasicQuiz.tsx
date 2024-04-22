@@ -2,8 +2,6 @@ import { useState } from "react";
 import { HomePage, Footer } from "./HomePage_Buttons";
 import { Button, Form } from "react-bootstrap";
 
-const QUESTIONS = 11;
-
 interface Question {
   question: string;
   type: "multipleChoice" | "checkbox" | "textbox";
@@ -149,11 +147,6 @@ function Quiz() {
     } else {
       setSelectedOptions([...newOptions, option]);
     }
-  };
-  const handleInputChange3 = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const newAnswer = [...selectedOptions];
-    newAnswer[currentQuestion] = e.target.value;
-    setSelectedOptions(newAnswer);
   };
 
   return (
