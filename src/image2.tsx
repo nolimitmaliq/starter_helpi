@@ -9,9 +9,27 @@ type ChangeImagesProps = {
     url: string;
     alt: string;
   }[];
+  profession: string[];
 };
-export function ChangeImages({ images }: ChangeImagesProps): JSX.Element {
+
+export function ChangeImages({
+  images,
+  profession,
+}: ChangeImagesProps): JSX.Element {
   const [imageIndex, setImageIndex] = useState(0);
+  const [profIndex, setProfIndex] = useState(0);
+  function showNextProf() {
+    setProfIndex((index) => {
+      if (index === profession.length - 1) return 0;
+      return index + 1;
+    });
+  }
+  function showPrevProf() {
+    setProfIndex((index) => {
+      if (index === 0) return profession.length - 1;
+      return index - 1;
+    });
+  }
   function showNextImage() {
     setImageIndex((index) => {
       if (index === images.length - 1) return 0;
@@ -24,10 +42,23 @@ export function ChangeImages({ images }: ChangeImagesProps): JSX.Element {
       return index - 1;
     });
   }
+  function handleClick() {
+    showNextImage();
+    showNextProf();
+  }
+  function handleClick2() {
+    showPrevImage();
+    showPrevProf();
+  }
+
   return (
     <section
       aria-label="Image Slider"
-      style={{ width: "100%", height: "100%", position: "relative" }}
+      style={{
+        width: "100%",
+        height: "100%",
+        position: "relative",
+      }}
     >
       <div
         style={{
@@ -51,7 +82,7 @@ export function ChangeImages({ images }: ChangeImagesProps): JSX.Element {
         ))}
       </div>
       <button
-        onClick={showPrevImage}
+        onClick={handleClick2}
         className="img-slider-btn"
         style={{ left: 170, bottom: 150 }}
         aria-label="Previous Image"
@@ -59,13 +90,22 @@ export function ChangeImages({ images }: ChangeImagesProps): JSX.Element {
         <ArrowBigLeft aria-hidden />
       </button>
       <button
-        onClick={showNextImage}
+        onClick={handleClick}
         className="img-slider-btn"
         style={{ right: 170, bottom: 150 }}
         aria-label="Next Image"
       >
         <ArrowBigRight aria-hidden />
       </button>
+      <div
+        style={{
+          fontWeight: "bold",
+          fontSize: "24px",
+          color: "white",
+        }}
+      >
+        {profession[profIndex]}
+      </div>
       <div
         style={{
           position: "absolute",

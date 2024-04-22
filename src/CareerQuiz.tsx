@@ -3,6 +3,7 @@
 // import { BasicQuizInfo } from "./BasicQuiz";
 // import { BasicQuestion } from "./BasicQuiz2";
 import "./App.css";
+//import { BasicQuest } from "./BasicQuiz";
 
 export function BasicQuiz() {
   // const [displayText, setDisplayText] = useState(false);
@@ -36,7 +37,11 @@ export function DetailedQuiz() {
       </div>
       <div>
         <h1>
-          {/* {displayText && (
+          {/* <Button onClick={handleButton} className="Career-Quiz2">
+            <FaArrowRight />
+            Detailed Quiz
+          </Button>
+          {displayText && (
             <div className="Basic-QuizText">
               <p></p>
             </div>

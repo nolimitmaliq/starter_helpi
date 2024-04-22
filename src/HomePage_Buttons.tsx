@@ -12,11 +12,30 @@ import career1 from "./image 1.jpg";
 import career2 from "./image 2.jpg";
 import career3 from "./image 4.jpg";
 import career4 from "./image 5.jpg";
+import career5 from "./Accountant.jpg";
+import career6 from "./police officer.jpg";
+import career7 from "./engineer.jpg";
+import career8 from "./psychologist.jpg";
+import { Linkedin } from "lucide-react";
 const Images = [
   { url: career1, alt: "Lawyer" },
-  { url: career2, alt: "Personal Trainer" },
-  { url: career3, alt: "Doctor" },
+  { url: career2, alt: "Doctor" },
+  { url: career3, alt: "Personal Trainer" },
   { url: career4, alt: "Professor" },
+  { url: career5, alt: "Accountant" },
+  { url: career6, alt: "Police Office" },
+  { url: career7, alt: "Engineer" },
+  { url: career8, alt: "Psychologist" },
+];
+const profession = [
+  "Lawyer",
+  "Doctor",
+  "Personal Trainer",
+  "Professor",
+  "Accountant",
+  "Police Officer",
+  "Engineer",
+  "Psychologist",
 ];
 
 export function Footer() {
@@ -58,19 +77,25 @@ export function HomePage(): JSX.Element {
   // function openNewWindow() {
   //   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
   // }
-  const [displayText, setDisplayText] = useState<boolean>(false);
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const [displayText3, setDisplayText3] = useState<boolean>(false);
+  //const [displayHomepage4, setDisplayText4] = useState<boolean>(false);
 
-  const handleButton = () => {
-    setDisplayText(!displayText);
-  };
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
+    //setDisplayText4(!displayHomepage4);
     //openNewWindow();
   };
   const handleButton3 = () => {
     setDisplayText3(!displayText3);
+  };
+
+  const [jobSearchInfoVisible, setJobSearchInfoVisible] = useState(false);
+
+  // Function to handle the click event of the "Job Search" button
+  const handleJobSearchClick = () => {
+    // Toggle the visibility of the paragraph
+    setJobSearchInfoVisible(!jobSearchInfoVisible);
   };
 
   return (
@@ -83,7 +108,8 @@ export function HomePage(): JSX.Element {
         <div className="Body">
           <div className="Header-Background">
             <header className="App-header">
-              <h1>Welcome to Career Quiz!</h1>
+              <h1>Welcome to the Career Quiz!</h1>
+              <h1 className="caption">Discover Your Dream Here...</h1>
             </header>
             <div className="buttonContainer">
               <a href="#differentCareers" className="button ">
@@ -120,26 +146,31 @@ export function HomePage(): JSX.Element {
           <div>
             <div>
               <h1>
-                <Button onClick={handleButton} className="Career-Quiz ">
-                  View Careers
-                </Button>
-                {displayText && (
-                  <div
-                    style={{
-                      maxWidth: "1200px",
-                      width: "100%",
-                      aspectRatio: "10/6",
-                      margin: "0 auto",
-                    }}
-                  >
-                    <ChangeImages images={Images}></ChangeImages>
-                    <p></p>
-                  </div>
-                )}
+                <div
+                  style={{
+                    maxWidth: "1200px",
+                    width: "100%",
+                    aspectRatio: "10/6",
+                    margin: "0 auto",
+                  }}
+                >
+                  <ChangeImages
+                    images={Images}
+                    profession={profession}
+                  ></ChangeImages>
+                  <p></p>
+                </div>
               </h1>
             </div>
             <div id="careerQuizzes">
-              <h1 className="App-buttons2">Career Quizzes</h1>
+              <h1
+                className="App-buttons2"
+                style={{
+                  margin: "1px auto",
+                }}
+              >
+                Career Quizzes
+              </h1>
               <p className="HomePage-text">
                 Ever pondered upon your life's direction and struggled to
                 identify a career you'd feel passionate about? Now, thanks to
@@ -189,14 +220,46 @@ export function HomePage(): JSX.Element {
             </div>
             <div>
               <h1>
-                <Button onClick={handleButton3} className="Career-Quiz ">
-                  View Tips
-                </Button>
-                {displayText3 && (
-                  <div className="Basic-QuizText">
-                    <p></p>
-                  </div>
-                )}
+                <div>
+                  <Button onClick={handleButton3} className="Career-Quiz2">
+                    View Tips
+                  </Button>
+                  {displayText3 && (
+                    <>
+                      <Button
+                        onClick={handleButton3}
+                        className="Career-Buttons"
+                      >
+                        Resume Help
+                      </Button>
+                      <Button
+                        onClick={handleJobSearchClick}
+                        className="Career-Buttons"
+                      >
+                        Job Search
+                      </Button>
+                      {jobSearchInfoVisible && (
+                        <p className="HomePage-text">
+                          Links to Explore in Job Searches: Linked{""}
+                          <Linkedin>https://www.linkedin.com/feed/</Linkedin>,
+                          Indeed, Monster, GlassDoor
+                        </p>
+                      )}
+                      <Button
+                        onClick={handleButton3}
+                        className="Career-Buttons"
+                      >
+                        Career Advice
+                      </Button>
+                      <Button
+                        onClick={handleButton3}
+                        className="Career-Buttons"
+                      >
+                        Academic Planning
+                      </Button>
+                    </>
+                  )}
+                </div>
               </h1>
             </div>
             <div id="aboutUs">
