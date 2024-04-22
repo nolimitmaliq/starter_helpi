@@ -94,7 +94,7 @@ export function HomePage(): JSX.Element {
         <div className="Body">
           <div className="Header-Background">
             <header className="App-header">
-              <h1>Welcome to the Career Quiz!</h1>
+              <h1>Welcome to CareerQuestt!</h1>
               <h1 className="caption">Discover Your Dream Here...</h1>
             </header>
             <div className="buttonContainer">

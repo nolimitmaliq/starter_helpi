@@ -17,9 +17,10 @@ export function DetailedQuestion() {
                 <h1
                   style={{
                     fontSize: "50px",
+                    margin: 500,
                   }}
                 >
-                  Basic Quiz
+                  Detailed Quiz
                 </h1>
               </header>
               <div className="buttonContainer">
