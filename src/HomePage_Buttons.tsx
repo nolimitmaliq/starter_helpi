@@ -16,7 +16,7 @@ import career5 from "./Accountant.jpg";
 import career6 from "./police officer.jpg";
 import career7 from "./engineer.jpg";
 import career8 from "./psychologist.jpg";
-
+import { Linkedin } from "lucide-react";
 const Images = [
   { url: career1, alt: "Lawyer" },
   { url: career2, alt: "Doctor" },
@@ -79,13 +79,23 @@ export function HomePage(): JSX.Element {
   // }
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const [displayText3, setDisplayText3] = useState<boolean>(false);
+  //const [displayHomepage4, setDisplayText4] = useState<boolean>(false);
 
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
+    //setDisplayText4(!displayHomepage4);
     //openNewWindow();
   };
   const handleButton3 = () => {
     setDisplayText3(!displayText3);
+  };
+
+  const [jobSearchInfoVisible, setJobSearchInfoVisible] = useState(false);
+
+  // Function to handle the click event of the "Job Search" button
+  const handleJobSearchClick = () => {
+    // Toggle the visibility of the paragraph
+    setJobSearchInfoVisible(!jobSearchInfoVisible);
   };
 
   return (
@@ -98,7 +108,8 @@ export function HomePage(): JSX.Element {
         <div className="Body">
           <div className="Header-Background">
             <header className="App-header">
-              <h1>Welcome to Career Quiz!</h1>
+              <h1>Welcome to the Career Quiz!</h1>
+              <h1 className="caption">Discover Your Dream Here...</h1>
             </header>
             <div className="buttonContainer">
               <a href="#differentCareers" className="button ">
@@ -209,14 +220,46 @@ export function HomePage(): JSX.Element {
             </div>
             <div>
               <h1>
-                <Button onClick={handleButton3} className="Career-Quiz ">
-                  View Tips
-                </Button>
-                {displayText3 && (
-                  <div className="Basic-QuizText">
-                    <p></p>
-                  </div>
-                )}
+                <div>
+                  <Button onClick={handleButton3} className="Career-Quiz2">
+                    View Tips
+                  </Button>
+                  {displayText3 && (
+                    <>
+                      <Button
+                        onClick={handleButton3}
+                        className="Career-Buttons"
+                      >
+                        Resume Help
+                      </Button>
+                      <Button
+                        onClick={handleJobSearchClick}
+                        className="Career-Buttons"
+                      >
+                        Job Search
+                      </Button>
+                      {jobSearchInfoVisible && (
+                        <p className="HomePage-text">
+                          Links to Explore in Job Searches: Linked{""}
+                          <Linkedin>https://www.linkedin.com/feed/</Linkedin>,
+                          Indeed, Monster, GlassDoor
+                        </p>
+                      )}
+                      <Button
+                        onClick={handleButton3}
+                        className="Career-Buttons"
+                      >
+                        Career Advice
+                      </Button>
+                      <Button
+                        onClick={handleButton3}
+                        className="Career-Buttons"
+                      >
+                        Academic Planning
+                      </Button>
+                    </>
+                  )}
+                </div>
               </h1>
             </div>
             <div id="aboutUs">
