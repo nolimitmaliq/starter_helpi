@@ -142,31 +142,27 @@ export function HomePage(): JSX.Element {
               feel pressured to find the "perfect" option.
             </p>
           </div>
-          <div></div>
           <div>
-            <div>
-              <h1>
-                <div
-                  style={{
-                    maxWidth: "1200px",
-                    width: "100%",
-                    aspectRatio: "10/6",
-                    margin: "0 auto",
-                  }}
-                >
-                  <ChangeImages
-                    images={Images}
-                    profession={profession}
-                  ></ChangeImages>
-                  <p></p>
-                </div>
-              </h1>
+            <div
+              style={{
+                maxWidth: "1100px",
+                width: "100%",
+                aspectRatio: "10/6",
+                margin: "0 auto",
+              }}
+            >
+              <span>
+                <ChangeImages
+                  images={Images}
+                  profession={profession}
+                ></ChangeImages>
+              </span>
             </div>
             <div id="careerQuizzes">
               <h1
                 className="App-buttons2"
                 style={{
-                  margin: "1px auto",
+                  margin: "12px auto",
                 }}
               >
                 Career Quizzes
