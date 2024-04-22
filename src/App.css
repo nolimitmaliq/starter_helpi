@@ -75,6 +75,17 @@
   justify-content: center;
   font-size: calc(14px + 3vmin);
   color: rgb(240, 240, 240);
+  /* height: 1px; */
+}
+.App-header4 {
+  min-height: 10vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(14px + 3vmin);
+  color: rgb(240, 240, 240);
+  height: 10px;
 }
 .App-header.background {
   background: linear-gradient(
@@ -153,6 +164,7 @@
   position: relative;
   border-top: 3px solid #408ec6;
   padding-top: 16px;
+  margin: 0px auto;
 }
 
 .App-differentcareersbutton {
@@ -404,6 +416,11 @@
 
 .Body {
   background: linear-gradient(to top, #7a2048, #1e2761);
+}
+
+.QuizBody {
+  background: radial-gradient(#7a2048, #1e2761);
+  color: white;
 }
 
 .window {

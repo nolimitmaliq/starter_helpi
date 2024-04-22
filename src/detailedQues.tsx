@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
@@ -11,7 +10,7 @@ const Question = [
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
 ];
 
-export function DetailedQuestion(): JSX.Element {
+export function DetailedQues(): JSX.Element {
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
     new Array(Question.length).fill("")
@@ -78,6 +77,7 @@ export function DetailedQuestion(): JSX.Element {
         className="button"
         style={{
           left: "20px",
+          margin: "24px auto",
         }}
       >
         Next
