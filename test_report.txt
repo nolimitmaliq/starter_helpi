@@ -44,7 +44,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (117 ms)
+  ✕ renders learn react link (108 ms)
 
   ● renders learn react link
 
@@ -231,14 +231,14 @@ go away.[0m
 ----------------------|---------|----------|---------|---------|---------------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s         
 ----------------------|---------|----------|---------|---------|---------------------------
-All files             |   22.34 |    21.87 |   14.63 |   23.59 |                           
+All files             |   18.96 |    15.78 |   12.24 |      20 |                           
  App.tsx              |     100 |      100 |     100 |     100 |                           
- BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 6-20                      
+ BasicQuiz.tsx        |       4 |        0 |       0 |    4.16 | 126-265                   
  Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27                      
  CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                     
  CareerTips.tsx       |       0 |        0 |       0 |       0 | 9-20                      
  DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 6-27                      
- HomePage_Buttons.tsx |   63.63 |    41.66 |   22.22 |   63.63 | 45,49-50,85,90,98,191-198 
+ HomePage_Buttons.tsx |   63.63 |       40 |   22.22 |   63.63 | 45,49-50,81,84,92,185-192 
  detailedQues.tsx     |    8.33 |      100 |       0 |    8.33 | 14-33                     
  image2.tsx           |   19.23 |       20 |   21.42 |   22.72 | 22-51,124                 
  index.tsx            |       0 |      100 |     100 |       0 | 8-22                      
@@ -248,5 +248,5 @@ All files             |   22.34 |    21.87 |   14.63 |   23.59 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.582 s
+Time:        3.444 s
 Ran all test suites.
