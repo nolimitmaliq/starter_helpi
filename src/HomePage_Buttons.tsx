@@ -74,17 +74,11 @@ export function Footer() {
 
 export function HomePage(): JSX.Element {
   const [tab, setTab] = useState<string>("home");
-  // function openNewWindow() {
-  //   window.open("https://careerquizlo.org", "_blank", "width=600,height=400");
-  // }
   const [displayText2, setDisplayText2] = useState<boolean>(false);
   const [displayText3, setDisplayText3] = useState<boolean>(false);
-  //const [displayHomepage4, setDisplayText4] = useState<boolean>(false);
 
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
-    //setDisplayText4(!displayHomepage4);
-    //openNewWindow();
   };
   const handleButton3 = () => {
     setDisplayText3(!displayText3);
@@ -200,8 +194,6 @@ export function HomePage(): JSX.Element {
                     >
                       Detailed Quiz
                     </Button>
-                    {/* {tab === "Basic" && <BasicQuestion />}
-                {tab === "Detailed" && <DetailedQuestion />} */}
                   </>
                 )}
               </div>
@@ -264,22 +256,14 @@ export function HomePage(): JSX.Element {
             </div>
             <div id="aboutUs">
               <div>
-                {" "}
                 <h1 className="App-buttons2">About Us</h1>
-                <Button onClick={handleButton2} className="Career-Quiz2 ">
-                  Click Here to Learn More About Us!
-                </Button>
-                {displayText2 && (
-                  <>
-                    <p className="HomePage-text">
-                      Our mission is to help people of all ages find the right
-                      career for them. All information on the website is
-                      credible and please stay connected if you would like to
-                      receive updates on the website and newer features. We are
-                      working towards improving the website to help everyone.
-                    </p>
-                  </>
-                )}
+                <p className="HomePage-text">
+                  Our mission is to help people of all ages find the right
+                  career for them. All information on the website is credible
+                  and please stay connected if you would like to receive updates
+                  on the website and newer features. We are working towards
+                  improving the website to help everyone.
+                </p>
               </div>
             </div>
             <Footer />
