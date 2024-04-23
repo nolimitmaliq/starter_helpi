@@ -32,13 +32,13 @@ export function DetailedQues(): JSX.Element {
     ); // Loops back to last at the start
   };
   const [progress, setProgress] = useState(0);
-  const handleButtonClick = () => {
-    if (progress < 99) {
+  const handleNextClick = () => {
+    if (progress < 100) {
       setProgress(progress + 20);
     }
   };
 
-  const handlePrevious = () => {
+  const handlePreviousClick = () => {
     if (progress > 0) {
       setProgress(progress - 20);
     }
@@ -53,11 +53,11 @@ export function DetailedQues(): JSX.Element {
     }
   };
   function handleNext() {
-    handleButtonClick();
+    handleNextClick();
     nextQuestion();
   }
   function handlePrev() {
-    handlePrevious();
+    handlePreviousClick();
     prevQuestion();
   }
   return (
