@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { HomePage, Footer } from "./HomePage_Buttons";
 import { Button, Form } from "react-bootstrap";
+import "./Quizzes.css";
+// import "./App.css";
 
 interface Question {
   question: string;
@@ -151,98 +153,95 @@ function Quiz() {
 
   return (
     <div>
-      <h1>{questions[currentQuestion].question}</h1>
-      {questions[currentQuestion].type === "multipleChoice" && (
-        <div className="Basic-Multiple">
-          {questions[currentQuestion].options.map((option) => (
-            <Form.Check
-              key={option}
-              type="radio"
-              id="Choices"
-              name="choices"
-              value={option}
-              onChange={handleInputChange}
-              label={option}
-              checked={selectedOptions[currentQuestion] === option}
+      <div className="StaticBackground">
+        <h1>{questions[currentQuestion].question}</h1>
+        {questions[currentQuestion].type === "multipleChoice" && (
+          <div>
+            {questions[currentQuestion].options.map((option) => (
+              <Form.Check
+                key={option}
+                type="radio"
+                id={option}
+                name="choices"
+                value={option}
+                onChange={handleInputChange}
+                label={option}
+                checked={selectedOptions[currentQuestion] === option}
+              ></Form.Check>
+            ))}
+          </div>
+        )}
+        {questions[currentQuestion].type === "checkbox" && (
+          <div>
+            {questions[currentQuestion].options.map((option) => (
+              <Form.Check
+                key={option}
+                type="checkbox"
+                id={option}
+                name="choices-chsckbox"
+                value={option}
+                onChange={handleInputChange2}
+                label={option}
+                checked={selectedOptions.includes(option)}
+              ></Form.Check>
+            ))}
+          </div>
+        )}
+        {questions[currentQuestion].type === "textbox" && (
+          <Form.Group controlId={`Question-${currentQuestion}`}>
+            <Form.Label
               style={{
-                width: "200px",
-                border: "1px solid gray",
-                backgroundColor: "#1e2761",
+                display: "block",
+                marginBottom: "10px",
                 color: "white",
-                fontSize: "30",
+                fontSize: "25px",
+                textAlign: "center",
+                margin: "0 auto",
+                maxWidth: "80%",
               }}
-            ></Form.Check>
-          ))}
-        </div>
-      )}
-      {questions[currentQuestion].type === "checkbox" && (
-        <div>
-          {questions[currentQuestion].options.map((option) => (
-            <Form.Check
-              key={option}
-              type="checkbox"
-              id="Choices-checkbox"
-              name="choices-chsckbox"
-              value={option}
-              onChange={handleInputChange2}
-              label={option}
-              checked={selectedOptions.includes(option)}
-            ></Form.Check>
-          ))}
-        </div>
-      )}
-      {questions[currentQuestion].type === "textbox" && (
-        <Form.Group controlId={`Question-${currentQuestion}`}>
-          <Form.Label
-            style={{
-              display: "block",
-              marginBottom: "10px",
-              color: "white",
-              fontSize: "25px",
-              textAlign: "center",
-              margin: "0 auto",
-              maxWidth: "80%",
-            }}
-          >
-            {questions[currentQuestion].options}
-          </Form.Label>
-          <Form.Control
-            as="textarea"
-            value={selectedOptions[currentQuestion]}
-            onChange={handleInputChange}
-            style={{
-              margin: "20px auto",
-              height: "200px",
-              width: "700px",
-              border: "1px solid gray",
-              backgroundColor: "#1e2761",
-              color: "white",
-              fontSize: "30",
-            }}
-          />
-        </Form.Group>
-      )}
-      <Button
-        onClick={PrevQuestion}
-        disabled={currentQuestion === 0}
-        className="button"
-        style={{
-          right: "20px",
-        }}
-      >
-        Previous
-      </Button>
-      <Button
-        onClick={NextQuestion}
-        disabled={currentQuestion === questions.length - 1}
-        className="button"
-        style={{
-          left: "20px",
-          margin: "24px auto",
-        }}
-      >
-        Next
-      </Button>
+            >
+              {questions[currentQuestion].options}
+            </Form.Label>
+            <Form.Control
+              as="textarea"
+              value={selectedOptions[currentQuestion]}
+              onChange={handleInputChange}
+              style={{
+                margin: "20px auto",
+                height: "200px",
+                width: "700px",
+                border: "1px solid gray",
+                background: "black",
+                color: "white",
+                fontSize: "17px",
+              }}
+            />
+          </Form.Group>
+        )}
+      </div>
+      <div className="ButtonSpace">
+        <Button
+          onClick={PrevQuestion}
+          disabled={currentQuestion === 0}
+          className="button"
+          style={{
+            right: "20px",
+          }}
+        >
+          Previous
+        </Button>
+        <Button
+          onClick={NextQuestion}
+          disabled={currentQuestion === questions.length - 1}
+          className="button"
+          style={{
+            left: "20px",
+            margin: "24px auto",
+          }}
+        >
+          Next
+        </Button>
+      </div>
     </div>
   );
 }
