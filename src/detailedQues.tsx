@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import "./Quizzes.css";
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
@@ -61,35 +62,37 @@ export function DetailedQues(): JSX.Element {
   }
   return (
     <div>
-      <Form.Group controlId={`Question-${qIndex}`}>
-        <Form.Label
-          style={{
-            display: "block",
-            marginBottom: "10px",
-            color: "white",
-            fontSize: "25px",
-            textAlign: "center",
-            margin: "0 auto",
-            maxWidth: "80%",
-          }}
-        >
-          {Question[qIndex]}
-        </Form.Label>
-        <Form.Control
-          as="textarea"
-          value={answers[qIndex]}
-          onChange={handleInputChange}
-          style={{
-            margin: "20px auto",
-            height: "200px",
-            width: "700px",
-            border: "1px solid gray",
-            backgroundColor: "#1e2761",
-            color: "white",
-            fontSize: "30",
-          }}
-        />
-      </Form.Group>
+      <div className="StaticBackground">
+        <Form.Group controlId={`Question-${qIndex}`}>
+          <Form.Label
+            style={{
+              display: "block",
+              marginBottom: "10px",
+              color: "white",
+              fontSize: "25px",
+              textAlign: "center",
+              margin: "0 auto",
+              maxWidth: "80%",
+            }}
+          >
+            {Question[qIndex]}
+          </Form.Label>
+          <Form.Control
+            as="textarea"
+            value={answers[qIndex]}
+            onChange={handleInputChange}
+            style={{
+              margin: "20px auto",
+              height: "200px",
+              width: "700px",
+              border: "1px solid gray",
+              backgroundColor: "black",
+              color: "white",
+              fontSize: "17px",
+            }}
+          />
+        </Form.Group>
+      </div>
       <Button
         onClick={handlePrev}
         disabled={qIndex === 0}
