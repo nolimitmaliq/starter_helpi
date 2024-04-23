@@ -457,3 +457,36 @@
 .window {
   align-items: center;
 }
+
+.Basic-Multiple {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.progress-bar {
+  width: 10%;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #e6e6e6;
+}
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background-color: #2ecc71; /* bar filled in */
+  transition: width 0.5s ease-out;
+}
+
+.progress-label {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #916767;
+}
