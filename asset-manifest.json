@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/starter_helpi/static/css/main.f8df953e.css",
-    "main.js": "/starter_helpi/static/js/main.d531a303.js",
+    "main.css": "/starter_helpi/static/css/main.477b9282.css",
+    "main.js": "/starter_helpi/static/js/main.da1d6bc8.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/psychologist.jpg": "/starter_helpi/static/media/psychologist.e66b84804f412346b715.jpg",
     "static/media/engineer.jpg": "/starter_helpi/static/media/engineer.75b8ab4c440698727a93.jpg",
@@ -12,12 +12,12 @@
     "static/media/image 1.jpg": "/starter_helpi/static/media/image 1.927340ae3354d896bac1.jpg",
     "static/media/image 4.jpg": "/starter_helpi/static/media/image 4.1c2fdf5ed0a2ce9006d9.jpg",
     "index.html": "/starter_helpi/index.html",
-    "main.f8df953e.css.map": "/starter_helpi/static/css/main.f8df953e.css.map",
-    "main.d531a303.js.map": "/starter_helpi/static/js/main.d531a303.js.map",
+    "main.477b9282.css.map": "/starter_helpi/static/css/main.477b9282.css.map",
+    "main.da1d6bc8.js.map": "/starter_helpi/static/js/main.da1d6bc8.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.f8df953e.css",
-    "static/js/main.d531a303.js"
+    "static/css/main.477b9282.css",
+    "static/js/main.da1d6bc8.js"
   ]
 }
