@@ -12,7 +12,7 @@
         at div
         at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:75:33)
         at div
-        at App
+        at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:16:33)
 
       4 |
       5 | test("renders learn react link", () => {
@@ -44,7 +44,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (110 ms)
+  ✕ renders learn react link (109 ms)
 
   ● renders learn react link
 
@@ -241,8 +241,8 @@ go away.[0m
 ----------------------|---------|----------|---------|---------|------------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
 ----------------------|---------|----------|---------|---------|------------------------
-All files             |   15.15 |    11.36 |    10.9 |      16 |                        
- App.tsx              |     100 |      100 |     100 |     100 |                        
+All files             |   17.73 |    13.04 |   10.52 |   18.65 |                        
+ App.tsx              |      60 |       50 |   33.33 |      60 | 12,20-26               
  BasicQuiz.tsx        |       4 |        0 |       0 |    4.16 | 128-264                
  Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27                   
  CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                  
@@ -258,5 +258,5 @@ All files             |   15.15 |    11.36 |    10.9 |      16 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.5 s
+Time:        3.528 s
 Ran all test suites.
