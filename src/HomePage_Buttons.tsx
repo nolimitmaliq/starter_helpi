@@ -16,7 +16,6 @@ import career5 from "./Accountant.jpg";
 import career6 from "./police officer.jpg";
 import career7 from "./engineer.jpg";
 import career8 from "./psychologist.jpg";
-import { Linkedin } from "lucide-react";
 const Images = [
   { url: career1, alt: "Lawyer" },
   { url: career2, alt: "Doctor" },
@@ -84,13 +83,7 @@ export function HomePage(): JSX.Element {
     setDisplayText3(!displayText3);
   };
 
-  const [jobSearchInfoVisible, setJobSearchInfoVisible] = useState(false);
-
   // Function to handle the click event of the "Job Search" button
-  const handleJobSearchClick = () => {
-    // Toggle the visibility of the paragraph
-    setJobSearchInfoVisible(!jobSearchInfoVisible);
-  };
 
   return (
     <>
@@ -136,69 +129,60 @@ export function HomePage(): JSX.Element {
               feel pressured to find the "perfect" option.
             </p>
           </div>
-          <div></div>
+          <div
+            style={{
+              maxWidth: "1100px",
+              width: "100%",
+              aspectRatio: "10/6",
+              margin: "0 auto",
+            }}
+          >
+            <ChangeImages
+              images={Images}
+              profession={profession}
+            ></ChangeImages>
+          </div>
+          <div id="careerQuizzes">
+            <h1
+              className="App-buttons2"
+              style={{
+                margin: "12px auto",
+              }}
+            >
+              Career Quizzes
+            </h1>
+            <p className="HomePage-text">
+              Ever pondered upon your life's direction and struggled to identify
+              a career you'd feel passionate about? Now, thanks to our Basic and
+              Detailed Quizzes, deciphering your future becomes possible. Our
+              quizzes are designed for everyone, irrespective of your age, race,
+              ethnicity, gender, or nationality.
+            </p>
+          </div>
           <div>
             <div>
-              <h1>
-                <div
-                  style={{
-                    maxWidth: "1200px",
-                    width: "100%",
-                    aspectRatio: "10/6",
-                    margin: "0 auto",
-                  }}
-                >
-                  <ChangeImages
-                    images={Images}
-                    profession={profession}
-                  ></ChangeImages>
-                  <p></p>
-                </div>
-              </h1>
+              <Button onClick={handleButton2} className="Career-Quiz2 ">
+                View Quizzes
+              </Button>
+              {displayText2 && (
+                <>
+                  <BasicQuiz></BasicQuiz>
+                  <Button
+                    onClick={() => setTab("basic")}
+                    className="Career-Quiz2"
+                  >
+                    Basic Quiz
+                  </Button>
+                  <DetailedQuiz></DetailedQuiz>
+                  <Button
+                    onClick={() => setTab("detailed")}
+                    className="Career-Quiz2"
+                  >
+                    Detailed Quiz
+                  </Button>
+                </>
+              )}
             </div>
-            <div id="careerQuizzes">
-              <h1
-                className="App-buttons2"
-                style={{
-                  margin: "1px auto",
-                }}
-              >
-                Career Quizzes
-              </h1>
-              <p className="HomePage-text">
-                Ever pondered upon your life's direction and struggled to
-                identify a career you'd feel passionate about? Now, thanks to
-                our Basic and Detailed Quizzes, deciphering your future becomes
-                possible. Our quizzes are designed for everyone, irrespective of
-                your age, race, ethnicity, gender, or nationality.
-              </p>
-            </div>
-            <div>
-              <div>
-                <Button onClick={handleButton2} className="Career-Quiz2 ">
-                  View Quizzes
-                </Button>
-                {displayText2 && (
-                  <>
-                    <BasicQuiz></BasicQuiz>
-                    <Button
-                      onClick={() => setTab("basic")}
-                      className="Career-Quiz2"
-                    >
-                      Basic Quiz
-                    </Button>
-                    <DetailedQuiz></DetailedQuiz>
-                    <Button
-                      onClick={() => setTab("detailed")}
-                      className="Career-Quiz2"
-                    >
-                      Detailed Quiz
-                    </Button>
-                  </>
-                )}
-              </div>
-            </div>
-            <div></div>
           </div>
           <div id="careerTips">
             <div>
@@ -212,46 +196,16 @@ export function HomePage(): JSX.Element {
             </div>
             <div>
               <h1>
-                <div>
+                <a
+                  href="https://www.linkedin.com/pulse/seven-great-career-advice-tips-college-students-resumemansion/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <Button onClick={handleButton3} className="Career-Quiz2">
                     View Tips
                   </Button>
-                  {displayText3 && (
-                    <>
-                      <Button
-                        onClick={handleButton3}
-                        className="Career-Buttons"
-                      >
-                        Resume Help
-                      </Button>
-                      <Button
-                        onClick={handleJobSearchClick}
-                        className="Career-Buttons"
-                      >
-                        Job Search
-                      </Button>
-                      {jobSearchInfoVisible && (
-                        <p className="HomePage-text">
-                          Links to Explore in Job Searches: Linked{""}
-                          <Linkedin>https://www.linkedin.com/feed/</Linkedin>,
-                          Indeed, Monster, GlassDoor
-                        </p>
-                      )}
-                      <Button
-                        onClick={handleButton3}
-                        className="Career-Buttons"
-                      >
-                        Career Advice
-                      </Button>
-                      <Button
-                        onClick={handleButton3}
-                        className="Career-Buttons"
-                      >
-                        Academic Planning
-                      </Button>
-                    </>
-                  )}
-                </div>
+                  {displayText3}
+                </a>
               </h1>
             </div>
             <div id="aboutUs">
