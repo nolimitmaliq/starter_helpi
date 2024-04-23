@@ -1,10 +1,5 @@
-// import { BasicQuestion } from "./BasicQuiz";
-// import { DetailedQuestion } from "./DetailedQuiz";
 import { HomePage } from "./HomePage_Buttons";
-// import React, { useState } from "react";
 import "./App.css";
-//import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-//import { Button, Form } from "react-bootstrap";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
 //let keyData = "";

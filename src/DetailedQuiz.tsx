@@ -2,7 +2,7 @@ import { useState } from "react";
 import { HomePage, Footer } from "./HomePage_Buttons";
 import { Button } from "react-bootstrap";
 import { DetailedQues } from "./detailedQues";
-import { ProgressBar } from "./progressBar";
+// import { ProgressBar } from "./progressBar";
 export function DetailedQuestion() {
   const [tab, setTab] = useState<string>("detailed");
 
@@ -37,7 +37,6 @@ export function DetailedQuestion() {
             </div>
             <div className="QuizBody">
               <DetailedQues></DetailedQues>
-              <ProgressBar></ProgressBar>
             </div>
           </div>
           <Footer />
