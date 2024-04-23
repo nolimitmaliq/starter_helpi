@@ -457,9 +457,3 @@
 .window {
   align-items: center;
 }
-
-.Basic-Multiple {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
