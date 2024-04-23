@@ -8,6 +8,8 @@ import { DetailedQuestion } from "./DetailedQuiz";
 // import { HomePage } from "./HomePage_Buttons";
 //import Menubar from "./Menubar";
 
+//import img from "./spaceheader.jpg";
+import spaceheader from "./spaceheader.jpg";
 import career1 from "./image 1.jpg";
 import career2 from "./image 2.jpg";
 import career3 from "./image 4.jpg";
@@ -17,6 +19,7 @@ import career6 from "./police officer.jpg";
 import career7 from "./engineer.jpg";
 import career8 from "./psychologist.jpg";
 import { Linkedin } from "lucide-react";
+
 const Images = [
   { url: career1, alt: "Lawyer" },
   { url: career2, alt: "Doctor" },
@@ -100,25 +103,33 @@ export function HomePage(): JSX.Element {
         <DetailedQuestion />
       ) : (
         <div className="Body">
-          <div className="Header-Background">
-            <header className="App-header">
-              <h1>Welcome to CareerQuestt!</h1>
-              <h1 className="caption">Discover Your Dream Here...</h1>
-            </header>
-            <div className="buttonContainer">
-              <a href="#differentCareers" className="button ">
-                Different Careers
-              </a>
-              <a href="#careerQuizzes" className="button">
-                Career Quizzes
-              </a>
-              <a href="#careerTips" className="button">
-                Career Tips
-              </a>
-              <a href="#aboutUs" className="button">
-                About Us
-              </a>
-            </div>
+          <header
+            className="App-header"
+            style={{
+              backgroundImage: `url(${spaceheader})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          >
+            <h1>Welcome to CareerWay!</h1>
+            <h1 className="caption">
+              Endless Career Possibilites, All the Way to the Moon and Back and
+              We Will Be The Rocket!!
+            </h1>
+          </header>
+          <div className="buttonContainer">
+            <a href="#differentCareers" className="button ">
+              Different Careers
+            </a>
+            <a href="#careerQuizzes" className="button">
+              Career Quizzes
+            </a>
+            <a href="#careerTips" className="button">
+              Career Tips
+            </a>
+            <a href="#aboutUs" className="button">
+              About Us
+            </a>
           </div>
 
           <div id="differentCareers">
