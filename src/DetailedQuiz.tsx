@@ -20,7 +20,7 @@ export function DetailedQuestion() {
                     fontSize: "50px",
                   }}
                 >
-                  Basic Quiz
+                  Detailed Quiz
                 </h1>
               </header>
               <div className="buttonContainer">

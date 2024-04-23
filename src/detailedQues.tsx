@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
-
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
@@ -62,70 +61,67 @@ export function DetailedQues(): JSX.Element {
   }
   return (
     <div>
-      <Form>
-        <Form.Group controlId={`Question-${qIndex}`}>
-          <Form.Label
-            style={{
-              display: "block",
-              marginBottom: "10px",
-              color: "white",
-              fontSize: "25px",
-              textAlign: "center",
-              margin: "0 auto",
-              maxWidth: "80%",
-            }}
-          >
-            {Question[qIndex]}
-          </Form.Label>
-          <Form.Control
-            as="textarea"
-            value={answers[qIndex]}
-            onChange={handleInputChange}
-            style={{
-              margin: "20px auto",
-              height: "200px",
-              width: "700px",
-              border: "1px solid gray",
-              backgroundColor: "#1e2761",
-              color: "white",
-              fontSize: "30px", // Added px for fontSize
-            }}
-          />
-        </Form.Group>
-        <div style={{ textAlign: "center", margin: "20px" }}>
-          <Button
-            onClick={handlePrev}
-            disabled={qIndex === 0}
-            className="button"
-            style={{
-              marginRight: "20px", // Adjusted right to marginRight for proper CSS in React
-            }}
-          >
-            Previous
-          </Button>
-          <Button
-            onClick={handleNext}
-            disabled={qIndex === Question.length - 1}
-            className="button"
-            style={{
-              marginLeft: "20px", // Adjusted left to marginLeft for proper CSS in React
-            }}
-          >
-            Next
-          </Button>
+      <Form.Group controlId={`Question-${qIndex}`}>
+        <Form.Label
+          style={{
+            display: "block",
+            marginBottom: "10px",
+            color: "white",
+            fontSize: "25px",
+            textAlign: "center",
+            margin: "0 auto",
+            maxWidth: "80%",
+          }}
+        >
+          {Question[qIndex]}
+        </Form.Label>
+        <Form.Control
+          as="textarea"
+          value={answers[qIndex]}
+          onChange={handleInputChange}
+          style={{
+            margin: "20px auto",
+            height: "200px",
+            width: "700px",
+            border: "1px solid gray",
+            backgroundColor: "#1e2761",
+            color: "white",
+            fontSize: "30",
+          }}
+        />
+      </Form.Group>
+      <Button
+        onClick={handlePrev}
+        disabled={qIndex === 0}
+        className="button"
+        style={{
+          right: "20px",
+        }}
+      >
+        Previous
+      </Button>
+      <Button
+        onClick={handleNext}
+        disabled={qIndex === Question.length - 1}
+        className="button"
+        style={{
+          left: "20px",
+          margin: "24px auto",
+        }}
+      >
+        Next
+      </Button>
+      <div className="container">
+        <div className="progress-bar">
+          <div
+            className="progress-bar-fill"
+            style={{ width: `${progress}%`, backgroundColor: getColor() }}
+          ></div>
         </div>
-        <div className="container">
-          <div className="progress-bar">
-            <div
-              className="progress-bar-fill"
-              style={{ width: `${progress}%`, backgroundColor: getColor() }}
-            ></div>
-          </div>
-          <div className="progress-label">{progress}%</div>
-          {/* <button onClick={handleButtonClick}>Progress</button>
+        <div className="progress-label">{progress}%</div>
+        {/* <button onClick={handleButtonClick}>Progress</button>
           {<button onClick={handlePrevious}>Previous</button>} */}
-        </div>
-      </Form>
+      </div>
     </div>
   );
 }
