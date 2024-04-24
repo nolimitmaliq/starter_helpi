@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/starter_helpi/static/css/main.477b9282.css",
-    "main.js": "/starter_helpi/static/js/main.c7fd5a24.js",
+    "main.css": "/starter_helpi/static/css/main.c4606ad3.css",
+    "main.js": "/starter_helpi/static/js/main.70e01c19.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/psychologist.jpg": "/starter_helpi/static/media/psychologist.e66b84804f412346b715.jpg",
     "static/media/engineer.jpg": "/starter_helpi/static/media/engineer.75b8ab4c440698727a93.jpg",
@@ -10,14 +10,15 @@
     "static/media/police officer.jpg": "/starter_helpi/static/media/police officer.7e5b4ca42b96ee4d58a4.jpg",
     "static/media/image 2.jpg": "/starter_helpi/static/media/image 2.f272dd72e10c197fc460.jpg",
     "static/media/image 1.jpg": "/starter_helpi/static/media/image 1.927340ae3354d896bac1.jpg",
+    "static/media/spaceheader.jpg": "/starter_helpi/static/media/spaceheader.403448cb932226c8061b.jpg",
     "static/media/image 4.jpg": "/starter_helpi/static/media/image 4.1c2fdf5ed0a2ce9006d9.jpg",
     "index.html": "/starter_helpi/index.html",
-    "main.477b9282.css.map": "/starter_helpi/static/css/main.477b9282.css.map",
-    "main.c7fd5a24.js.map": "/starter_helpi/static/js/main.c7fd5a24.js.map",
+    "main.c4606ad3.css.map": "/starter_helpi/static/css/main.c4606ad3.css.map",
+    "main.70e01c19.js.map": "/starter_helpi/static/js/main.70e01c19.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.477b9282.css",
-    "static/js/main.c7fd5a24.js"
+    "static/css/main.c4606ad3.css",
+    "static/js/main.70e01c19.js"
   ]
 }
