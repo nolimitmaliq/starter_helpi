@@ -2,6 +2,7 @@ import { useState } from "react";
 import { HomePage, Footer } from "./HomePage_Buttons";
 import { Button } from "react-bootstrap";
 import { DetailedQues } from "./detailedQues";
+// import { ProgressBar } from "./progressBar";
 export function DetailedQuestion() {
   const [tab, setTab] = useState<string>("detailed");
 
