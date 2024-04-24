@@ -18,7 +18,6 @@ import career5 from "./Accountant.jpg";
 import career6 from "./police officer.jpg";
 import career7 from "./engineer.jpg";
 import career8 from "./psychologist.jpg";
-import { Linkedin } from "lucide-react";
 
 const Images = [
   { url: career1, alt: "Lawyer" },
@@ -283,9 +282,8 @@ export function HomePage(): JSX.Element {
                         </Button>
                         {jobSearchInfoVisible && (
                           <p className="HomePage-text">
-                            Links to Explore in Job Searches: Linked{""}
-                            <Linkedin>https://www.linkedin.com/feed/</Linkedin>,
-                            Indeed, Monster, GlassDoor
+                            Links to Explore in Job Searches Indeed, Monster,
+                            GlassDoor
                           </p>
                         )}
                         <Button
