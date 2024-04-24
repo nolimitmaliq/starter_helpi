@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import "./Quizzes.css";
 
 const Question = [
   "What are your top 5 skills?",
@@ -38,70 +39,58 @@ export function DetailedQues(): JSX.Element {
 
   return (
     <div>
-      <Form.Group controlId={`Question-${qIndex}`}>
-        <Form.Label
-          style={{
-            display: "block",
-            marginBottom: "10px",
-            color: "white",
-            fontSize: "25px",
-            textAlign: "center",
-            margin: "0 auto",
-            maxWidth: "80%",
-          }}
-        >
-          {Question[qIndex]}
-        </Form.Label>
-        <Form.Control
-          as="textarea"
-          value={answers[qIndex]}
-          onChange={handleInputChange}
-          style={{
-            margin: "20px auto",
-            height: "200px",
-            width: "700px",
-            border: "1px solid gray",
-            backgroundColor: "#1e2761",
-            color: "white",
-            fontSize: "30px", // Fixed the missing 'px'
-          }}
-        />
-      </Form.Group>
-      {qIndex !== 0 && (
-        <Button
-          onClick={prevQuestion}
-          disabled={qIndex === 0}
-          className="button"
-          style={{
-            right: "20px",
-          }}
-        >
-          Previous
-        </Button>
-      )}
-      {qIndex !== Question.length - 1 ? (
-        <Button
-          onClick={nextQuestion}
-          disabled={qIndex === Question.length - 1}
-          className="button"
-          style={{
-            left: "20px",
-            margin: "24px auto",
-          }}
-        >
-          Next
-        </Button>
-      ) : (
-        <Button
-          onClick={handleSubmit}
-          className="button"
-          style={{
-            margin: "24px auto",
-          }}
-        >
-          Submit
-        </Button>
-      )}
+      <div className="StaticBackground">
+        <Form.Group controlId={`Question-${qIndex}`}>
+          <Form.Label
+            style={{
+              display: "block",
+              marginBottom: "10px",
+              color: "white",
+              fontSize: "25px",
+              textAlign: "center",
+              margin: "0 auto",
+              maxWidth: "80%",
+            }}
+          >
+            {Question[qIndex]}
+          </Form.Label>
+          <Form.Control
+            as="textarea"
+            value={answers[qIndex]}
+            onChange={handleInputChange}
+            style={{
+              margin: "20px auto",
+              height: "200px",
+              width: "700px",
+              border: "1px solid gray",
+              background: "black",
+              color: "white",
+              fontSize: "17px",
+            }}
+          />
+        </Form.Group>
+      </div>
+      <Button
+        onClick={prevQuestion}
+        disabled={qIndex === 0}
+        className="button"
+        style={{
+          right: "20px",
+        }}
+      >
+        Previous
+      </Button>
+      <Button
+        onClick={nextQuestion}
+        disabled={qIndex === Question.length - 1}
+        className="button"
+        style={{
+          left: "20px",
+          margin: "24px auto",
+        }}
+      >
+        Next
+      </Button>
     </div>
   );
 }
