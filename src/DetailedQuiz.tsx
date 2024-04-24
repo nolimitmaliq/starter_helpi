@@ -18,6 +18,7 @@ export function DetailedQuestion() {
                 <h1
                   style={{
                     fontSize: "50px",
+                    margin: 500,
                   }}
                 >
                   Detailed Quiz

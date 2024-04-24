@@ -4,6 +4,24 @@
   margin-bottom: 0rem;
 }
 
+.home-page-container {
+  position: relative;
+}
+
+.stars-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure stars are behind the main content */
+}
+
+.home-page-content {
+  z-index: 1; /* Ensure main content is above the stars */
+}
+
 .buttonContainer {
   display: flex;
   justify-content: space-around; /* Adjust as needed */
@@ -17,22 +35,22 @@
   font-family: cursive;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #dcd6d6; /* Change the text color */
+  color: #fdfdfd; /* Change the text color */
   margin-top: 0px; /* Adjust the top margin */
   padding: 0px;
 }
 
 .button {
-  width: 300px;
+  width: 380px;
   height: 30px;
   font-size: 18px; /* Increase font size */
   /* padding: 7px 100.2px; Increase padding to make the buttons bigger */
-  border-radius: 50px; /* Add rounded corners */
+  border-radius: 20px; /* Add rounded corners */
   text-decoration: none;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: white;
   border-top: 2px solid white;
-  background-color: #1e2761;
+  background-color: #23235d;
   position: relative;
   text-align: center;
   justify-content: space-evenly;
@@ -41,7 +59,7 @@
   outline: none;
 }
 .button:hover {
-  box-shadow: inset 300px 0 0 0 #7a2048;
+  box-shadow: inset 500px 0 0 0 #0b0b0b;
 }
 
 .button.differentCareers {
@@ -65,7 +83,7 @@
 }
 
 .Header-Background {
-  background: linear-gradient(45deg, #1e2761 10%, #7a2048 50%, #1e2761 10%);
+  background: linear-gradient(45deg, #1e2761 10%, #100f0f 50%, #1e2761 10%);
 }
 .App-logo {
   height: 40vmin;
@@ -79,15 +97,20 @@
 }
 
 .App-header {
-  min-height: 10vh;
+  min-height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(14px + 3vmin);
-  color: rgb(240, 240, 240);
-  /* height: 1px; */
+  color: rgb(252, 251, 253);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-style: cursive;
+  text-shadow: 12px 12px 12px black; /* Add black outline */
+  z-index: 1; /* Ensure header is above the stars */
 }
+
 .App-header4 {
   min-height: 10vh;
   display: flex;
@@ -99,14 +122,9 @@
   height: 10px;
 }
 .App-header.background {
-  background: linear-gradient(
-    45deg,
-    transparent,
-    #0c2455 20%,
-    #0c2455 50%,
-    #0c2455 79%,
-    transparent
-  );
+  width: 100%; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 20px; /* Add margin at the bottom of the image */
 }
 
 .footer {
@@ -118,7 +136,7 @@
   justify-content: center;
   font-size: calc(2px + 2vmin);
   color: rgb(240, 240, 240);
-  background: linear-gradient(45deg, #1e2761 10%, #7a2048 50%, #1e2761 10%);
+  background: linear-gradient(45deg, #1e2761 10%, #100f0f 50%, #1e2761 10%);
 }
 
 .signup-box {
@@ -169,17 +187,17 @@
 /* background-color: darkorchid; */
 
 .App-buttons2 {
-  color: #408ec6;
+  color: #f7f7f7;
   text-align: center;
   /* text-indent: 5%; */
   position: relative;
-  border-top: 3px solid #408ec6;
+  border-top: 3px solid #ffffff;
   padding-top: 16px;
   margin: 0px auto;
 }
 
 .App-differentcareersbutton {
-  color: #408ec6;
+  color: #ffffff;
   text-align: center;
   /* text-indent: 5%; */
   position: relative;
@@ -188,11 +206,11 @@
 }
 
 .App-buttons4 {
-  color: #408ec6;
+  color: #ffffff;
   text-align: center;
   /* text-indent: 5%; */
   position: relative;
-  border-top: 3px solid #408ec6;
+  border-top: 3px solid #ffffff;
   padding-top: 16px;
 }
 
@@ -227,7 +245,7 @@
   /* text-align: center; */
   /* text-indent: 5%; */
   /* position: relative; */
-  border-top: 3px solid rgb(0, 170, 255);
+  border-top: 3px solid rgb(255, 255, 255);
   padding-top: 16px;
 }
 
@@ -364,8 +382,8 @@
 }
 
 .Career-Quiz2 {
-  --background-color: #e3e3e3; /* Light grey background as the starting color */
-  --accent-color: #408ec6; /* Blue color for hover/focus effect */
+  --background-color: #ffffff; /* Light grey background as the starting color */
+  --accent-color: #766868; /* Blue color for hover/focus effect */
   --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
   margin: 1rem auto;
@@ -375,7 +393,8 @@
   cursor: pointer;
   border-radius: var(--border-radius);
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
-  font-family: "Courier New", Courier, monospace;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   align-items: center;
 }
 
@@ -385,7 +404,7 @@
   background-color: var(
     --accent-color
   ); /* Change background to blue on hover/focus */
-  color: white; /* Change text color to white on hover/focus */
+  color: rgb(18, 17, 17); /* Change text color to white on hover/focus */
   z-index: 1;
 }
 
@@ -409,7 +428,7 @@
 }
 
 .HomePage-text {
-  border: 4px solid #408ec6;
+  border: 4px solid #ffffff;
   border-radius: 10px;
   padding: 10px;
   margin-left: 20%;
@@ -417,7 +436,7 @@
   color: white;
 }
 .Career-Quiz-text {
-  border: 2px solid #408ec6;
+  border: 2px solid #ffffff;
   border-radius: 10px;
   padding: 10px;
   margin-left: 20%;
@@ -426,7 +445,7 @@
 }
 
 .Career-Buttons {
-  --background-color: #408ec6; /* New background color */
+  --background-color: #f5f5f5; /* New background color */
   --accent-color: #7a2048; /* New accent color for hover/focus effect */
   --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
@@ -446,11 +465,14 @@
 }
 
 .Body {
-  background: linear-gradient(to top, #7a2048, #1e2761);
+  background: linear-gradient(45deg, #1c1d39 10%, #1b1b2a 55%, #1b1b2a 10%);
+  height: 100%;
+  overflow: hidden;
+  position: relative; /* Ensure relative positioning for z-index */
 }
 
 .QuizBody {
-  background: #7a2048;
+  background: linear-gradient(45deg, #1c1d39 10%, #1b1b2a 55%, #1b1b2a 10%);
   color: white;
 }
 
