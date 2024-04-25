@@ -488,7 +488,7 @@ form button {
 .QuizBody {
   background: #221f1f;
   color: white;
-  height: 70vh;
+  /* height: 70vh; */
 }
 
 .window {

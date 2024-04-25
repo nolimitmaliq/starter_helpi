@@ -1,4 +1,4 @@
-import { HomePage, Footer } from "./HomePage_Buttons";
+import { Footer, HomePage } from "./HomePage_Buttons";
 import React, { useState } from "react";
 import "./App.css";
 //import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
