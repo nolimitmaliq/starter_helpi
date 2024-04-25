@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
+import "./Quizzes.css";
+
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
@@ -30,7 +32,9 @@ export function DetailedQues(): JSX.Element {
       prevIndex > 0 ? prevIndex - 1 : Question.length - 1
     ); // Loops back to last at the start
   };
+
   const [progress, setProgress] = useState(0);
+
   const handleNextClick = () => {
     if (progress < 100) {
       setProgress(progress + 20);
@@ -43,49 +47,36 @@ export function DetailedQues(): JSX.Element {
     }
   };
   const getColor = () => {
-    // if (progress < 40) {
-    //   return "#ff0000";
-    // } else if (progress < 70) {
-    //   return "#ffa500";
-    // } else {
-    //   return "#2eec71";
-    // }
-    return "#7a2048";
+    if (progress < 40) {
+      return "#ff0000";
+    } else if (progress < 70) {
+      return "#ffa500";
+    } else {
+      return "#2eec71";
+    }
   };
   function handleNext() {
     handleNextClick();
     nextQuestion();
   }
+
   function handlePrev() {
     handlePreviousClick();
     prevQuestion();
   }
 
   return (
-    <div
-      style={{
-        height: "36rem",
-      }}
-    >
-      <div className="container">
-        <div className="progress-bar">
-          <div
-            className="progress-bar-fill"
-            style={{ width: `${progress}%`, backgroundColor: getColor() }}
-          ></div>
-        </div>
-        <div className="progress-label">{progress}%</div>
-      </div>
+    <div>
       <Form.Group controlId={`Question-${qIndex}`}>
         <Form.Label
           style={{
             display: "block",
+            marginBottom: "10px",
             color: "white",
             fontSize: "25px",
             textAlign: "center",
             margin: "0 auto",
             maxWidth: "80%",
-            bottom: "90%",
           }}
         >
           {Question[qIndex]}
@@ -126,6 +117,15 @@ export function DetailedQues(): JSX.Element {
       >
         Next
       </Button>
+      <div className="container">
+        <div className="progress-bar">
+          <div
+            className="progress-bar-fill"
+            style={{ width: `${progress}%`, backgroundColor: getColor() }}
+          ></div>
+        </div>
+        <div className="progress-label">{progress}%</div>
+      </div>
     </div>
   );
 }

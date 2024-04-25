@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import "./App.css";
 import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
@@ -15,6 +15,8 @@ import {
 // import { HomePage } from "./HomePage_Buttons";
 //import Menubar from "./Menubar";
 
+//import img from "./spaceheader.jpg";
+import spaceheader from "./spaceheader.jpg";
 import career1 from "./image 1.jpg";
 import career2 from "./image 2.jpg";
 import career3 from "./image 4.jpg";
@@ -23,6 +25,7 @@ import career5 from "./Accountant.jpg";
 import career6 from "./police officer.jpg";
 import career7 from "./engineer.jpg";
 import career8 from "./psychologist.jpg";
+
 const Images = [
   { url: career1, alt: "Lawyer" },
   { url: career2, alt: "Doctor" },
@@ -134,22 +137,74 @@ export function HomePage(): JSX.Element {
   };
 
   // Function to handle the click event of the "Job Search" button
+  // const handleJobSearchClick = () => {
+  //   // Toggle the visibility of the paragraph
+  //   setJobSearchInfoVisible(!jobSearchInfoVisible);
+  // };
 
+  useEffect(() => {
+    function random(min: number, max: number): number {
+      return min + Math.random() * (max - min);
+    }
+
+    const body = document.querySelector("body");
+    if (!body) throw new Error("Body element not found!");
+
+    const numberOfStars = 100; // Set the desired number of stars
+    const sideMargin = 20; // Define the margin from the sides of the screen
+
+    for (let i = 0; i < numberOfStars; i++) {
+      let xPos =
+        i % 2 === 0
+          ? random(0, sideMargin) // Generate xPos for the left side
+          : random(100 - sideMargin, 100); // Generate xPos for the right side
+      let yPos = random(0, 120); // Generate yPos within the vertical range
+      let alpha = random(0.5, 2);
+      let size = random(1, 2);
+      let colour = "#ffffff";
+
+      const star = document.createElement("div");
+      star.style.position = "absolute";
+      star.style.left = xPos + "%";
+      star.style.top = yPos + "%";
+      star.style.opacity = alpha.toString();
+      star.style.width = size + "px";
+      star.style.height = size + "px";
+      star.style.backgroundColor = colour;
+
+      body.appendChild(star);
+    }
+
+    return () => {
+      // Cleanup code if needed
+    };
+  }, []); // Empty dependency array ensures that this effect runs only once on mount
   return (
-    <div>
-      {tab === "basic" ? (
-        <BasicQuestion />
-      ) : tab === "detailed" ? (
-        <DetailedQuestion />
-      ) : (
-        <div className="Body">
-          <div className="Header-Background">
-            <header className="App-header">
-              <h1>Welcome to the Career Quiz!</h1>
-              <h1 className="caption">Discover Your Dream Here...</h1>
+    <div className="home-page-container">
+      <div className="stars-container">{/* Stars will be appended here */}</div>
+      <div className="home-page-content">
+        {tab === "basic" ? (
+          <BasicQuestion />
+        ) : tab === "detailed" ? (
+          <DetailedQuestion />
+        ) : (
+          <div className="Body">
+            <header
+              className="App-header"
+              style={{
+                backgroundImage: `url(${spaceheader})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            >
+              <h1>Welcome to Career-Way!</h1>
+              <h1 className="caption">
+                There are endless career possibilities...All the way to the
+                Moon...
+              </h1>
             </header>
             <div className="buttonContainer">
-              <a href="#differentCareers" className="button ">
+              <a href="#differentCareers" className="button">
                 Different Careers
               </a>
               <a href="#careerQuizzes" className="button">
@@ -162,68 +217,58 @@ export function HomePage(): JSX.Element {
                 About Us
               </a>
             </div>
-          </div>
 
-          <div id="differentCareers">
-            <h1 className="App-differentcareersbutton">Different Careers</h1>
-            <p className="HomePage-text">
-              There are so many career options to choose from. One must first
-              consider their strengths, interests, and passions. It's also
-              important to think about job availability, growth opportunity, and
-              salary expectations. But ultimately, choosing a career is a
-              personal decision that should reflect one's own goals, values and
-              ambitions. It can be helpful to speak to professionals in fields
-              of interest or work with a career coach to gain more clarity and
-              make an informed decision. Remember, this choice isn't set in
-              stone, people often change careers in their lifetime, so don't
-              feel pressured to find the "perfect" option.
-            </p>
-          </div>
-          <div
-            style={{
-              maxWidth: "1000px",
-              width: "100%",
-              aspectRatio: "10/6",
-              margin: "0 auto",
-            }}
-          >
-            <ChangeImages
-              images={Images}
-              profession={profession}
-            ></ChangeImages>
-          </div>
-          <div id="careerQuizzes">
-            <h1
-              className="App-buttons2"
+            <div id="differentCareers">
+              <h1 className="App-differentcareersbutton">Different Careers</h1>
+              <p className="HomePage-text">
+                There are so many career options to choose from. One must first
+                consider their strengths, interests, and passions. It's also
+                important to think about job availability, growth opportunity,
+                and salary expectations. But ultimately, choosing a career is a
+                personal decision that should reflect one's own goals, values,
+                and ambitions. It can be helpful to speak to professionals in
+                fields of interest or work with a career coach to gain more
+                clarity and make an informed decision. Remember, this choice
+                isn't set in stone, people often change careers in their
+                lifetime, so don't feel pressured to find the "perfect" option.
+              </p>
+            </div>
+            <div
               style={{
-                margin: "12px auto",
+                maxWidth: "1100px",
+                width: "100%",
+                aspectRatio: "10/6",
+                margin: "0 auto",
               }}
             >
-              Career Quizzes
-            </h1>
-            <p className="HomePage-text">
-              Ever pondered upon your life's direction and struggled to identify
-              a career you'd feel passionate about? Now, thanks to our Basic and
-              Detailed Quizzes, deciphering your future becomes possible. Our
-              quizzes are designed for everyone, irrespective of your age, race,
-              ethnicity, gender, or nationality.
-            </p>
-          </div>
-          <div>
+              <ChangeImages images={Images} profession={profession} />
+            </div>
+            <div id="careerQuizzes">
+              <h1 className="App-buttons2" style={{ margin: "12px auto" }}>
+                Career Quizzes
+              </h1>
+              <p className="HomePage-text">
+                Ever pondered upon your life's direction and struggled to
+                identify a career you'd feel passionate about? Now, thanks to
+                our Basic and Detailed Quizzes, deciphering your future becomes
+                possible. Our quizzes are designed for everyone, irrespective of
+                your age, race, ethnicity, gender, or nationality.
+              </p>
+            </div>
             <div>
-              <Button onClick={handleButton2} className="Career-Quiz2 ">
+              <Button onClick={handleButton2} className="Career-Quiz2">
                 View Quizzes
               </Button>
               {displayText2 && (
                 <>
-                  <BasicQuiz></BasicQuiz>
+                  <BasicQuiz />
                   <Button
                     onClick={() => setTab("basic")}
                     className="Career-Quiz2"
                   >
                     Basic Quiz
                   </Button>
-                  <DetailedQuiz></DetailedQuiz>
+                  <DetailedQuiz />
                   <Button
                     onClick={() => setTab("detailed")}
                     className="Career-Quiz2"
@@ -234,45 +279,8 @@ export function HomePage(): JSX.Element {
               )}
             </div>
           </div>
-          <div id="careerTips">
-            {/* <div>
-              <h1 className="App-buttons2">Career Tips</h1>
-              <p className="HomePage-text">
-                Career Tips is a resource designed to guide users on how to
-                pursue their potential career. This platform educates users
-                about various useful websites and provides an insight into the
-                hiring process.
-              </p>
-            </div>
-            <div>
-              <h1>
-                <a
-                  href="https://www.linkedin.com/pulse/seven-great-career-advice-tips-college-students-resumemansion/"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <Button onClick={handleButton3} className="Career-Quiz2">
-                    View Tips
-                  </Button>
-                  {displayText3}
-                </a>
-              </h1>
-            </div> */}
-            {/* <div id="aboutUs">
-              <div>
-                <h1 className="App-buttons2">About Us</h1>
-                <p className="HomePage-text">
-                  Our mission is to help people of all ages find the right
-                  career for them. All information on the website is credible
-                  and please stay connected if you would like to receive updates
-                  on the website and newer features. We are working towards
-                  improving the website to help everyone.
-                </p>
-              </div>
-            </div> */}
-          </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }

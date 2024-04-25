@@ -109,7 +109,7 @@ export function ChangeImages({
       <div
         style={{
           position: "absolute",
-          bottom: "8rem",
+          bottom: "9rem",
           left: "50%",
           translate: "-50%",
           display: "flex",

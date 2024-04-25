@@ -124,3 +124,16 @@
 .StaticBackground {
   height: 300px;
 }
+
+.rocket-container {
+  position: relative;
+  width: 100%;
+  height: 100px; /* Adjust as necessary */
+}
+
+.rocket {
+  position: absolute;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: left 0.5s ease; /* Adjust duration as necessary */
+}

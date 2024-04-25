@@ -39,7 +39,6 @@ export function DetailedQuestion() {
               <DetailedQues></DetailedQues>
             </div>
           </div>
-          {/* <Footer /> */}
         </>
       )}
     </>

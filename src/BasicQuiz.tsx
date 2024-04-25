@@ -12,7 +12,7 @@ interface Question {
 
 const questions: Question[] = [
   {
-    question: "What is your highest leavel of education?",
+    question: "What is your highest level of education?",
     type: "multipleChoice",
     options: [
       "Middle School",
@@ -300,8 +300,15 @@ export function BasicQuestion() {
         <>
           <div>
             <div className="Header-Background">
-              <header className="App-header">
-                <h1>Basic Quiz</h1>
+              <header className="App-header4">
+                <h1
+                  style={{
+                    fontSize: "50px",
+                    margin: 10,
+                  }}
+                >
+                  Basic Quiz
+                </h1>
               </header>
               <div className="buttonContainer">
                 <Button onClick={() => setTab("home")} className="button">
@@ -313,7 +320,6 @@ export function BasicQuestion() {
               <Quiz />
             </div>
           </div>
-          {/* <Footer /> */}
         </>
       )}
     </>
