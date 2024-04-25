@@ -1,8 +1,9 @@
 {
   "files": {
     "main.css": "/starter_helpi/static/css/main.de22da79.css",
-    "main.js": "/starter_helpi/static/js/main.8287283d.js",
+    "main.js": "/starter_helpi/static/js/main.2e34108c.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
+    "static/media/Spinning_Mars.gif": "/starter_helpi/static/media/Spinning_Mars.84878dbd099a331b43b3.gif",
     "static/media/psychologist.jpg": "/starter_helpi/static/media/psychologist.e66b84804f412346b715.jpg",
     "static/media/engineer.jpg": "/starter_helpi/static/media/engineer.75b8ab4c440698727a93.jpg",
     "static/media/image 5.jpg": "/starter_helpi/static/media/image 5.730fa562abe134bb218a.jpg",
@@ -10,15 +11,18 @@
     "static/media/police officer.jpg": "/starter_helpi/static/media/police officer.7e5b4ca42b96ee4d58a4.jpg",
     "static/media/image 2.jpg": "/starter_helpi/static/media/image 2.f272dd72e10c197fc460.jpg",
     "static/media/image 1.jpg": "/starter_helpi/static/media/image 1.927340ae3354d896bac1.jpg",
+    "static/media/milkyway.jpg": "/starter_helpi/static/media/milkyway.7bf82e616ab8c26db923.jpg",
     "static/media/spaceheader.jpg": "/starter_helpi/static/media/spaceheader.403448cb932226c8061b.jpg",
     "static/media/image 4.jpg": "/starter_helpi/static/media/image 4.1c2fdf5ed0a2ce9006d9.jpg",
+    "static/media/ShootingStar.jpg": "/starter_helpi/static/media/ShootingStar.90d93b2b9051653f1b6f.jpg",
+    "static/media/planet3.jpg": "/starter_helpi/static/media/planet3.4a74a6d6cdfb48fcd2e5.jpg",
     "index.html": "/starter_helpi/index.html",
     "main.de22da79.css.map": "/starter_helpi/static/css/main.de22da79.css.map",
-    "main.8287283d.js.map": "/starter_helpi/static/js/main.8287283d.js.map",
+    "main.2e34108c.js.map": "/starter_helpi/static/js/main.2e34108c.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.de22da79.css",
-    "static/js/main.8287283d.js"
+    "static/js/main.2e34108c.js"
   ]
 }
