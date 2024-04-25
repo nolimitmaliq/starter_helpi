@@ -39,36 +39,10 @@ const PlanetComponent: React.FC = () => {
         className="planet"
         style={{
           position: "absolute",
-          top: "1540px",
-          left: "0%",
-          width: "300px", // Adjust size as necessary
-          height: "200px",
-        }}
-      />
-
-      <img
-        src={MilkyWayImage}
-        alt="Planet 2"
-        className="planet"
-        style={{
-          position: "absolute",
-          top: "1540px",
-          left: "80%",
-          width: "300px", // Adjust size as necessary
-          height: "200px",
-        }}
-      />
-
-      <img
-        src={ShootingStar}
-        alt="Planet 2"
-        className="planet"
-        style={{
-          position: "absolute",
           top: "1280px",
           left: "80%",
           width: "300px", // Adjust size as necessary
-          height: "150px",
+          height: "200px",
         }}
       />
 
