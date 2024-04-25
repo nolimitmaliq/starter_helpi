@@ -7,12 +7,12 @@
         at h2
         at h1
         at div
-        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:44:37)
+        at Footer (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:45:37)
         at div
         at div
         at div
         at div
-        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:78:33)
+        at HomePage (/home/runner/work/starter_helpi/starter_helpi/src/HomePage_Buttons.tsx:79:33)
         at div
         at App (/home/runner/work/starter_helpi/starter_helpi/src/App.tsx:16:33)
 
@@ -46,7 +46,7 @@
       at runCLI (node_modules/@jest/core/build/cli/index.js:173:3)
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (145 ms)
+  ✕ renders learn react link (146 ms)
 
   ● renders learn react link
 
@@ -231,14 +231,15 @@ go away.[0m
 ----------------------|---------|----------|---------|---------|------------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s      
 ----------------------|---------|----------|---------|---------|------------------------
-All files             |   30.96 |    18.75 |   15.51 |   31.97 |                        
+All files             |   33.11 |    20.45 |   17.24 |   34.26 |                        
  App.tsx              |      60 |       50 |   33.33 |      60 | 12,20-26               
  BasicQuiz.tsx        |       4 |        0 |       0 |    4.16 | 128-264                
  Buttons.tsx          |       0 |      100 |       0 |       0 | 7-27                   
  CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                  
  DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 7-29                   
- HomePage_Buttons.tsx |   81.39 |       60 |   45.45 |   82.92 | 47,51-52,83,86,225-232 
- detailedQues.tsx     |    3.22 |        0 |       0 |    3.33 | 15-64                  
+ HomePage_Buttons.tsx |   81.39 |       60 |   45.45 |   82.92 | 48,52-53,84,87,226-233 
+ PlanetComponent.tsx  |     100 |      100 |     100 |     100 |                        
+ detailedQues.tsx     |       4 |        0 |       0 |    4.16 | 16-61                  
  image2.tsx           |   19.23 |       20 |   21.42 |   22.72 | 22-51,124              
  index.tsx            |       0 |      100 |     100 |       0 | 8-22                   
  popups.tsx           |       0 |      100 |       0 |       0 | 6                      
@@ -247,5 +248,5 @@ All files             |   30.96 |    18.75 |   15.51 |   31.97 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.472 s
+Time:        3.454 s
 Ran all test suites.
