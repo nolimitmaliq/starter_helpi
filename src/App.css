@@ -465,14 +465,15 @@
 }
 
 .Body {
-  background: linear-gradient(45deg, #1c1d39 10%, #1b1b2a 55%, #1b1b2a 10%);
+  background: black;
+  /*background: linear-gradient(45deg, #1c1d39 10%, #1b1b2a 55%, #1b1b2a 10%);*/
   height: 100%;
   overflow: hidden;
   position: relative; /* Ensure relative positioning for z-index */
 }
 
 .QuizBody {
-  background: linear-gradient(45deg, #1c1d39 10%, #1b1b2a 55%, #1b1b2a 10%);
+  background: #221f1f;
   color: white;
 }
 

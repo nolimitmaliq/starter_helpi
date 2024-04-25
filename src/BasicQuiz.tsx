@@ -12,7 +12,7 @@ interface Question {
 
 const questions: Question[] = [
   {
-    question: "What is your highest leavel of education?",
+    question: "What is your highest level of education?",
     type: "multipleChoice",
     options: [
       "Middle School",
