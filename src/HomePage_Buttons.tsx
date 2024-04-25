@@ -18,6 +18,7 @@ import career5 from "./Accountant.jpg";
 import career6 from "./police officer.jpg";
 import career7 from "./engineer.jpg";
 import career8 from "./psychologist.jpg";
+import PlanetComponent from "./PlanetComponent";
 
 const Images = [
   { url: career1, alt: "Lawyer" },
@@ -274,6 +275,8 @@ export function HomePage(): JSX.Element {
                   </p>
                 </div>
               </div>
+              <PlanetComponent />
+
               <Footer />
             </div>
           </div>

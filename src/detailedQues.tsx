@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
+import RocketImage from "./Rocket16.jpg"; // Import your rocket image
 
 const Question = [
   "What are your top 5 skills?",
@@ -32,7 +33,9 @@ export function DetailedQues(): JSX.Element {
       prevIndex > 0 ? prevIndex - 1 : Question.length - 1
     ); // Loops back to last at the start
   };
+
   const [progress, setProgress] = useState(0);
+
   const handleNextClick = () => {
     if (progress < 100) {
       setProgress(progress + 20);
@@ -44,23 +47,17 @@ export function DetailedQues(): JSX.Element {
       setProgress(progress - 20);
     }
   };
-  const getColor = () => {
-    if (progress < 40) {
-      return "#ff0000";
-    } else if (progress < 70) {
-      return "#ffa500";
-    } else {
-      return "#2eec71";
-    }
-  };
+
   function handleNext() {
     handleNextClick();
     nextQuestion();
   }
+
   function handlePrev() {
     handlePreviousClick();
     prevQuestion();
   }
+
   return (
     <div>
       <div className="StaticBackground">
@@ -115,16 +112,15 @@ export function DetailedQues(): JSX.Element {
       >
         Next
       </Button>
-      <div className="container">
-        <div className="progress-bar">
-          <div
-            className="progress-bar-fill"
-            style={{ width: `${progress}%`, backgroundColor: getColor() }}
-          ></div>
-        </div>
-        <div className="progress-label">{progress}%</div>
-        {/* <button onClick={handleButtonClick}>Progress</button>
-          {<button onClick={handlePrevious}>Previous</button>} */}
+      <div className="rocket-container">
+        <img
+          src={RocketImage}
+          alt="Rocket"
+          className="rocket"
+          style={{
+            left: `${progress}%`,
+          }}
+        />
       </div>
     </div>
   );
