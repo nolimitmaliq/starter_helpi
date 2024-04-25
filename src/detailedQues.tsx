@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
-import RocketImage from "./Rocket16.jpg"; // Import your rocket image
 
 const Question = [
   "What are your top 5 skills?",
@@ -47,7 +46,15 @@ export function DetailedQues(): JSX.Element {
       setProgress(progress - 20);
     }
   };
-
+  const getColor = () => {
+    if (progress < 40) {
+      return "#ff0000";
+    } else if (progress < 70) {
+      return "#ffa500";
+    } else {
+      return "#2eec71";
+    }
+  };
   function handleNext() {
     handleNextClick();
     nextQuestion();
@@ -60,37 +67,35 @@ export function DetailedQues(): JSX.Element {
 
   return (
     <div>
-      <div className="StaticBackground">
-        <Form.Group controlId={`Question-${qIndex}`}>
-          <Form.Label
-            style={{
-              display: "block",
-              marginBottom: "10px",
-              color: "white",
-              fontSize: "25px",
-              textAlign: "center",
-              margin: "0 auto",
-              maxWidth: "80%",
-            }}
-          >
-            {Question[qIndex]}
-          </Form.Label>
-          <Form.Control
-            as="textarea"
-            value={answers[qIndex]}
-            onChange={handleInputChange}
-            style={{
-              margin: "20px auto",
-              height: "200px",
-              width: "700px",
-              border: "1px solid gray",
-              backgroundColor: "black",
-              color: "white",
-              fontSize: "17px",
-            }}
-          />
-        </Form.Group>
-      </div>
+      <Form.Group controlId={`Question-${qIndex}`}>
+        <Form.Label
+          style={{
+            display: "block",
+            marginBottom: "10px",
+            color: "white",
+            fontSize: "25px",
+            textAlign: "center",
+            margin: "0 auto",
+            maxWidth: "80%",
+          }}
+        >
+          {Question[qIndex]}
+        </Form.Label>
+        <Form.Control
+          as="textarea"
+          value={answers[qIndex]}
+          onChange={handleInputChange}
+          style={{
+            margin: "20px auto",
+            height: "200px",
+            width: "700px",
+            border: "1px solid gray",
+            backgroundColor: "#1e2761",
+            color: "white",
+            fontSize: "30",
+          }}
+        />
+      </Form.Group>
       <Button
         onClick={handlePrev}
         disabled={qIndex === 0}
@@ -112,15 +117,14 @@ export function DetailedQues(): JSX.Element {
       >
         Next
       </Button>
-      <div className="rocket-container">
-        <img
-          src={RocketImage}
-          alt="Rocket"
-          className="rocket"
-          style={{
-            left: `${progress}%`,
-          }}
-        />
+      <div className="container">
+        <div className="progress-bar">
+          <div
+            className="progress-bar-fill"
+            style={{ width: `${progress}%`, backgroundColor: getColor() }}
+          ></div>
+        </div>
+        <div className="progress-label">{progress}%</div>
       </div>
     </div>
   );

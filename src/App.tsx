@@ -1,4 +1,4 @@
-import { HomePage } from "./HomePage_Buttons";
+import { HomePage, Footer } from "./HomePage_Buttons";
 import React, { useState } from "react";
 import "./App.css";
 //import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
@@ -30,6 +30,7 @@ function App() {
     <>
       <div className="App">
         <HomePage></HomePage>
+        <Footer></Footer>
       </div>
 
       <div>

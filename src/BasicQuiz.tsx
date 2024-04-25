@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { HomePage, Footer } from "./HomePage_Buttons";
+import { HomePage } from "./HomePage_Buttons";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
 // import "./App.css";
@@ -150,9 +150,52 @@ function Quiz() {
       setSelectedOptions([...newOptions, option]);
     }
   };
+  const [progress, setProgress] = useState(0);
+  const handleNextClick = () => {
+    if (progress < 81) {
+      setProgress(progress + 8);
+    }
+    if (progress === 80) {
+      setProgress(100);
+    }
+  };
+
+  const handlePreviousClick = () => {
+    if (progress > 0) {
+      setProgress(progress - 8);
+    }
+    if (progress === 20) {
+      setProgress(0);
+    }
+  };
+  const getColor = () => {
+    return "#7a2048";
+  };
+  function handleNext() {
+    handleNextClick();
+    NextQuestion();
+  }
+  function handlePrev() {
+    handlePreviousClick();
+    PrevQuestion();
+  }
 
   return (
-    <div>
+    <div
+      style={{
+        height: "33rem",
+        margin: " -1.4rem auto",
+      }}
+    >
+      <div className="container">
+        <div className="progress-bar">
+          <div
+            className="progress-bar-fill"
+            style={{ width: `${progress}%`, backgroundColor: getColor() }}
+          ></div>
+        </div>
+        <div className="progress-label">{progress}%</div>
+      </div>
       <div className="StaticBackground">
         <h1>{questions[currentQuestion].question}</h1>
         {questions[currentQuestion].type === "multipleChoice" && (
@@ -221,7 +264,7 @@ function Quiz() {
       </div>
       <div className="ButtonSpace">
         <Button
-          onClick={PrevQuestion}
+          onClick={handlePrev}
           disabled={currentQuestion === 0}
           className="button"
           style={{
@@ -231,7 +274,7 @@ function Quiz() {
           Previous
         </Button>
         <Button
-          onClick={NextQuestion}
+          onClick={handleNext}
           disabled={currentQuestion === questions.length - 1}
           className="button"
           style={{
@@ -257,8 +300,15 @@ export function BasicQuestion() {
         <>
           <div>
             <div className="Header-Background">
-              <header className="App-header">
-                <h1>Basic Quiz</h1>
+              <header className="App-header4">
+                <h1
+                  style={{
+                    fontSize: "50px",
+                    margin: 10,
+                  }}
+                >
+                  Basic Quiz
+                </h1>
               </header>
               <div className="buttonContainer">
                 <Button onClick={() => setTab("home")} className="button">
@@ -270,7 +320,6 @@ export function BasicQuestion() {
               <Quiz />
             </div>
           </div>
-          <Footer />
         </>
       )}
     </>
