@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { HomePage, Footer } from "./HomePage_Buttons";
+import { HomePage } from "./HomePage_Buttons";
 import { DetailedQuestion } from "./DetailedQuiz";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
@@ -138,7 +138,6 @@ export function BasicQuestion() {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
     new Array(questions.length).fill("")
   );
-  const [visible, setVisible] = useState<boolean>(false);
   useEffect(() => {
     console.log(selectedOptions);
   }, [selectedOptions]);
@@ -148,10 +147,6 @@ export function BasicQuestion() {
   const PrevQuestion = () => {
     setCurrentQuestion(currentQuestion - 1);
   };
-  function Submit() {
-    saveData();
-    setTab("detailed");
-  }
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const newAnswer = [...selectedOptions];
     newAnswer[currentQuestion] = e.target.value;
