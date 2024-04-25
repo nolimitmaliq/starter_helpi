@@ -5,6 +5,13 @@ import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
 import { ChangeImages } from "./image2";
 import { BasicQuestion } from "./BasicQuiz";
 import { DetailedQuestion } from "./DetailedQuiz";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faInstagram,
+  faXTwitter,
+  faGithub,
+} from "@fortawesome/free-brands-svg-icons";
 // import { HomePage } from "./HomePage_Buttons";
 //import Menubar from "./Menubar";
 
@@ -37,56 +44,99 @@ const profession = [
   "Psychologist",
 ];
 
-export function Footer() {
-  const [email, setEmail] = useState<string>("");
+export function Footer(): JSX.Element {
+  // const [email, setEmail] = useState<string>("");
 
-  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value);
-  };
+  // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   setEmail(event.target.value);
+  // };
 
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log("Submitted email:", email);
-  };
+  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  //   event.preventDefault();
+  //   console.log("Submitted email:", email);
+  // };
 
   return (
-    <div className="footer">
-      <h1 className="footer">
-        <h2>Sign Up to get more advice on Careers!</h2>
-        <div className="signup-box">
-          <form onSubmit={handleSubmit}>
-            <label htmlFor="email">Email:</label>
+    <footer>
+      <div className="row">
+        <div className="col">
+          <h3>Career Tips </h3>
+          <p>
+            Career Tips is a resource designed to guide users on how to pursue
+            their potential career. This platform educates users about various
+            useful websites and provides an insight into the hiring process.{" "}
+          </p>
+          <p>
+            {" "}
+            <a
+              href="https://www.linkedin.com/pulse/seven-great-career-advice-tips-college-students-resumemansion/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Click Here
+            </a>{" "}
+          </p>
+        </div>
+        <div className="col">
+          <h3> About Us </h3>
+          <p>
+            Our mission is to help people of all ages find the right career for
+            them. All information on the website is credible and please stay
+            connected if you would like to receive updates on the website and
+            newer features. We are working towards improving the website to help
+            everyone.
+          </p>
+        </div>
+        <div className="col">
+          <h3>Collaborator</h3>
+          <p>
+            Maliq Adewale{" "}
+            <FontAwesomeIcon icon={faInstagram} className="brand" />
+            <FontAwesomeIcon icon={faXTwitter} className="brand" />
+            <FontAwesomeIcon icon={faGithub} className="brand" />
+          </p>
+          <p>
+            Ujjawala <FontAwesomeIcon icon={faInstagram} className="brand" />
+            <FontAwesomeIcon icon={faXTwitter} className="brand" />
+            <FontAwesomeIcon icon={faGithub} className="brand" />
+          </p>
+          <p>
+            Rahul Patel <FontAwesomeIcon icon={faInstagram} className="brand" />
+            <FontAwesomeIcon icon={faXTwitter} className="brand" />
+            <FontAwesomeIcon icon={faGithub} className="brand" />
+          </p>
+        </div>
+        <div className="col">
+          <h3>NewsLetter</h3>
+          <form>
+            <FontAwesomeIcon icon={faEnvelope} className="icon" />
             <input
               type="email"
-              id="email"
-              value={email}
-              onChange={handleInputChange}
+              placeholder="Enter Your Email Addreess"
               required
-            />
-            <button type="submit">Sign Up</button>
+            ></input>
+            <button type="submit">
+              <FontAwesomeIcon icon={faArrowRight}></FontAwesomeIcon>
+            </button>
           </form>
         </div>
-      </h1>
-    </div>
+      </div>
+    </footer>
   );
 }
 
 export function HomePage(): JSX.Element {
   const [tab, setTab] = useState<string>("home");
   const [displayText2, setDisplayText2] = useState<boolean>(false);
-  const [displayText3, setDisplayText3] = useState<boolean>(false);
 
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
-  };
-  const handleButton3 = () => {
-    setDisplayText3(!displayText3);
   };
 
   // Function to handle the click event of the "Job Search" button
 
   return (
-    <>
+    <div>
       {tab === "basic" ? (
         <BasicQuestion />
       ) : tab === "detailed" ? (
@@ -131,7 +181,7 @@ export function HomePage(): JSX.Element {
           </div>
           <div
             style={{
-              maxWidth: "1100px",
+              maxWidth: "1000px",
               width: "100%",
               aspectRatio: "10/6",
               margin: "0 auto",
@@ -185,7 +235,7 @@ export function HomePage(): JSX.Element {
             </div>
           </div>
           <div id="careerTips">
-            <div>
+            {/* <div>
               <h1 className="App-buttons2">Career Tips</h1>
               <p className="HomePage-text">
                 Career Tips is a resource designed to guide users on how to
@@ -207,8 +257,8 @@ export function HomePage(): JSX.Element {
                   {displayText3}
                 </a>
               </h1>
-            </div>
-            <div id="aboutUs">
+            </div> */}
+            {/* <div id="aboutUs">
               <div>
                 <h1 className="App-buttons2">About Us</h1>
                 <p className="HomePage-text">
@@ -219,11 +269,10 @@ export function HomePage(): JSX.Element {
                   improving the website to help everyone.
                 </p>
               </div>
-            </div>
-            <Footer />
+            </div> */}
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }

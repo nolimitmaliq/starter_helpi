@@ -43,13 +43,14 @@ export function DetailedQues(): JSX.Element {
     }
   };
   const getColor = () => {
-    if (progress < 40) {
-      return "#ff0000";
-    } else if (progress < 70) {
-      return "#ffa500";
-    } else {
-      return "#2eec71";
-    }
+    // if (progress < 40) {
+    //   return "#ff0000";
+    // } else if (progress < 70) {
+    //   return "#ffa500";
+    // } else {
+    //   return "#2eec71";
+    // }
+    return "#7a2048";
   };
   function handleNext() {
     handleNextClick();
@@ -59,18 +60,32 @@ export function DetailedQues(): JSX.Element {
     handlePreviousClick();
     prevQuestion();
   }
+
   return (
-    <div>
+    <div
+      style={{
+        height: "36rem",
+      }}
+    >
+      <div className="container">
+        <div className="progress-bar">
+          <div
+            className="progress-bar-fill"
+            style={{ width: `${progress}%`, backgroundColor: getColor() }}
+          ></div>
+        </div>
+        <div className="progress-label">{progress}%</div>
+      </div>
       <Form.Group controlId={`Question-${qIndex}`}>
         <Form.Label
           style={{
             display: "block",
-            marginBottom: "10px",
             color: "white",
             fontSize: "25px",
             textAlign: "center",
             margin: "0 auto",
             maxWidth: "80%",
+            bottom: "90%",
           }}
         >
           {Question[qIndex]}
@@ -111,17 +126,6 @@ export function DetailedQues(): JSX.Element {
       >
         Next
       </Button>
-      <div className="container">
-        <div className="progress-bar">
-          <div
-            className="progress-bar-fill"
-            style={{ width: `${progress}%`, backgroundColor: getColor() }}
-          ></div>
-        </div>
-        <div className="progress-label">{progress}%</div>
-        {/* <button onClick={handleButtonClick}>Progress</button>
-          {<button onClick={handlePrevious}>Previous</button>} */}
-      </div>
     </div>
   );
 }

@@ -1,4 +1,4 @@
-import { HomePage } from "./HomePage_Buttons";
+import { HomePage, Footer } from "./HomePage_Buttons";
 import "./App.css";
 
 //local storage and API Key: key should be entered in by the user and will be stored in local storage (NOT session storage)
@@ -27,6 +27,7 @@ function App() {
     <>
       <div className="App">
         <HomePage></HomePage>
+        <Footer></Footer>
       </div>
 
       <div>
