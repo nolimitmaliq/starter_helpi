@@ -25,6 +25,7 @@ import career5 from "./Accountant.jpg";
 import career6 from "./police officer.jpg";
 import career7 from "./engineer.jpg";
 import career8 from "./psychologist.jpg";
+import PlanetComponent from "./PlanetComponent";
 
 const Images = [
   { url: career1, alt: "Lawyer" },
@@ -99,7 +100,8 @@ export function Footer(): JSX.Element {
             <FontAwesomeIcon icon={faGithub} className="brand" />
           </p>
           <p>
-            Ujjawala <FontAwesomeIcon icon={faInstagram} className="brand" />
+            Ujjwala Pothula
+            <FontAwesomeIcon icon={faInstagram} className="brand" />
             <FontAwesomeIcon icon={faXTwitter} className="brand" />
             <FontAwesomeIcon icon={faGithub} className="brand" />
           </p>
@@ -278,6 +280,7 @@ export function HomePage(): JSX.Element {
                 </>
               )}
             </div>
+            <PlanetComponent></PlanetComponent>
           </div>
         )}
       </div>
