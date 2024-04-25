@@ -109,6 +109,7 @@
   font-style: cursive;
   text-shadow: 12px 12px 12px black; /* Add black outline */
   z-index: 1; /* Ensure header is above the stars */
+  margin: 0 auto;
 }
 
 .App-header4 {
@@ -119,7 +120,7 @@
   justify-content: center;
   font-size: calc(14px + 3vmin);
   color: rgb(240, 240, 240);
-  height: 10px;
+  height: 200px;
 }
 .App-header.background {
   width: 100%; /* Adjust the width as needed */
@@ -127,64 +128,78 @@
   margin-bottom: 20px; /* Add margin at the bottom of the image */
 }
 
-.footer {
-  min-height: 2vh;
-  margin-top: auto; /* Push the footer to the bottom */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(2px + 2vmin);
+footer {
+  width: 100%;
+  position: absolute;
   color: rgb(240, 240, 240);
-  background: linear-gradient(45deg, #1e2761 10%, #100f0f 50%, #1e2761 10%);
+  background: #1e2761 10%;
+  padding: 10px 0 5px;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: auto;
 }
-
-.signup-box {
-  border: 10px solid #716f6f;
-  border-radius: 0px;
-  padding: 20px;
-  margin-bottom: 10px;
-}
-
-.signup-box h2 {
-  margin-top: 0;
-}
-
-.signup-box form {
+.row {
+  width: 90%;
+  margin: auto;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-
-.signup-box label {
-  margin-bottom: 7px;
+.col {
+  flex-basis: calc(30% - 30px);
+  padding: 10px;
+  margin-right: 20px;
 }
-
-.signup-box input[type="email"] {
-  font-size: smaller;
-  padding: 5px;
-  border: 1px solid #6f6868;
-  border-radius: 0px;
-  margin-bottom: 0px;
+.col h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
 }
-
-.signup-box button {
-  background-color: #bdc3c9;
-  color: #f6f3f3;
-  border: none;
-  padding: 10px 10px;
-  border-radius: 0px;
+.col h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+form {
+  padding-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 50px;
+}
+form input {
+  width: 100%;
+  background: transparent;
+  color: #ccc;
+  border: 0;
+  outline: none;
+}
+form button {
+  background: transparent;
+  border: 0;
+  outline: none;
   cursor: pointer;
+  font-size: 16px;
+  color: #ccc;
 }
-
-.signup-box button:hover {
-  background-color: #a6a8ab;
+.icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+.brand {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  text-align: center;
 }
 
 .App-link {
   color: #61dafb;
 }
-/* background-color: rgb(47, 70, 11); */
-/* background-color: darkorchid; */
 
 .App-buttons2 {
   color: #f7f7f7;
@@ -217,7 +232,6 @@
 .Background {
   background: linear-gradient(to right, rgb(243, 73, 73), rgb(0, 170, 255));
 }
-/*row*/
 .Border {
   border-top: 2px solid white;
   display: flex;
@@ -242,9 +256,9 @@
 .App-buttons5 {
   background: linear-gradient(to right, rgb(243, 73, 73), rgb(0, 170, 255));
   color: white;
-  /* text-align: center; */
-  /* text-indent: 5%; */
-  /* position: relative; */
+  text-align: center;
+  text-indent: 5%;
+  position: relative;
   border-top: 3px solid rgb(255, 255, 255);
   padding-top: 16px;
 }
@@ -257,15 +271,6 @@
     transform: rotate(360deg);
   }
 }
-
-/* .ImageContainer {
-  position: relative;
-  width: 60%;
-  height: auto;
-  max-width: 300px;
-  margin: 0 auto; Center horizontally
-  text-align: center; Center inline elements
-} */
 
 *,
 *::before,
@@ -285,11 +290,19 @@
   all: unset;
   display: block;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  top: 0px;
+  bottom: 0px;
   padding: 1rem;
   cursor: pointer;
-  /* transition: background-color 100ms ease-in-out; */
+}
+.img-slider-btn {
+  all: unset;
+  display: block;
+  position: absolute;
+  top: 150px;
+  bottom: 150px;
+  padding: 1rem;
+  cursor: pointer;
 }
 .img-slider-btn:hover > *,
 .img-slider-btn:focus-visible > * {
@@ -313,6 +326,8 @@
   width: 1rem;
   transition: scale 100ms ease-in-out;
   color: transparent;
+  bottom: 200px;
+  top: 200px;
 }
 .img-slider-dot-btn:hover,
 .img-slider-btn:focus-visible {
@@ -360,7 +375,6 @@
 }
 
 .Career-Quiz:hover,
-/* .Career-Quiz:focus, */
 .Basic-Quiz:hover,
 .Basic-Quiz:focus {
   background-color: var(--accent-color);
@@ -465,15 +479,16 @@
 }
 
 .Body {
-  background: linear-gradient(45deg, #1c1d39 10%, #1b1b2a 55%, #1b1b2a 10%);
+  background: black;
   height: 100%;
   overflow: hidden;
   position: relative; /* Ensure relative positioning for z-index */
 }
 
 .QuizBody {
-  background: linear-gradient(45deg, #1c1d39 10%, #1b1b2a 55%, #1b1b2a 10%);
+  background: #221f1f;
   color: white;
+  /* height: 70vh; */
 }
 
 .window {
@@ -487,25 +502,29 @@
 }
 
 .container {
+  position: absolute;
+  top: 11px;
+  right: 14px;
+  width: auto;
+  margin: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .progress-bar {
-  width: 10%;
-  height: 20px;
+  width: 150px;
+  height: 10px;
   border-radius: 10px;
   background-color: #e6e6e6;
 }
+
 .progress-bar-fill {
   height: 100%;
   border-radius: 10px;
-  background-color: #2ecc71; /* bar filled in */
+  background-color: #7a2048;
   transition: width 0.5s ease-out;
 }
-
 .progress-label {
   margin-top: 10px;
   font-size: 24px;

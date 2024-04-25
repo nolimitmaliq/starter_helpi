@@ -62,8 +62,8 @@ export function ChangeImages({
     >
       <div
         style={{
-          width: "70%",
-          height: "70%",
+          width: "80%",
+          height: "80%",
           display: "flex",
           overflow: "hidden",
           margin: "0 auto",
@@ -84,7 +84,7 @@ export function ChangeImages({
       <button
         onClick={handleClick2}
         className="img-slider-btn"
-        style={{ left: 170, bottom: 150 }}
+        style={{ left: 100, bottom: 190 }}
         aria-label="Previous Image"
       >
         <ArrowBigLeft aria-hidden />
@@ -92,7 +92,7 @@ export function ChangeImages({
       <button
         onClick={handleClick}
         className="img-slider-btn"
-        style={{ right: 170, bottom: 150 }}
+        style={{ right: 100, bottom: 190 }}
         aria-label="Next Image"
       >
         <ArrowBigRight aria-hidden />
@@ -109,7 +109,7 @@ export function ChangeImages({
       <div
         style={{
           position: "absolute",
-          bottom: "13.5rem",
+          bottom: "9rem",
           left: "50%",
           translate: "-50%",
           display: "flex",

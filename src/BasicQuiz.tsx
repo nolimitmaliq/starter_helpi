@@ -14,7 +14,7 @@ interface Question {
 
 let questions: Question[] = [
   {
-    question: "What is your highest leavel of education?",
+    question: "What is your highest level of education?",
     type: "multipleChoice",
     options: [
       "Middle School",
@@ -177,6 +177,35 @@ function Quiz() {
   function saveData() {
     localStorage.setItem(quizKey, JSON.parse(selectedOptions[currentQuestion]));
   }
+  const [progress, setProgress] = useState(0);
+  const handleNextClick = () => {
+    if (progress < 81) {
+      setProgress(progress + 8);
+    }
+    if (progress === 80) {
+      setProgress(100);
+    }
+  };
+
+  const handlePreviousClick = () => {
+    if (progress > 0) {
+      setProgress(progress - 8);
+    }
+    if (progress === 20) {
+      setProgress(0);
+    }
+  };
+  const getColor = () => {
+    return "#7a2048";
+  };
+  function handleNext() {
+    handleNextClick();
+    NextQuestion();
+  }
+  function handlePrev() {
+    handlePreviousClick();
+    PrevQuestion();
+  }
 
   return (
     <>
@@ -184,7 +213,21 @@ function Quiz() {
         <DetailedQuestion />
       ) : (
         <>
-          <div>
+          <div
+            style={{
+              height: "33rem",
+              margin: " -1.4rem auto",
+            }}
+          >
+            <div className="container">
+              <div className="progress-bar">
+                <div
+                  className="progress-bar-fill"
+                  style={{ width: `${progress}%`, backgroundColor: getColor() }}
+                ></div>
+              </div>
+              <div className="progress-label">{progress}%</div>
+            </div>
             <div className="StaticBackground">
               <h1>{questions[currentQuestion].question}</h1>
               {questions[currentQuestion].type === "multipleChoice" && (
@@ -255,7 +298,7 @@ function Quiz() {
             </div>
             <div className="ButtonSpace">
               <Button
-                onClick={PrevQuestion}
+                onClick={handlePrev}
                 disabled={currentQuestion === 0}
                 className="button"
                 style={{
@@ -277,7 +320,7 @@ function Quiz() {
                 </Button>
               ) : (
                 <Button
-                  onClick={NextQuestion}
+                  onClick={handleNext}
                   disabled={currentQuestion === questions.length - 1}
                   className="button"
                   style={{
@@ -303,14 +346,23 @@ export function BasicQuestion() {
     <>
       {tab === "home" ? (
         <HomePage />
+      ) : tab === "detailed" ? (
+        <DetailedQuestion />
       ) : (
         <>
           <div>
             <div className="Header-Background">
-              <header className="App-header">
-                <h1>Basic Quiz</h1>
+              <header className="App-header4">
+                <h1
+                  style={{
+                    fontSize: "50px",
+                    margin: 10,
+                  }}
+                >
+                  Basic Quiz
+                </h1>
               </header>
-              <div className="buttonContainer">
+              <div>
                 <Button onClick={() => setTab("home")} className="button">
                   Home Page
                 </Button>
@@ -319,8 +371,13 @@ export function BasicQuestion() {
             <div className="QuizBody">
               <Quiz />
             </div>
+            {/* <div className="QuizBody">
+              <Button onClick={() => setTab("detailed")} className="button">
+                Submit
+              </Button>
+            </div> */}
           </div>
-          <Footer />
+          <div className="buttonContainer"></div>
         </>
       )}
     </>
