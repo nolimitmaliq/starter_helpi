@@ -14,7 +14,7 @@ const Question = [
 
 const quizKey2 = "quiz2";
 export function DetailedQues(): JSX.Element {
-  const [tab, setTab] = useState<string>("detailed");
+  // const [tab, setTab] = useState<string>("detailed");
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
     new Array(Question.length).fill("")
@@ -130,7 +130,7 @@ export function DetailedQues(): JSX.Element {
       {qIndex === Question.length - 1 ? (
         <Button
           onClick={() => {
-            setTab("results");
+            // setTab("results");
             saveData();
           }}
           className="button"
