@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
 import Rocket from "./Rocket16.jpg";
-
+//ffif
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
@@ -12,14 +12,18 @@ const Question = [
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
 ];
 
+const quizKey2 = "quiz2";
 export function DetailedQues(): JSX.Element {
+  const [tab, setTab] = useState<string>("detailed");
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
     new Array(Question.length).fill("")
   );
   const [rocketPosition, setRocketPosition] = useState(0); // Tracks the rocket position
   const [progress, setProgress] = useState(0);
-
+  // useEffect(() => {
+  //   saveData();
+  // }, [answers]);
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newAnswers = [...answers];
     newAnswers[qIndex] = event.target.value;
@@ -62,6 +66,14 @@ export function DetailedQues(): JSX.Element {
     handlePreviousClick();
     prevQuestion();
     setRocketPosition(progress - 20); // Set rocket position based on progress for the previous question
+  }
+  function saveData() {
+    const final = Question.map((Question, index) => ({
+      question: Question,
+      answer: answers[index],
+    }));
+    localStorage.setItem(quizKey2, JSON.stringify(final));
+    console.log(localStorage.getItem(quizKey2));
   }
 
   const getColor = () => {
@@ -115,17 +127,33 @@ export function DetailedQues(): JSX.Element {
       >
         Previous
       </Button>
-      <Button
-        onClick={handleNext}
-        disabled={qIndex === Question.length - 1}
-        className="button"
-        style={{
-          left: "20px",
-          margin: "24px auto",
-        }}
-      >
-        Next
-      </Button>
+      {qIndex === Question.length - 1 ? (
+        <Button
+          onClick={() => {
+            setTab("results");
+            saveData();
+          }}
+          className="button"
+          style={{
+            left: "20px",
+            margin: "24px auto",
+          }}
+        >
+          Submit
+        </Button>
+      ) : (
+        <Button
+          onClick={handleNext}
+          disabled={qIndex === Question.length - 1}
+          className="button"
+          style={{
+            left: "20px",
+            margin: "24px auto",
+          }}
+        >
+          Next
+        </Button>
+      )}
       <div className="container">
         <div className="progress-bar">
           <div
