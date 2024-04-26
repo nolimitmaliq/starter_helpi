@@ -127,10 +127,6 @@ let questions: Question[] = [
 ];
 //LOCALSTORAGE
 const quizKey = "quiz";
-const previousData = sessionStorage.getItem(quizKey);
-if (previousData !== null) {
-  questions = JSON.parse(previousData);
-}
 
 export function BasicQuestion() {
   const [tab, setTab] = useState<string>("basic");
@@ -139,8 +135,9 @@ export function BasicQuestion() {
     new Array(questions.length).fill("")
   );
   useEffect(() => {
-    console.log(selectedOptions);
-  }, [selectedOptions]);
+    window.localStorage.setItem(quizKey, selectedOptions[currentQuestion]);
+  }, [currentQuestion, selectedOptions]);
+
   const NextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
   };
