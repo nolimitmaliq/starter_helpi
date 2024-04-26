@@ -127,10 +127,10 @@ let questions: Question[] = [
 ];
 //LOCALSTORAGE
 const quizKey = "quiz";
-const previousData = sessionStorage.getItem(quizKey);
-if (previousData !== null) {
-  questions = JSON.parse(previousData);
-}
+// const previousData = localStorage.getItem(quizKey);
+// if (previousData !== null) {
+//   questions = JSON.parse(previousData);
+// }
 
 export function BasicQuestion() {
   const [tab, setTab] = useState<string>("basic");
@@ -141,6 +141,9 @@ export function BasicQuestion() {
   useEffect(() => {
     console.log(selectedOptions);
   }, [selectedOptions]);
+  //   useEffect(() => {
+  //     window.localStorage.setItem(quizKey, selectedOptions[currentQuestion]);
+  //   }, [questions[currentQuestion], selectedOptions]);
   const NextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
   };
@@ -166,9 +169,16 @@ export function BasicQuestion() {
       setSelectedOptions(newOptions);
     }
   };
+  //   const final = selectedOptions.map((q: string): string => q + selectedOptions);
   function saveData() {
-    sessionStorage.setItem(quizKey, JSON.stringify(selectedOptions));
+    const final = questions.map((question, index) => ({
+      question: question.question,
+      answer: selectedOptions[index],
+    }));
+    localStorage.setItem(quizKey, JSON.stringify(final));
+    console.log(localStorage.getItem(quizKey));
   }
+
   const [progress, setProgress] = useState(0);
   const handleNextClick = () => {
     if (progress < 81) {
