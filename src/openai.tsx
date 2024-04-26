@@ -1,5 +1,5 @@
 // import { OpenAI } from "openai";
-// const API_KEY = "sk-proj-3xur8wrjkrOoMJ4eb85zT3BlbkFJvhBwYmIfJjd9UEeK687v";
+
 // const openai = new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: true });
 
 // async function main() {

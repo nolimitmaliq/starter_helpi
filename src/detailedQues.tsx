@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
 import Rocket from "./Rocket16.jpg";
-
+//ffif
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
