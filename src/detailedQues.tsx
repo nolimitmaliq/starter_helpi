@@ -21,9 +21,7 @@ export function DetailedQues(): JSX.Element {
   );
   const [rocketPosition, setRocketPosition] = useState(0); // Tracks the rocket position
   const [progress, setProgress] = useState(0);
-  // useEffect(() => {
-  //   saveData();
-  // }, [answers]);
+
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newAnswers = [...answers];
     newAnswers[qIndex] = event.target.value;

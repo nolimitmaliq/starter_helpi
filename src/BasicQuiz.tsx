@@ -3,6 +3,7 @@ import { HomePage } from "./HomePage_Buttons";
 import { DetailedQuestion } from "./DetailedQuiz";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
+import Chat from "./openai";
 
 // import "./App.css";
 
@@ -126,13 +127,12 @@ let questions: Question[] = [
   },
 ];
 //LOCALSTORAGE
-const quizKey = "quiz";
+const QUIZKEY = "quiz";
 
-// const previousData = localStorage.getItem(quizKey);
+// const previousData = localStorage.getItem(QUIZKEY);
 // if (previousData !== null) {
 //   questions = JSON.parse(previousData);
 // }
-
 export function BasicQuestion() {
   const [tab, setTab] = useState<string>("basic");
   const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -142,9 +142,6 @@ export function BasicQuestion() {
   useEffect(() => {
     console.log(selectedOptions);
   }, [selectedOptions]);
-  //   useEffect(() => {
-  //     window.localStorage.setItem(quizKey, selectedOptions[currentQuestion]);
-  //   }, [questions[currentQuestion], selectedOptions]);
   const NextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
   };
@@ -176,8 +173,8 @@ export function BasicQuestion() {
       question: question.question,
       answer: selectedOptions[index],
     }));
-    localStorage.setItem(quizKey, JSON.stringify(final));
-    console.log(localStorage.getItem(quizKey));
+    localStorage.setItem(QUIZKEY, JSON.stringify(final));
+    console.log(localStorage.getItem(QUIZKEY));
   }
 
   const [progress, setProgress] = useState(0);
@@ -361,6 +358,7 @@ export function BasicQuestion() {
                       Next
                     </Button>
                   )}
+                  <Chat key={QUIZKEY}></Chat>
                 </div>
               </div>
             </div>
