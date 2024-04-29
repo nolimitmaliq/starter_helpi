@@ -127,6 +127,7 @@ let questions: Question[] = [
 ];
 //LOCALSTORAGE
 const quizKey = "quiz";
+
 // const previousData = localStorage.getItem(quizKey);
 // if (previousData !== null) {
 //   questions = JSON.parse(previousData);
@@ -345,7 +346,7 @@ export function BasicQuestion() {
                         margin: "24px auto",
                       }}
                     >
-                      Submit
+                      Go to Detailed
                     </Button>
                   ) : (
                     <Button

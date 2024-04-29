@@ -73,7 +73,7 @@ export function DetailedQues(): JSX.Element {
       answer: answers[index],
     }));
     localStorage.setItem(quizKey2, JSON.stringify(final));
-    console.log(localStorage.getItem(quizKey2));
+    console.log(JSON.parse(localStorage.getItem(quizKey2)!));
   }
 
   const getColor = () => {
