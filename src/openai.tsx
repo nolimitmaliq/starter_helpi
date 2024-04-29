@@ -1,5 +1,4 @@
 import { OpenAI } from "openai";
-import { Completions } from "openai/resources";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 // import { BasicQuestion } from "./BasicQuiz";
