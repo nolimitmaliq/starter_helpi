@@ -73,6 +73,7 @@ export function Footer(): JSX.Element {
           <p>
             {" "}
             <a
+              className="App-link"
               href="https://www.linkedin.com/pulse/seven-great-career-advice-tips-college-students-resumemansion/"
               target="_blank"
               rel="noreferrer"
@@ -246,7 +247,10 @@ export function HomePage(): JSX.Element {
               <ChangeImages images={Images} profession={profession} />
             </div>
             <div id="careerQuizzes">
-              <h1 className="App-buttons2" style={{ margin: "12px auto" }}>
+              <h1
+                className="Career-Quiz-Button"
+                style={{ margin: "12px auto" }}
+              >
                 Career Quizzes
               </h1>
               <p className="HomePage-text">

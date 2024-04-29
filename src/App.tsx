@@ -34,7 +34,7 @@ function App() {
       </div>
 
       <div>
-        <Form className="Form">
+        <Form>
           <Form.Label>API Key:</Form.Label>
           <Form.Control
             type="password"

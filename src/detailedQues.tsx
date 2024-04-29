@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
 import Rocket from "./Rocket16.jpg";
+import Chat from "./openai";
 //ffif
 const Question = [
   "What are your top 5 skills?",
@@ -12,7 +13,7 @@ const Question = [
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
 ];
 
-const quizKey2 = "quiz2";
+const QUIZKEY2 = "detailed quiz";
 export function DetailedQues(): JSX.Element {
   // const [tab, setTab] = useState<string>("detailed");
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
@@ -70,8 +71,8 @@ export function DetailedQues(): JSX.Element {
       question: Question,
       answer: answers[index],
     }));
-    localStorage.setItem(quizKey2, JSON.stringify(final));
-    console.log(JSON.parse(localStorage.getItem(quizKey2)!));
+    localStorage.setItem(QUIZKEY2, JSON.stringify(final));
+    console.log(JSON.parse(localStorage.getItem(QUIZKEY2)!));
   }
 
   const getColor = () => {
@@ -109,9 +110,9 @@ export function DetailedQues(): JSX.Element {
             height: "200px",
             width: "700px",
             border: "1px solid gray",
-            backgroundColor: "#1e2761",
+            background: "black",
             color: "white",
-            fontSize: "30",
+            fontSize: "17px",
           }}
         />
       </Form.Group>
@@ -120,25 +121,14 @@ export function DetailedQues(): JSX.Element {
         disabled={qIndex === 0}
         className="button"
         style={{
+          margin: "24px auto",
           right: "20px",
         }}
       >
         Previous
       </Button>
       {qIndex === Question.length - 1 ? (
-        <Button
-          onClick={() => {
-            // setTab("results");
-            saveData();
-          }}
-          className="button"
-          style={{
-            left: "20px",
-            margin: "24px auto",
-          }}
-        >
-          Submit
-        </Button>
+        <Chat key={QUIZKEY2} onSaveData={saveData}></Chat>
       ) : (
         <Button
           onClick={handleNext}

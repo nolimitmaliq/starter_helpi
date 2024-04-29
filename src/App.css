@@ -4,6 +4,8 @@
   margin-bottom: 0rem;
 }
 
+/* Home page starts here --------------------------------------------------------------------*/
+
 .home-page-container {
   position: relative;
 }
@@ -22,78 +24,18 @@
   z-index: 1; /* Ensure main content is above the stars */
 }
 
+.Body {
+  background: black;
+  height: 100%;
+  overflow: hidden;
+  position: relative; /* Ensure relative positioning for z-index */
+}
+
 .buttonContainer {
   display: flex;
   justify-content: space-around; /* Adjust as needed */
   align-items: center; /* Center align buttons vertically */
   margin-bottom: 0px; /* Add some space between buttons and content */
-}
-
-.caption {
-  font-size: 25px; /* Adjust the font size */
-  font-style: italic; /* Italicize the text */
-  font-family: cursive;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  color: #fdfdfd; /* Change the text color */
-  margin-top: 0px; /* Adjust the top margin */
-  padding: 0px;
-}
-
-.button {
-  width: 380px;
-  height: 30px;
-  font-size: 18px; /* Increase font size */
-  /* padding: 7px 100.2px; Increase padding to make the buttons bigger */
-  border-radius: 20px; /* Add rounded corners */
-  text-decoration: none;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: white;
-  border-top: 2px solid white;
-  background-color: #23235d;
-  position: relative;
-  text-align: center;
-  justify-content: space-evenly;
-  box-shadow: inset 0 0 0 0 white;
-  transition: ease-out 0.3s;
-  outline: none;
-}
-.button:hover {
-  box-shadow: inset 500px 0 0 0 #0b0b0b;
-}
-
-.button.differentCareers {
-  background-color: #7f2556; /* Change background color for Different Careers button */
-  color: #fff; /* Change text color */
-}
-
-.button.careerQuizzes {
-  background-color: #a53923; /* Change background color for Different Careers button */
-  color: #fff; /* Change text color */
-}
-
-.button.careerTips {
-  background-color: #32cd32; /* Change background color for Career Tips button */
-  color: #fff; /* Change text color */
-}
-
-.button.aboutUs {
-  background-color: #2867ab; /* Change background color for Career Tips button */
-  color: #fff; /* Change text color */
-}
-
-.Header-Background {
-  background: linear-gradient(45deg, #1e2761 10%, #100f0f 50%, #1e2761 10%);
-}
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
 
 .App-header {
@@ -112,6 +54,81 @@
   margin: 0 auto;
 }
 
+.caption {
+  font-size: 25px; /* Adjust the font size */
+  font-style: italic; /* Italicize the text */
+  font-family: cursive;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fdfdfd; /* Change the text color */
+  margin-top: 0px; /* Adjust the top margin */
+  padding: 0px;
+}
+
+.App-differentcareersbutton {
+  color: #ffffff;
+  text-align: center;
+  position: relative;
+  border-top: 0px solid rgb(0, 170, 255);
+  padding-top: 0px;
+}
+
+.HomePage-text {
+  border: 4px solid #ffffff;
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 20%;
+  margin-right: 20%;
+  color: white;
+}
+
+.Career-Quiz-Button {
+  color: #f7f7f7;
+  text-align: center;
+  position: relative;
+  border-top: 3px solid #ffffff;
+  padding-top: 16px;
+  margin: 0px auto;
+}
+
+/* Home page ends here ----------------------------------------------------------------------- */
+
+.button {
+  width: 180px;
+  height: 30px;
+  font-size: 18px; /* Increase font size */
+  /* padding: 7px 100.2px; Increase padding to make the buttons bigger */
+  border-radius: 20px; /* Add rounded corners */
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  border-top: 2px solid white;
+  background-color: #23235d;
+  position: relative;
+  text-align: center;
+  justify-content: space-evenly;
+  box-shadow: inset 0 0 0 0 white;
+  transition: ease-out 0.6s;
+  outline: none;
+}
+.button:hover {
+  box-shadow: inset 500px 0 0 0 #0b0b0b;
+}
+
+.Header-Background {
+  background: linear-gradient(45deg, #1e2761 10%, #100f0f 50%, #1e2761 10%);
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
 .App-header4 {
   min-height: 10vh;
   display: flex;
@@ -127,6 +144,8 @@
   height: auto; /* Maintain aspect ratio */
   margin-bottom: 20px; /* Add margin at the bottom of the image */
 }
+
+/* Footer startes here -------------------------------------------------------------------------------------------------------------------*/
 
 footer {
   width: 100%;
@@ -198,27 +217,10 @@ form button {
 }
 
 .App-link {
-  color: #61dafb;
-}
-
-.App-buttons2 {
-  color: #f7f7f7;
-  text-align: center;
-  /* text-indent: 5%; */
-  position: relative;
-  border-top: 3px solid #ffffff;
-  padding-top: 16px;
-  margin: 0px auto;
-}
-
-.App-differentcareersbutton {
   color: #ffffff;
-  text-align: center;
-  /* text-indent: 5%; */
-  position: relative;
-  border-top: 0px solid rgb(0, 170, 255);
-  padding-top: 0px;
 }
+
+/* Footer ends here ----------------------------------------------------------------------------------------------------------------------------*/
 
 .App-buttons4 {
   color: #ffffff;
@@ -441,14 +443,6 @@ form button {
   top: 700px;
 }
 
-.HomePage-text {
-  border: 4px solid #ffffff;
-  border-radius: 10px;
-  padding: 10px;
-  margin-left: 20%;
-  margin-right: 20%;
-  color: white;
-}
 .Career-Quiz-text {
   border: 2px solid #ffffff;
   border-radius: 10px;
@@ -476,13 +470,6 @@ form button {
 
 .Career-Buttons + .Career-Buttons {
   margin-left: 50px; /* Adjust the top margin between buttons */
-}
-
-.Body {
-  background: black;
-  height: 100%;
-  overflow: hidden;
-  position: relative; /* Ensure relative positioning for z-index */
 }
 
 .QuizBody {
@@ -530,4 +517,7 @@ form button {
   font-size: 24px;
   font-weight: bold;
   color: #916767;
+}
+.White {
+  background-color: white;
 }

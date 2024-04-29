@@ -137,3 +137,25 @@
   transform: translateX(-50%);
   transition: left 0.5s ease; /* Adjust duration as necessary */
 }
+
+.Submit-button {
+  width: 100px;
+  height: 30px;
+  font-size: 18px; /* Increase font size */
+  /* padding: 7px 100.2px; Increase padding to make the buttons bigger */
+  border-radius: 10px; /* Add rounded corners */
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white;
+  border-top: 2px solid white;
+  background-color: rgb(77, 70, 30);
+  position: relative;
+  text-align: center;
+  justify-content: space-evenly;
+  box-shadow: inset 0 0 0 0 white;
+  transition: ease-out 0.9s;
+  outline: none;
+}
+.Submit-button:hover {
+  box-shadow: inset 500px 0 0 0 #0b0b0b;
+}

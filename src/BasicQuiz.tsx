@@ -127,7 +127,7 @@ let questions: Question[] = [
   },
 ];
 //LOCALSTORAGE
-const QUIZKEY = "quiz";
+const QUIZKEY = "basic quiz";
 
 // const previousData = localStorage.getItem(QUIZKEY);
 // if (previousData !== null) {
@@ -358,7 +358,9 @@ export function BasicQuestion() {
                       Next
                     </Button>
                   )}
-                  <Chat key={QUIZKEY}></Chat>
+                  {currentQuestion === questions.length - 1 ? (
+                    <Chat key={QUIZKEY} onSaveData={saveData}></Chat>
+                  ) : null}
                 </div>
               </div>
             </div>

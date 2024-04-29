@@ -8,8 +8,9 @@ const openai = new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: true });
 // localStorage.getItem();
 interface Key {
   key: string;
+  onSaveData: () => void;
 }
-export default function Chat({ key }: Key): JSX.Element {
+export default function Chat({ key, onSaveData }: Key): JSX.Element {
   const [response, SetResponse] = useState<string | null>("");
 
   async function getResponse() {
@@ -41,7 +42,15 @@ export default function Chat({ key }: Key): JSX.Element {
   }
   return (
     <div>
-      <Button onClick={getResponse}>Submit</Button>
+      <Button
+        className="Submit-button"
+        onClick={() => {
+          getResponse();
+          onSaveData();
+        }}
+      >
+        Submit
+      </Button>
       {response}
     </div>
   );
