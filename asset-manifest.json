@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/starter_helpi/static/css/main.ceedb166.css",
-    "main.js": "/starter_helpi/static/js/main.02211341.js",
+    "main.js": "/starter_helpi/static/js/main.21e69dfa.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/Spinning_Mars.gif": "/starter_helpi/static/media/Spinning_Mars.84878dbd099a331b43b3.gif",
     "static/media/psychologist.jpg": "/starter_helpi/static/media/psychologist.e66b84804f412346b715.jpg",
@@ -18,11 +18,11 @@
     "static/media/planet3.jpg": "/starter_helpi/static/media/planet3.4a74a6d6cdfb48fcd2e5.jpg",
     "index.html": "/starter_helpi/index.html",
     "main.ceedb166.css.map": "/starter_helpi/static/css/main.ceedb166.css.map",
-    "main.02211341.js.map": "/starter_helpi/static/js/main.02211341.js.map",
+    "main.21e69dfa.js.map": "/starter_helpi/static/js/main.21e69dfa.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ceedb166.css",
-    "static/js/main.02211341.js"
+    "static/js/main.21e69dfa.js"
   ]
 }
