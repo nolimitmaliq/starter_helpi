@@ -12,7 +12,7 @@ const Question = [
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
 ];
 
-const quizKey2 = "quiz2";
+const DetailedKey = "quiz2";
 export function DetailedQues(): JSX.Element {
   // const [tab, setTab] = useState<string>("detailed");
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
@@ -70,8 +70,8 @@ export function DetailedQues(): JSX.Element {
       question: Question,
       answer: answers[index],
     }));
-    localStorage.setItem(quizKey2, JSON.stringify(final));
-    console.log(JSON.parse(localStorage.getItem(quizKey2)!));
+    localStorage.setItem(DetailedKey, JSON.stringify(final));
+    console.log(JSON.parse(localStorage.getItem(DetailedKey)!));
   }
 
   const getColor = () => {
