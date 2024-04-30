@@ -359,7 +359,10 @@ export function BasicQuestion() {
                     </Button>
                   )}
                   {currentQuestion === questions.length - 1 ? (
-                    <Chat key={QUIZKEY} onSaveData={saveData}></Chat>
+                    <Chat
+                      questionAndAnswer={QUIZKEY}
+                      onSaveData={saveData}
+                    ></Chat>
                   ) : null}
                 </div>
               </div>
