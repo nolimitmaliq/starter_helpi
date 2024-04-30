@@ -3,7 +3,7 @@ import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
 import Rocket from "./Rocket16.jpg";
 import Chat from "./openai";
-//ffif
+
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
