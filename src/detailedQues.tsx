@@ -128,7 +128,7 @@ export function DetailedQues(): JSX.Element {
         Previous
       </Button>
       {qIndex === Question.length - 1 ? (
-        <Chat key={quizKey2} onSaveData={saveData}></Chat>
+        <Chat questionAndAnswer={quizKey2} onSaveData={saveData}></Chat>
       ) : (
         <Button
           onClick={handleNext}
