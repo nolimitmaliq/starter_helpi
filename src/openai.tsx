@@ -15,6 +15,7 @@ export default function Chat({ key, onSaveData }: Key): JSX.Element {
 
   async function getResponse() {
     const QandA = localStorage.getItem(key);
+    console.log(QandA);
     if (QandA) {
       console.log("Data from Baic Quiz:", QandA);
       const completion = await openai.chat.completions.create({
@@ -36,7 +37,7 @@ export default function Chat({ key, onSaveData }: Key): JSX.Element {
         ],
         model: "gpt-3.5-turbo",
       });
-
+      console.log(completion);
       SetResponse(completion.choices[0].message.content);
     }
   }
