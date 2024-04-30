@@ -15,9 +15,9 @@ const PlanetComponent: React.FC = () => {
         style={{
           position: "absolute",
           top: "900px",
-          left: "3%",
-          width: "320px", // Adjust size as necessary
-          height: "320px",
+          left: "0%",
+          width: "300px", // Adjust size as necessary
+          height: "300px",
         }}
       />
       <img
