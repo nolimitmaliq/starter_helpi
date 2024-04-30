@@ -8,12 +8,14 @@ const openai = new OpenAI({ apiKey: API_KEY, dangerouslyAllowBrowser: true });
 // localStorage.getItem();
 interface Key {
   key: string;
+  onSaveData: () => void;
 }
-export default function Chat({ key }: Key): JSX.Element {
+export default function Chat({ key, onSaveData }: Key): JSX.Element {
   const [response, SetResponse] = useState<string | null>("");
 
   async function getResponse() {
     const QandA = localStorage.getItem(key);
+    console.log(QandA);
     if (QandA) {
       console.log("Data from Baic Quiz:", QandA);
       const completion = await openai.chat.completions.create({
@@ -35,13 +37,21 @@ export default function Chat({ key }: Key): JSX.Element {
         ],
         model: "gpt-3.5-turbo",
       });
-
+      console.log(completion);
       SetResponse(completion.choices[0].message.content);
     }
   }
   return (
     <div>
-      <Button onClick={getResponse}>Submit</Button>
+      <Button
+        className="Submit-button"
+        onClick={() => {
+          getResponse();
+          onSaveData();
+        }}
+      >
+        Submit
+      </Button>
       {response}
     </div>
   );
