@@ -167,6 +167,7 @@ export function BasicQuestion() {
       setSelectedOptions(newOptions);
     }
   };
+
   //   const final = selectedOptions.map((q: string): string => q + selectedOptions);
   function saveData() {
     const final = questions.map((question, index) => ({
@@ -228,7 +229,7 @@ export function BasicQuestion() {
                 </h1>
               </header>
               <div>
-                <Button onClick={() => setTab("home")} className="button">
+                <Button onClick={() => setTab("home")} className="button1">
                   Home Page
                 </Button>
               </div>
@@ -324,7 +325,7 @@ export function BasicQuestion() {
                   <Button
                     onClick={handlePrev}
                     disabled={currentQuestion === 0}
-                    className="button"
+                    className="button1"
                     style={{
                       right: "20px",
                     }}
@@ -337,7 +338,7 @@ export function BasicQuestion() {
                         setTab("detailed");
                         saveData();
                       }}
-                      className="button"
+                      className="button1"
                       style={{
                         left: "20px",
                         margin: "24px auto",
@@ -349,7 +350,7 @@ export function BasicQuestion() {
                     <Button
                       onClick={handleNext}
                       disabled={currentQuestion === questions.length - 1}
-                      className="button"
+                      className="button1"
                       style={{
                         left: "20px",
                         margin: "24px auto",
