@@ -112,6 +112,7 @@ export function Footer(): JSX.Element {
           <p>
             {" "}
             <a
+              className="App-link"
               href="https://docs.google.com/document/d/149faakIa1NP_6sUFtb7AjWHycS_MKdZhvkVtbTFS_HU/edit?usp=sharing"
               target="_blank"
               rel="noreferrer"
@@ -254,12 +255,6 @@ export function HomePage(): JSX.Element {
               </a>
               <a href="#careerQuizzes" className="button">
                 Career Quizzes
-              </a>
-              <a href="#careerTips" className="button">
-                Career Tips
-              </a>
-              <a href="#aboutUs" className="button">
-                About Us
               </a>
             </div>
 
