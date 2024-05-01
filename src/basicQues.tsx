@@ -133,10 +133,6 @@ let questions: Question[] = [
 //LOCALSTORAGE
 const QUIZKEY = "basic quiz";
 
-// const previousData = localStorage.getItem(QUIZKEY);
-// if (previousData !== null) {
-//   questions = JSON.parse(previousData);
-// }
 export function BasicQues({ changeTab, careers, setCareers }: career) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
@@ -170,7 +166,6 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
       setSelectedOptions(newOptions);
     }
   };
-  //   const final = selectedOptions.map((q: string): string => q + selectedOptions);
   function saveData() {
     const final = questions.map((question, index) => ({
       question: question.question,
@@ -322,15 +317,6 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
             Next
           </Button>
         )}
-        {/* {currentQuestion === questions.length - 1 ? (
-          <Chat
-            questionAndAnswer={QUIZKEY}
-            setChangeTab={changeTab}
-            careers={careers}
-            setCareers={setCareers}
-            onSaveData={saveData}
-          ></Chat>
-        ) : null} */}
       </div>
     </div>
   );

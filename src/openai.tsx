@@ -74,10 +74,12 @@ export default function Chat({
       </Button>
       {careers.map((career, index) => (
         <Card key={index} className="career-card">
-          <Card.Body>
-            {/* <Card.Title>Career Path {index + 1}</Card.Title> */}
-            <Card.Text>{career}</Card.Text>
-          </Card.Body>
+          <Card>
+            <Card.Body>
+              {/* <Card.Title>Career Path {index + 1}</Card.Title> */}
+              <Card.Text>{career}</Card.Text>
+            </Card.Body>
+          </Card>
         </Card>
       ))}
     </div>
