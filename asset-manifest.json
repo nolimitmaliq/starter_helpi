@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/starter_helpi/static/css/main.07241071.css",
-    "main.js": "/starter_helpi/static/js/main.4e769265.js",
+    "main.css": "/starter_helpi/static/css/main.e78c633a.css",
+    "main.js": "/starter_helpi/static/js/main.a5bba0e0.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/Spinning_Mars.gif": "/starter_helpi/static/media/Spinning_Mars.84878dbd099a331b43b3.gif",
     "static/media/psychologist.jpg": "/starter_helpi/static/media/psychologist.e66b84804f412346b715.jpg",
@@ -14,15 +14,14 @@
     "static/media/milkyway.jpg": "/starter_helpi/static/media/milkyway.7bf82e616ab8c26db923.jpg",
     "static/media/spaceheader.jpg": "/starter_helpi/static/media/spaceheader.403448cb932226c8061b.jpg",
     "static/media/image 4.jpg": "/starter_helpi/static/media/image 4.1c2fdf5ed0a2ce9006d9.jpg",
-    "static/media/ShootingStar.jpg": "/starter_helpi/static/media/ShootingStar.90d93b2b9051653f1b6f.jpg",
     "static/media/planet3.jpg": "/starter_helpi/static/media/planet3.4a74a6d6cdfb48fcd2e5.jpg",
     "index.html": "/starter_helpi/index.html",
-    "main.07241071.css.map": "/starter_helpi/static/css/main.07241071.css.map",
-    "main.4e769265.js.map": "/starter_helpi/static/js/main.4e769265.js.map",
+    "main.e78c633a.css.map": "/starter_helpi/static/css/main.e78c633a.css.map",
+    "main.a5bba0e0.js.map": "/starter_helpi/static/js/main.a5bba0e0.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.07241071.css",
-    "static/js/main.4e769265.js"
+    "static/css/main.e78c633a.css",
+    "static/js/main.a5bba0e0.js"
   ]
 }
