@@ -29,10 +29,8 @@ export function DetailedQuestion() {
               <div className="buttonContainer">
                 <Button
                   onClick={() => setTab("home")}
-                  className="button1"
-                  style={{
-                    margin: "20px auto",
-                  }}
+                  className="Home-button"
+                  style={{ margin: "20px auto" }}
                 >
                   Home Page
                 </Button>
