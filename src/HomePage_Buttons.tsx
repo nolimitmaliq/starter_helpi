@@ -109,6 +109,17 @@ export function Footer(): JSX.Element {
             newer features. We are working towards improving the website to help
             everyone.
           </p>
+          <p>
+            {" "}
+            <a
+              className="App-link"
+              href="https://docs.google.com/document/d/149faakIa1NP_6sUFtb7AjWHycS_MKdZhvkVtbTFS_HU/edit?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Picture Credits
+            </a>{" "}
+          </p>
         </div>
         <div className="col">
           <h3>Collaborator</h3>
@@ -244,12 +255,6 @@ export function HomePage(): JSX.Element {
               </a>
               <a href="#careerQuizzes" className="button">
                 Career Quizzes
-              </a>
-              <a href="#careerTips" className="button">
-                Career Tips
-              </a>
-              <a href="#aboutUs" className="button">
-                About Us
               </a>
             </div>
 

@@ -129,7 +129,7 @@ export function DetailedQues({
       <Button
         onClick={handlePrev}
         disabled={qIndex === 0}
-        className="button"
+        className="button1"
         style={{
           margin: "24px auto",
           right: "20px",
@@ -149,7 +149,7 @@ export function DetailedQues({
         <Button
           onClick={handleNext}
           disabled={qIndex === Question.length - 1}
-          className="button"
+          className="button1"
           style={{
             left: "20px",
             margin: "24px auto",
