@@ -399,6 +399,13 @@ export function BasicQuestion() {
                     <Chat
                       questionAndAnswer={QUIZKEY}
                       onSaveData={saveData}
+                      setChangeTab={function (career: string): void {
+                        throw new Error("Function not implemented.");
+                      }}
+                      careers={[]}
+                      setCareers={function (career: string[]): void {
+                        throw new Error("Function not implemented.");
+                      }}
                     ></Chat>
                   ) : null}
                 </div>

@@ -137,7 +137,17 @@ export function DetailedQues(): JSX.Element {
         Previous
       </Button>
       {qIndex === Question.length - 1 ? (
-        <Chat questionAndAnswer={quizKey2} onSaveData={saveData}></Chat>
+        <Chat
+          questionAndAnswer={quizKey2}
+          onSaveData={saveData}
+          setChangeTab={function (career: string): void {
+            throw new Error("Function not implemented.");
+          }}
+          careers={[]}
+          setCareers={function (career: string[]): void {
+            throw new Error("Function not implemented.");
+          }}
+        ></Chat>
       ) : (
         <Button
           onClick={handleNext}
