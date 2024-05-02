@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (148 ms)
+  ✕ renders learn react link (143 ms)
 
   ● renders learn react link
 
@@ -44,13 +44,13 @@ FAIL src/App.test.tsx
                   [33mclass[39m=[32m"buttonContainer"[39m
                 [36m>[39m
                   [36m<a[39m
-                    [33mclass[39m=[32m"button"[39m
+                    [33mclass[39m=[32m"Home-button"[39m
                     [33mhref[39m=[32m"#differentCareers"[39m
                   [36m>[39m
                     [0mDifferent Careers[0m
                   [36m</a>[39m
                   [36m<a[39m
-                    [33mclass[39m=[32m"button"[39m
+                    [33mclass[39m=[32m"Home-button"[39m
                     [33mhref[39m=[32m"#careerQuizzes"[39m
                   [36m>[39m
                     [0mCareer Quizzes[0m
@@ -150,7 +150,7 @@ FAIL src/App.test.tsx
                         [36m<path[39m
                           [33md[39m=[32m"M18 15h-6v4l-7-7 7-7v4h6v6z"[39m
                         [36m/>[39m
-                      [36m<...
+                  ...
 
        5 | test("renders learn react link", () => {
        6 |   render(<App />);
@@ -187,7 +187,7 @@ File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line 
 ----------------------|---------|----------|---------|---------|----------------------
 All files             |      25 |    13.33 |   14.28 |   25.62 |                      
  App.tsx              |     100 |      100 |     100 |     100 |                      
- BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 9-33                 
+ BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 9-34                 
  CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                
  DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 8-31                 
  HomePage_Buttons.tsx |   81.39 |    58.33 |      50 |   82.92 | 66,72-78,182,309-316 
@@ -205,5 +205,5 @@ All files             |      25 |    13.33 |   14.28 |   25.62 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        4.352 s
+Time:        3.749 s
 Ran all test suites.
