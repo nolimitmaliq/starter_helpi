@@ -12,27 +12,17 @@ export function Results({ careers }: Careers) {
       <div className="Results-Title">Results</div>
       <div className="Results">
         {careers.length === 0 ? (
-          <Spinner />
+          <Spinner></Spinner>
         ) : (
-          careers.map((career, index) => {
-            // Splitting career details into bullet points
-            const careerDetails = career.split("\n");
-            // Extracting career title
-            const title = careerDetails.shift(); // Remove first element from array and return it
-
-            return (
-              <Card key={index} className="career-card">
-                <Card.Title>{title}</Card.Title>
+          careers.map((career, index) => (
+            <Card key={index} className="career-card">
+              <Card className="Seperate-Careers">
                 <Card.Body>
-                  <ul>
-                    {careerDetails.map((detail, detailIndex) => (
-                      <li key={detailIndex}>{detail}</li>
-                    ))}
-                  </ul>
+                  <Card.Text>{career}</Card.Text>
                 </Card.Body>
               </Card>
-            );
-          })
+            </Card>
+          ))
         )}
       </div>
     </>
