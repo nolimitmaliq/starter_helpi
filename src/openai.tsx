@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { OpenAI } from "openai";
-import { Results } from "./Results";
 
 let API_KEY = localStorage.getItem("MYKEY");
 let key = "";
