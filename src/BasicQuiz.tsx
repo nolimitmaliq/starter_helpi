@@ -30,7 +30,11 @@ export function BasicQuestion() {
                 </h1>
               </header>
               <div>
-                <Button onClick={() => setTab("home")} className="button">
+                <Button
+                  onClick={() => setTab("home")}
+                  className="Home-button"
+                  style={{ margin: "20px auto" }}
+                >
                   Home Page
                 </Button>
               </div>
