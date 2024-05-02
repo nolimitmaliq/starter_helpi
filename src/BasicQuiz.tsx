@@ -139,6 +139,7 @@ export function BasicQuestion() {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
     new Array(questions.length).fill("")
   );
+  const [visible, setVisible] = useState<boolean>(true);
   const [errorMessage, setErrorMessage] = useState("");
   useEffect(() => {
     console.log(selectedOptions);
@@ -201,14 +202,19 @@ export function BasicQuestion() {
   };
   function handleNext() {
     let isValid = false;
-    const error = "You need at one option";
+    const error = "You need at least one option";
+    setVisible(!visible);
 
     if (questions[currentQuestion].type === "multipleChoice") {
       // For multiple choice and text box, check if the answer is not empty
       isValid = selectedOptions[currentQuestion].trim() !== "";
     } else if (questions[currentQuestion].type === "textbox") {
-      isValid = selectedOptions[currentQuestion].trim() !== "";
-      setErrorMessage("You need at least 20 characters");
+      if (selectedOptions[currentQuestion].length > 20) {
+        isValid = true;
+      } else {
+        setErrorMessage("You need at least 20 characters");
+        return;
+      }
     } else if (questions[currentQuestion].type === "checkbox") {
       // For checkbox, check if the concatenated string of options is not empty
       isValid =
@@ -378,7 +384,7 @@ export function BasicQuestion() {
                       Next
                     </Button>
                   )}
-                  {
+                  {!visible && (
                     <div
                       style={{
                         color: "red",
@@ -388,7 +394,7 @@ export function BasicQuestion() {
                     >
                       {errorMessage}
                     </div>
-                  }
+                  )}
                   {currentQuestion === questions.length - 1 ? (
                     <Chat
                       questionAndAnswer={QUIZKEY}

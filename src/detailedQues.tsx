@@ -16,7 +16,7 @@ const Question = [
 
 const quizKey2 = "quiz2";
 export function DetailedQues(): JSX.Element {
-  // const [tab, setTab] = useState<string>("detailed");
+  const [visible, setVisible] = useState<boolean>(true);
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
     new Array(Question.length).fill("")
@@ -59,7 +59,8 @@ export function DetailedQues(): JSX.Element {
 
   function handleNext() {
     const error = "You need at least 20 characters";
-    if (answers[qIndex].length <= 20) {
+    setVisible(!visible);
+    if (answers[qIndex].length < 20) {
       setErrorMessage(error);
     } else {
       handleNextClick();
@@ -150,11 +151,11 @@ export function DetailedQues(): JSX.Element {
           Next
         </Button>
       )}
-      {
+      {!visible && (
         <div style={{ color: "red", textAlign: "center", marginTop: "10px" }}>
           {errorMessage}
         </div>
-      }
+      )}
       <div className="container">
         <div className="progress-bar">
           <div
