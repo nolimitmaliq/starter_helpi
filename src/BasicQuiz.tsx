@@ -4,6 +4,7 @@ import { DetailedQuestion } from "./DetailedQuiz";
 import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
 import Chat from "./openai";
+import React from "react";
 
 // import "./App.css";
 
