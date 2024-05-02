@@ -139,6 +139,7 @@ export function BasicQuestion() {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
     new Array(questions.length).fill("")
   );
+  const [errorMessage, setErrorMessage] = useState("");
   useEffect(() => {
     console.log(selectedOptions);
   }, [selectedOptions]);
@@ -199,8 +200,27 @@ export function BasicQuestion() {
     return "#7a2048";
   };
   function handleNext() {
-    handleNextClick();
-    NextQuestion();
+    let isValid = false;
+    const error = "You need at one option";
+
+    if (questions[currentQuestion].type === "multipleChoice") {
+      // For multiple choice and text box, check if the answer is not empty
+      isValid = selectedOptions[currentQuestion].trim() !== "";
+    } else if (questions[currentQuestion].type === "textbox") {
+      isValid = selectedOptions[currentQuestion].trim() !== "";
+      setErrorMessage("You need at least 20 characters");
+    } else if (questions[currentQuestion].type === "checkbox") {
+      // For checkbox, check if the concatenated string of options is not empty
+      isValid =
+        selectedOptions[currentQuestion].trim().replace(/,\s*$/, "") !== "";
+    }
+
+    if (isValid) {
+      handleNextClick();
+      NextQuestion();
+    } else {
+      setErrorMessage(error);
+    }
   }
   function handlePrev() {
     handlePreviousClick();
@@ -358,6 +378,17 @@ export function BasicQuestion() {
                       Next
                     </Button>
                   )}
+                  {
+                    <div
+                      style={{
+                        color: "red",
+                        textAlign: "center",
+                        marginTop: "10px",
+                      }}
+                    >
+                      {errorMessage}
+                    </div>
+                  }
                   {currentQuestion === questions.length - 1 ? (
                     <Chat
                       questionAndAnswer={QUIZKEY}

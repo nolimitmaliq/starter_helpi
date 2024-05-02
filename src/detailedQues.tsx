@@ -11,6 +11,7 @@ const Question = [
   "What aspects of your current job or experience do you find most challenging? Why?",
   "How important is it that your career has an impact on society?",
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
+  "What role does teamwork play in your current job, and how do you contribute to a positive team environment?",
 ];
 
 const quizKey2 = "quiz2";
@@ -22,6 +23,7 @@ export function DetailedQues(): JSX.Element {
   );
   const [rocketPosition, setRocketPosition] = useState(0); // Tracks the rocket position
   const [progress, setProgress] = useState(0);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newAnswers = [...answers];
@@ -56,9 +58,14 @@ export function DetailedQues(): JSX.Element {
   };
 
   function handleNext() {
-    handleNextClick();
-    nextQuestion();
-    setRocketPosition(progress + 20); // Move the rocket forward based on progress
+    const error = "You need at least 20 characters";
+    if (answers[qIndex].length <= 20) {
+      setErrorMessage(error);
+    } else {
+      handleNextClick();
+      nextQuestion();
+      setRocketPosition(progress + 20); // Move the rocket forward based on progress
+    }
   }
 
   function handlePrev() {
@@ -104,6 +111,7 @@ export function DetailedQues(): JSX.Element {
         <Form.Control
           as="textarea"
           value={answers[qIndex]}
+          required
           onChange={handleInputChange}
           style={{
             margin: "20px auto",
@@ -142,6 +150,11 @@ export function DetailedQues(): JSX.Element {
           Next
         </Button>
       )}
+      {
+        <div style={{ color: "red", textAlign: "center", marginTop: "10px" }}>
+          {errorMessage}
+        </div>
+      }
       <div className="container">
         <div className="progress-bar">
           <div
