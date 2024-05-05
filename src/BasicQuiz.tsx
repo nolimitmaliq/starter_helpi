@@ -30,13 +30,11 @@ export function BasicQuestion() {
                   Basic Quiz
                 </h1>
               </header>
-              <div className="buttonContainer">
+              <div>
                 <Button
                   onClick={() => setTab("home")}
-                  className="button1"
-                  style={{
-                    margin: "20px auto",
-                  }}
+                  className="Home-button"
+                  style={{ margin: "20px auto" }}
                 >
                   Home Page
                 </Button>

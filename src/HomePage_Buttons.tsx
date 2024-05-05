@@ -305,10 +305,10 @@ export function HomePage(): JSX.Element {
               </h1>
             </header>
             <div className="buttonContainer">
-              <a href="#differentCareers" className="button">
+              <a href="#differentCareers" className="Home-button">
                 Different Careers
               </a>
-              <a href="#careerQuizzes" className="button">
+              <a href="#careerQuizzes" className="Home-button">
                 Career Quizzes
               </a>
             </div>
