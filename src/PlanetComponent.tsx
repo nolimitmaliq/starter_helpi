@@ -14,7 +14,7 @@ const PlanetComponent: React.FC = () => {
         style={{
           position: "absolute",
           top: "900px",
-          left: "4%",
+          left: "0%",
           width: "250px", // Adjust size as necessary
           height: "250px",
         }}
