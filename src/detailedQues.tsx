@@ -4,6 +4,12 @@ import "./Quizzes.css";
 import Rocket from "./Rocket16.jpg";
 import Chat from "./openai";
 
+interface career {
+  changeTab: (career: string) => void;
+  careers: string[];
+  setCareers: (career: string[]) => void;
+}
+
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
@@ -13,8 +19,12 @@ const Question = [
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
 ];
 
-const quizKey2 = "quiz2";
-export function DetailedQues(): JSX.Element {
+const QUIZKEY2 = "quiz2";
+export function DetailedQues({
+  changeTab,
+  careers,
+  setCareers,
+}: career): JSX.Element {
   // const [tab, setTab] = useState<string>("detailed");
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
@@ -71,8 +81,8 @@ export function DetailedQues(): JSX.Element {
       question: Question,
       answer: answers[index],
     }));
-    localStorage.setItem(quizKey2, JSON.stringify(final));
-    console.log(JSON.parse(localStorage.getItem(quizKey2)!));
+    localStorage.setItem(QUIZKEY2, JSON.stringify(final));
+    console.log(JSON.parse(localStorage.getItem(QUIZKEY2)!));
   }
 
   const getColor = () => {
@@ -128,7 +138,13 @@ export function DetailedQues(): JSX.Element {
         Previous
       </Button>
       {qIndex === Question.length - 1 ? (
-        <Chat questionAndAnswer={quizKey2} onSaveData={saveData}></Chat>
+        <Chat
+          questionAndAnswer={QUIZKEY2}
+          setChangeTab={changeTab}
+          careers={careers}
+          setCareers={setCareers}
+          onSaveData={saveData}
+        ></Chat>
       ) : (
         <Button
           onClick={handleNext}
