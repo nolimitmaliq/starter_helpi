@@ -236,6 +236,9 @@ export function HomePage(): JSX.Element {
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
   };
+  function toTop(): void {
+    window.scrollTo(0, 0);
+  }
 
   // Function to handle the click event of the "Job Search" button
   // const handleJobSearchClick = () => {
@@ -361,14 +364,20 @@ export function HomePage(): JSX.Element {
                 <>
                   <BasicQuiz />
                   <Button
-                    onClick={() => setTab("basic")}
+                    onClick={() => {
+                      setTab("basic");
+                      toTop();
+                    }}
                     className="Career-Quiz2"
                   >
                     Basic Quiz
                   </Button>
                   <DetailedQuiz />
                   <Button
-                    onClick={() => setTab("detailed")}
+                    onClick={() => {
+                      setTab("detailed");
+                      toTop();
+                    }}
                     className="Career-Quiz2"
                   >
                     Detailed Quiz

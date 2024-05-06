@@ -174,7 +174,6 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
     localStorage.setItem(QUIZKEY, JSON.stringify(final));
     console.log(localStorage.getItem(QUIZKEY));
   }
-
   const [progress, setProgress] = useState(0);
   const handleNextClick = () => {
     if (progress < 81) {
@@ -220,7 +219,9 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
         <div className="progress-label">{progress}%</div>
       </div>
       <div className="StaticBackground">
-        <h1>{questions[currentQuestion].question}</h1>
+        <h1 style={{ marginTop: "0px" }}>
+          {questions[currentQuestion].question}
+        </h1>
         {questions[currentQuestion].type === "multipleChoice" && (
           <div>
             {questions[currentQuestion].options.map((option) => (
