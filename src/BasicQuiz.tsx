@@ -5,6 +5,8 @@ import { BasicQues } from "./basicQues";
 import { Button } from "react-bootstrap";
 import { Results } from "./Results";
 import "./Quizzes.css";
+import React from "react";
+
 export function BasicQuestion() {
   const [tab, setTab] = useState<string>("basic");
   const [changeTab, setChangeTab] = useState<string>("basic");
@@ -23,7 +25,6 @@ export function BasicQuestion() {
                 <h1
                   style={{
                     fontSize: "50px",
-                    margin: 10,
                   }}
                 >
                   Basic Quiz
