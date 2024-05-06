@@ -290,9 +290,9 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
           onClick={handlePrev}
           disabled={currentQuestion === 0}
           className="button"
-          style={{
-            right: "20px",
-          }}
+          // style={{
+          //   right: "20px",
+          // }}
         >
           Previous
         </Button>

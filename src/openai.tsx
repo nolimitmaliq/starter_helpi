@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { OpenAI } from "openai";
+// import "./App.css";
 
 let API_KEY = localStorage.getItem("MYKEY");
 let key = "";
@@ -36,7 +37,7 @@ export default function Chat({
           {
             role: "system",
             content:
-              "We constructed a set of questions, multiple choice, checkbox, short responses and long respones. Our goal is to try and provide 5 possible career paths based on the user responses to the questions with an explaination about the careers including a detailed discription of what they will do in that field, their average salary, possible path to their career, an indeed link and a linkdIn link to potential jobs and potential networking oppurtunities.",
+              "We constructed a set of questions, multiple choice, checkbox, short responses and long respones. Our goal is to try and provide 5 best possible career paths based on the user responses to the questions with an explaination about the careers including a detailed discription of what they will do in that field, their average salary, possible path to their career, an indeed link and a linkdIn link to potential jobs and potential networking oppurtunities. Have all of the information outputted within the same part of the career",
           },
           {
             role: "user",
@@ -61,16 +62,18 @@ export default function Chat({
 
   return (
     <div>
-      <Button
-        className="Submit-button"
-        onClick={() => {
-          onSaveData();
-          setChangeTab("results");
-          getResponse();
-        }}
-      >
-        Submit
-      </Button>
+      <div className="Button-group">
+        <Button
+          className="Submit-button"
+          onClick={() => {
+            onSaveData();
+            setChangeTab("results");
+            getResponse();
+          }}
+        >
+          Submit
+        </Button>
+      </div>
       {careers.map((career, index) => (
         <Card key={index} className="career-card">
           <Card>

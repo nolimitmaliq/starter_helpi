@@ -130,10 +130,10 @@ export function DetailedQues({
         onClick={handlePrev}
         disabled={qIndex === 0}
         className="button"
-        style={{
-          margin: "24px auto",
-          right: "20px",
-        }}
+        // style={{
+        //   margin: "24px auto",
+        //   right: "20px",
+        // }}
       >
         Previous
       </Button>
