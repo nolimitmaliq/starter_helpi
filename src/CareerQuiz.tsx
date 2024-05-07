@@ -27,9 +27,6 @@ export function DetailedQuiz() {
           determination of their career outcome.
         </p>
       </div>
-      <div>
-        <h1></h1>
-      </div>
     </div>
   );
 }

@@ -9,7 +9,7 @@
   padding-left: 30px;
   cursor: pointer;
   display: flex;
-  margin-left: 47%;
+  margin-left: 46%;
   color: white;
   line-height: 18px;
 }
@@ -68,7 +68,7 @@
   padding-left: 30px;
   cursor: pointer;
   display: flex;
-  margin-left: 47%;
+  margin-left: 46%;
   color: white;
   line-height: 18px;
 }
@@ -107,7 +107,7 @@
   content: "";
   position: absolute;
   left: 2px;
-  top: 1px;
+  top: 2px;
   width: 16px;
   height: 16px;
   border-radius: 100%;
@@ -115,7 +115,7 @@
   transform: scale(0);
   opacity: 0;
 }
-
+/* Other ----------------------------------------------------------------------------------------------------------------------------------*/
 .ButtonSpace {
   padding-top: 10px;
   flex-direction: row;
