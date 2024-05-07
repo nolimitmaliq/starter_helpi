@@ -17,6 +17,7 @@ const Question = [
   "What aspects of your current job or experience do you find most challenging? Why?",
   "How important is it that your career has an impact on society?",
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
+  "Which professional achievements or experiences have brought you the most satisfaction and why?",
 ];
 
 const QUIZKEY2 = "quiz2";
@@ -25,7 +26,6 @@ export function DetailedQues({
   careers,
   setCareers,
 }: career): JSX.Element {
-  // const [tab, setTab] = useState<string>("detailed");
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
     new Array(Question.length).fill("")

@@ -70,6 +70,7 @@ export default function Chat({
             setChangeTab("results");
             getResponse();
           }}
+          style={{ margin: "24px auto" }}
         >
           Submit
         </Button>

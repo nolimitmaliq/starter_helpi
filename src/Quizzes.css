@@ -119,6 +119,7 @@
 
 .ButtonSpace {
   padding-top: 10px;
+  flex-direction: row;
 }
 
 .StaticBackground {
