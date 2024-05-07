@@ -9,8 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
-  faXTwitter,
   faGithub,
+  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 // import { HomePage } from "./HomePage_Buttons";
 //import Menubar from "./Menubar";
@@ -133,11 +133,11 @@ export function Footer(): JSX.Element {
               <FontAwesomeIcon icon={faInstagram} className="brand" />
             </a>
             <a
-              href="https://www.instagram.com/m4_liq?igsh=MTIzM3VjYml2M24xYw=="
+              href="https://www.linkedin.com/in/maliq-adewale/"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faXTwitter} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
             </a>
             <a
               href="https://github.com/nolimitmaliq"
@@ -157,11 +157,11 @@ export function Footer(): JSX.Element {
               <FontAwesomeIcon icon={faInstagram} className="brand" />
             </a>
             <a
-              href="https://github.com/ujjwalaa7"
+              href="https://www.linkedin.com/in/ujjwalap16/"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faXTwitter} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
             </a>
             <a
               href="https://github.com/ujjwalaa7"
@@ -181,11 +181,11 @@ export function Footer(): JSX.Element {
               <FontAwesomeIcon icon={faInstagram} className="brand" />
             </a>
             <a
-              href="https://github.com/rahul5400"
+              href="https://www.linkedin.com/in/rahulpatel0/"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faXTwitter} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
             </a>
             <a
               href="https://github.com/rahul5400"

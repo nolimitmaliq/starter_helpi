@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: white;
+  background-color: #221f1f;
   margin-bottom: 0rem;
 }
 
@@ -408,7 +408,7 @@ form button {
   right: 70px;
 }
 .Career-Quiz {
-  --background-color: #e3e3e3; /* Light grey background as the starting color */
+  --background-color: #000000; /* Light grey background as the starting color */
   --accent-color: #408ec6; /* Blue color for hover/focus effect */
   --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
@@ -567,5 +567,5 @@ form button {
   color: #916767;
 }
 .White {
-  background-color: white;
+  background-color: rgb(0, 0, 0);
 }
