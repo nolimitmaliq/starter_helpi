@@ -84,13 +84,7 @@ export function DetailedQues(): JSX.Element {
   }
 
   const getColor = () => {
-    if (progress < 40) {
-      return "#ff0000";
-    } else if (progress < 70) {
-      return "#ffa500";
-    } else {
-      return "#2eec71";
-    }
+    return "#7a2048";
   };
 
   return (
