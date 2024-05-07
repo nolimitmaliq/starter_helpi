@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (141 ms)
+  ✕ renders learn react link (146 ms)
 
   ● renders learn react link
 
@@ -185,17 +185,17 @@ go away.[0m
 ----------------------|---------|----------|---------|---------|----------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    
 ----------------------|---------|----------|---------|---------|----------------------
-All files             |      25 |    13.33 |   14.28 |   25.62 |                      
+All files             |      23 |    11.76 |   13.88 |    23.5 |                      
  App.tsx              |     100 |      100 |     100 |     100 |                      
  BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 11-35                
  CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                
- DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 8-31                 
+ DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 7-28                 
  HomePage_Buttons.tsx |   81.39 |    58.33 |      50 |   82.92 | 66,72-78,237,364-371 
  PlanetComponent.tsx  |     100 |      100 |     100 |     100 |                      
  Results.tsx          |       0 |        0 |       0 |       0 | 10-18                
  Spinner.tsx          |      50 |        0 |       0 |      50 | 8                    
- basicQues.tsx        |    4.34 |        0 |       0 |    4.44 | 137-243              
- detailedQues.tsx     |    4.65 |        0 |       0 |    4.87 | 29-98                
+ basicQues.tsx        |    3.22 |        0 |       0 |    3.27 | 137-270              
+ detailedQues.tsx     |    4.25 |        0 |       0 |    4.44 | 19-142               
  image2.tsx           |   19.23 |       20 |   21.42 |   22.72 | 22-51,124            
  index.tsx            |       0 |      100 |     100 |       0 | 8-22                 
  openai.tsx           |   21.05 |    16.66 |       0 |   21.05 | 8,32-75              
@@ -205,5 +205,5 @@ All files             |      25 |    13.33 |   14.28 |   25.62 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.95 s
+Time:        3.864 s
 Ran all test suites.
