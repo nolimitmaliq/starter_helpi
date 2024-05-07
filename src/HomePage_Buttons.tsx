@@ -12,10 +12,7 @@ import {
   faGithub,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-// import { HomePage } from "./HomePage_Buttons";
-//import Menubar from "./Menubar";
 
-//import img from "./spaceheader.jpg";
 import spaceheader from "./spaceheader.jpg";
 import career1 from "./image 1.jpg";
 import career2 from "./image 2.jpg";
@@ -49,16 +46,6 @@ const profession = [
 ];
 
 export function Footer(): JSX.Element {
-  // const [email, setEmail] = useState<string>("");
-
-  // const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   setEmail(event.target.value);
-  // };
-
-  // const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-  //   event.preventDefault();
-  //   console.log("Submitted email:", email);
-  // };
   let keyData = "";
   const saveKeyData = "MYKEY";
   const prevKey = localStorage.getItem(saveKeyData); //so it'll look like: MYKEY: <api_key_value here> in the local storage when you inspect
@@ -236,12 +223,9 @@ export function HomePage(): JSX.Element {
   const handleButton2 = () => {
     setDisplayText2(!displayText2);
   };
-
-  // Function to handle the click event of the "Job Search" button
-  // const handleJobSearchClick = () => {
-  //   // Toggle the visibility of the paragraph
-  //   setJobSearchInfoVisible(!jobSearchInfoVisible);
-  // };
+  function toTop(): void {
+    window.scrollTo(0, 0);
+  }
 
   useEffect(() => {
     function random(min: number, max: number): number {
@@ -361,14 +345,20 @@ export function HomePage(): JSX.Element {
                 <>
                   <BasicQuiz />
                   <Button
-                    onClick={() => setTab("basic")}
+                    onClick={() => {
+                      setTab("basic");
+                      toTop();
+                    }}
                     className="Career-Quiz2"
                   >
                     Basic Quiz
                   </Button>
                   <DetailedQuiz />
                   <Button
-                    onClick={() => setTab("detailed")}
+                    onClick={() => {
+                      setTab("detailed");
+                      toTop();
+                    }}
                     className="Career-Quiz2"
                   >
                     Detailed Quiz

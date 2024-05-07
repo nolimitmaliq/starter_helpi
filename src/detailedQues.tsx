@@ -11,10 +11,11 @@ const Question = [
   "What aspects of your current job or experience do you find most challenging? Why?",
   "How important is it that your career has an impact on society?",
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
+  "Which professional achievements or experiences have brought you the most satisfaction and why?",
   "What role does teamwork play in your current job, and how do you contribute to a positive team environment?",
 ];
 
-const quizKey2 = "quiz2";
+const QUIZKEY2 = "quiz2";
 export function DetailedQues(): JSX.Element {
   const [visible, setVisible] = useState<boolean>(true);
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
@@ -79,8 +80,8 @@ export function DetailedQues(): JSX.Element {
       question: Question,
       answer: answers[index],
     }));
-    localStorage.setItem(quizKey2, JSON.stringify(final));
-    console.log(JSON.parse(localStorage.getItem(quizKey2)!));
+    localStorage.setItem(QUIZKEY2, JSON.stringify(final));
+    console.log(JSON.parse(localStorage.getItem(QUIZKEY2)!));
   }
 
   const getColor = () => {
@@ -119,20 +120,12 @@ export function DetailedQues(): JSX.Element {
           }}
         />
       </Form.Group>
-      <Button
-        onClick={handlePrev}
-        disabled={qIndex === 0}
-        className="button"
-        style={{
-          margin: "24px auto",
-          right: "20px",
-        }}
-      >
+      <Button onClick={handlePrev} disabled={qIndex === 0} className="button">
         Previous
       </Button>
       {qIndex === Question.length - 1 ? (
         <Chat
-          questionAndAnswer={quizKey2}
+          questionAndAnswer={QUIZKEY2}
           onSaveData={saveData}
           setChangeTab={function (career: string): void {
             throw new Error("Function not implemented.");

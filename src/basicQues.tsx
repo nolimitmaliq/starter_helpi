@@ -3,8 +3,6 @@ import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
 import Chat from "./openai";
 
-// import "./App.css";
-
 interface career {
   changeTab: (career: string) => void;
   careers: string[];
@@ -285,7 +283,6 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
             <Form.Label
               style={{
                 display: "block",
-                // marginBottom: "10px",
                 color: "white",
                 fontSize: "25px",
                 textAlign: "center",
@@ -317,9 +314,6 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
           onClick={handlePrev}
           disabled={currentQuestion === 0}
           className="button"
-          // style={{
-          //   right: "20px",
-          // }}
         >
           Previous
         </Button>
