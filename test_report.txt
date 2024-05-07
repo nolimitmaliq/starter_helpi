@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (146 ms)
+  ✕ renders learn react link (142 ms)
 
   ● renders learn react link
 
@@ -182,28 +182,27 @@ ever be fixed. Add "@babel/plugin-proposal-private-property-in-object" to
 your devDependencies to work around this error. This will make this message
 go away.[0m
   
-----------------------|---------|----------|---------|---------|----------------------
-File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s    
-----------------------|---------|----------|---------|---------|----------------------
-All files             |      23 |    11.76 |   13.88 |    23.5 |                      
- App.tsx              |     100 |      100 |     100 |     100 |                      
- BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 11-35                
- CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 10-27                
- DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 7-28                 
- HomePage_Buttons.tsx |   81.39 |    58.33 |      50 |   82.92 | 66,72-78,237,364-371 
- PlanetComponent.tsx  |     100 |      100 |     100 |     100 |                      
- Results.tsx          |       0 |        0 |       0 |       0 | 10-18                
- Spinner.tsx          |      50 |        0 |       0 |      50 | 8                    
- basicQues.tsx        |    3.22 |        0 |       0 |    3.27 | 137-270              
- detailedQues.tsx     |    4.25 |        0 |       0 |    4.44 | 19-142               
- image2.tsx           |   19.23 |       20 |   21.42 |   22.72 | 22-51,124            
- index.tsx            |       0 |      100 |     100 |       0 | 8-22                 
- openai.tsx           |   21.05 |    16.66 |       0 |   21.05 | 8,32-75              
- popups.tsx           |       0 |      100 |       0 |       0 | 6                    
- reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10                 
-----------------------|---------|----------|---------|---------|----------------------
+----------------------|---------|----------|---------|---------|--------------------------
+File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s        
+----------------------|---------|----------|---------|---------|--------------------------
+All files             |    22.8 |    11.76 |   13.88 |   23.28 |                          
+ App.tsx              |     100 |      100 |     100 |     100 |                          
+ BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 11-35                    
+ CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 4-19                     
+ DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 7-28                     
+ HomePage_Buttons.tsx |   76.08 |    58.33 |   45.45 |   77.27 | 53,59-65,224-227,349-360 
+ PlanetComponent.tsx  |     100 |      100 |     100 |     100 |                          
+ Results.tsx          |       0 |        0 |       0 |       0 | 10-18                    
+ Spinner.tsx          |      50 |        0 |       0 |      50 | 8                        
+ basicQues.tsx        |    3.22 |        0 |       0 |    3.27 | 135-268                  
+ detailedQues.tsx     |    4.25 |        0 |       0 |    4.44 | 20-135                   
+ image2.tsx           |   19.23 |       20 |   21.42 |   22.72 | 22-51,124                
+ index.tsx            |       0 |      100 |     100 |       0 | 8-22                     
+ openai.tsx           |   21.05 |    16.66 |       0 |   21.05 | 8,29-75                  
+ reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10                     
+----------------------|---------|----------|---------|---------|--------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.864 s
+Time:        3.562 s
 Ran all test suites.
