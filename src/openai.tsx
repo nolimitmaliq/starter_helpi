@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Card } from "react-bootstrap";
 import { OpenAI } from "openai";
-// import "./App.css";
 
 let API_KEY = localStorage.getItem("MYKEY");
 let key = "";
@@ -26,9 +25,6 @@ export default function Chat({
   careers,
   setCareers,
 }: Key): JSX.Element {
-  // const [careers, setCareers] = useState<string[]>([]);
-  // const [tab, setTab] = useState<string>("quiz");
-
   async function getResponse() {
     const QandA = localStorage.getItem(questionAndAnswer);
     if (QandA) {
@@ -79,7 +75,6 @@ export default function Chat({
         <Card key={index} className="career-card">
           <Card>
             <Card.Body>
-              {/* <Card.Title>Career Path {index + 1}</Card.Title> */}
               <Card.Text>{career}</Card.Text>
             </Card.Body>
           </Card>

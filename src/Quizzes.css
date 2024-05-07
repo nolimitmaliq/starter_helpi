@@ -1,4 +1,4 @@
-/* Radio */
+/* Radio ---------------------------------------------------------------------------------------------------------------------------*/
 [type="radio"] {
   opacity: 0;
 }
@@ -6,7 +6,6 @@
 [type="radio"] + label {
   position: relative;
   align-items: center;
-  /* justify-content: center; */
   padding-left: 30px;
   cursor: pointer;
   display: flex;
@@ -58,7 +57,7 @@
   opacity: 0;
 }
 
-/*CheckBox*/
+/*CheckBox-----------------------------------------------------------------------------------------------------------------------------*/
 [type="checkbox"] {
   opacity: 0;
 }
@@ -144,7 +143,6 @@
   width: 150px;
   height: 30px;
   font-size: 18px; /* Increase font size */
-  /* padding: 7px 100.2px; Increase padding to make the buttons bigger */
   border-radius: 10px; /* Add rounded corners */
   text-decoration: none;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -166,10 +164,4 @@
 .Submit-button-right {
   left: 20px;
   margin: 24px auto;
-}
-
-.Button-group {
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
 }

@@ -2,12 +2,9 @@ import { useState } from "react";
 import { HomePage } from "./HomePage_Buttons";
 import { Button } from "react-bootstrap";
 import { DetailedQues } from "./detailedQues";
-import { Results } from "./Results";
 // import { ProgressBar } from "./progressBar";
 export function DetailedQuestion() {
   const [tab, setTab] = useState<string>("detailed");
-  const [changeTab, setChangeTab] = useState<string>("detailed");
-  const [careers, setCareers] = useState<string[]>([]);
 
   return (
     <>
@@ -29,23 +26,17 @@ export function DetailedQuestion() {
               <div className="buttonContainer">
                 <Button
                   onClick={() => setTab("home")}
-                  className="Home-button"
-                  style={{ margin: "20px auto" }}
+                  className="button1"
+                  style={{
+                    margin: "20px auto",
+                  }}
                 >
                   Home Page
                 </Button>
               </div>
             </div>
             <div className="QuizBody">
-              {changeTab === "detailed" ? (
-                <DetailedQues
-                  changeTab={setChangeTab}
-                  careers={careers}
-                  setCareers={setCareers}
-                ></DetailedQues>
-              ) : (
-                <Results careers={careers}></Results>
-              )}
+              <DetailedQues></DetailedQues>
             </div>
           </div>
         </>

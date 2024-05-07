@@ -4,12 +4,6 @@ import "./Quizzes.css";
 import Rocket from "./Rocket16.jpg";
 import Chat from "./openai";
 
-interface career {
-  changeTab: (career: string) => void;
-  careers: string[];
-  setCareers: (career: string[]) => void;
-}
-
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
@@ -18,20 +12,19 @@ const Question = [
   "How important is it that your career has an impact on society?",
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
   "Which professional achievements or experiences have brought you the most satisfaction and why?",
+  "What role does teamwork play in your current job, and how do you contribute to a positive team environment?",
 ];
 
 const QUIZKEY2 = "quiz2";
-export function DetailedQues({
-  changeTab,
-  careers,
-  setCareers,
-}: career): JSX.Element {
+export function DetailedQues(): JSX.Element {
+  const [visible, setVisible] = useState<boolean>(true);
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
     new Array(Question.length).fill("")
   );
   const [rocketPosition, setRocketPosition] = useState(0); // Tracks the rocket position
   const [progress, setProgress] = useState(0);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newAnswers = [...answers];
@@ -66,9 +59,15 @@ export function DetailedQues({
   };
 
   function handleNext() {
-    handleNextClick();
-    nextQuestion();
-    setRocketPosition(progress + 20); // Move the rocket forward based on progress
+    const error = "You need at least 20 characters";
+    setVisible(!visible);
+    if (answers[qIndex].length < 20) {
+      setErrorMessage(error);
+    } else {
+      handleNextClick();
+      nextQuestion();
+      setRocketPosition(progress + 20); // Move the rocket forward based on progress
+    }
   }
 
   function handlePrev() {
@@ -86,13 +85,7 @@ export function DetailedQues({
   }
 
   const getColor = () => {
-    if (progress < 40) {
-      return "#ff0000";
-    } else if (progress < 70) {
-      return "#ffa500";
-    } else {
-      return "#2eec71";
-    }
+    return "#7a2048";
   };
 
   return (
@@ -114,6 +107,7 @@ export function DetailedQues({
         <Form.Control
           as="textarea"
           value={answers[qIndex]}
+          required
           onChange={handleInputChange}
           style={{
             margin: "20px auto",
@@ -126,24 +120,20 @@ export function DetailedQues({
           }}
         />
       </Form.Group>
-      <Button
-        onClick={handlePrev}
-        disabled={qIndex === 0}
-        className="button"
-        // style={{
-        //   margin: "24px auto",
-        //   right: "20px",
-        // }}
-      >
+      <Button onClick={handlePrev} disabled={qIndex === 0} className="button">
         Previous
       </Button>
       {qIndex === Question.length - 1 ? (
         <Chat
           questionAndAnswer={QUIZKEY2}
-          setChangeTab={changeTab}
-          careers={careers}
-          setCareers={setCareers}
           onSaveData={saveData}
+          setChangeTab={function (career: string): void {
+            throw new Error("Function not implemented.");
+          }}
+          careers={[]}
+          setCareers={function (career: string[]): void {
+            throw new Error("Function not implemented.");
+          }}
         ></Chat>
       ) : (
         <Button
@@ -157,6 +147,11 @@ export function DetailedQues({
         >
           Next
         </Button>
+      )}
+      {!visible && (
+        <div style={{ color: "red", textAlign: "center", marginTop: "10px" }}>
+          {errorMessage}
+        </div>
       )}
       <div className="container">
         <div className="progress-bar">

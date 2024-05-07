@@ -119,7 +119,6 @@
   width: 100px;
   height: 30px;
   font-size: 18px; /* Increase font size */
-  /* padding: 7px 100.2px; Increase padding to make the buttons bigger */
   border-radius: 10px; /* Add rounded corners */
   text-decoration: none;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
@@ -144,7 +143,6 @@
   width: 400px;
   height: 30px;
   font-size: 18px; /* Increase font size */
-  /* padding: 7px 100.2px; Increase padding to make the buttons bigger */
   border-radius: 20px; /* Add rounded corners */
   text-decoration: none;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
