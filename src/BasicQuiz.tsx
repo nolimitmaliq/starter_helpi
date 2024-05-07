@@ -30,7 +30,7 @@ export function BasicQuestion() {
                   Basic Quiz
                 </h1>
               </header>
-              <div>
+              <div className="buttonContainer">
                 <Button
                   onClick={() => setTab("home")}
                   className="Home-button"
