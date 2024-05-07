@@ -9,8 +9,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import {
   faInstagram,
-  faXTwitter,
   faGithub,
+  faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
 // import { HomePage } from "./HomePage_Buttons";
 //import Menubar from "./Menubar";
@@ -125,20 +125,75 @@ export function Footer(): JSX.Element {
           <h3>Collaborator</h3>
           <p>
             Maliq Adewale{" "}
-            <FontAwesomeIcon icon={faInstagram} className="brand" />
-            <FontAwesomeIcon icon={faXTwitter} className="brand" />
-            <FontAwesomeIcon icon={faGithub} className="brand" />
+            <a
+              href="https://www.instagram.com/m4_liq?igsh=MTIzM3VjYml2M24xYw=="
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="brand" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/maliq-adewale/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+            </a>
+            <a
+              href="https://github.com/nolimitmaliq"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} className="brand" />
+            </a>
           </p>
           <p>
-            Ujjwala Pothula
-            <FontAwesomeIcon icon={faInstagram} className="brand" />
-            <FontAwesomeIcon icon={faXTwitter} className="brand" />
-            <FontAwesomeIcon icon={faGithub} className="brand" />
+            Ujjwala Pothula{" "}
+            <a
+              href="https://www.instagram.com/_ujjwalap?igsh=MTVhNGc4Y3JtNGVtbA=="
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="brand" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ujjwalap16/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+            </a>
+            <a
+              href="https://github.com/ujjwalaa7"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} className="brand" />
+            </a>
           </p>
           <p>
-            Rahul Patel <FontAwesomeIcon icon={faInstagram} className="brand" />
-            <FontAwesomeIcon icon={faXTwitter} className="brand" />
-            <FontAwesomeIcon icon={faGithub} className="brand" />
+            Rahul Patel{" "}
+            <a
+              href="https://www.instagram.com/rahulp5400?igsh=Y2JqYjNrZ3Q1bHpo"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faInstagram} className="brand" />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/rahulpatel0/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+            </a>
+            <a
+              href="https://github.com/rahul5400"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FontAwesomeIcon icon={faGithub} className="brand" />
+            </a>
           </p>
         </div>
         <div className="col">
