@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (142 ms)
+  ✕ renders learn react link (138 ms)
 
   ● renders learn react link
 
@@ -35,7 +35,7 @@ FAIL src/App.test.tsx
                     [0mWelcome to Career-Way![0m
                   [36m</h1>[39m
                   [36m<h1[39m
-                    [33mclass[39m=[32m"caption"[39m
+                    [33mclass[39m=[32m"caption fade-in-horizontal"[39m
                   [36m>[39m
                     [0mThere are endless career possibilities...All the way to the Moon...[0m
                   [36m</h1>[39m
@@ -149,8 +149,7 @@ FAIL src/App.test.tsx
                       [36m>[39m
                         [36m<path[39m
                           [33md[39m=[32m"M18 15h-6v4l-7-7 7-7v4h6v6z"[39m
-                        [36m/>[39m
-                  ...
+                        [36m/>...
 
        5 | test("renders learn react link", () => {
        6 |   render(<App />);
@@ -204,5 +203,5 @@ All files             |    22.8 |    11.76 |   13.88 |   23.28 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.562 s
+Time:        3.755 s
 Ran all test suites.
