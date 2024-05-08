@@ -283,7 +283,7 @@ export function HomePage(): JSX.Element {
               }}
             >
               <h1>Welcome to Career-Way!</h1>
-              <h1 className="caption">
+              <h1 className="caption fade-in-horizontal">
                 There are endless career possibilities...All the way to the
                 Moon...
               </h1>

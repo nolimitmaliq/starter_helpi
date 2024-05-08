@@ -280,6 +280,23 @@ form button {
   box-shadow: inset 100px 0 0 0 #1b027f;
 }
 
+@keyframes fadeInHorizontal {
+  from {
+    opacity: 0;
+    transform: translateX(
+      -100%
+    ); /* Move the text outside of the viewport from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move the text back to its original position */
+  }
+}
+
+.fade-in-horizontal {
+  animation: fadeInHorizontal 9.5s ease-in-out;
+}
+
 .brand2 {
   width: 20px;
   height: 20px;
