@@ -64,6 +64,7 @@ export function DetailedQues(): JSX.Element {
     if (answers[qIndex].length < 20) {
       setErrorMessage(error);
     } else {
+      setErrorMessage("");
       handleNextClick();
       nextQuestion();
       setRocketPosition(progress + 20); // Move the rocket forward based on progress
@@ -148,7 +149,7 @@ export function DetailedQues(): JSX.Element {
           Next
         </Button>
       )}
-      {!visible && (
+      {!visible && errorMessage && (
         <div style={{ color: "red", textAlign: "center", marginTop: "10px" }}>
           {errorMessage}
         </div>
