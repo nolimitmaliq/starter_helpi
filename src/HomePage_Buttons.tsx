@@ -124,14 +124,14 @@ export function Footer(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand1" />
             </a>
             <a
               href="https://github.com/nolimitmaliq"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faGithub} className="brand" />
+              <FontAwesomeIcon icon={faGithub} className="brand2" />
             </a>
           </p>
           <p>
@@ -148,14 +148,14 @@ export function Footer(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand1" />
             </a>
             <a
               href="https://github.com/ujjwalaa7"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faGithub} className="brand" />
+              <FontAwesomeIcon icon={faGithub} className="brand2" />
             </a>
           </p>
           <p>
@@ -172,14 +172,14 @@ export function Footer(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand1" />
             </a>
             <a
               href="https://github.com/rahul5400"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faGithub} className="brand" />
+              <FontAwesomeIcon icon={faGithub} className="brand2" />
             </a>
           </p>
         </div>
@@ -283,7 +283,7 @@ export function HomePage(): JSX.Element {
               }}
             >
               <h1>Welcome to Career-Way!</h1>
-              <h1 className="caption">
+              <h1 className="caption fade-in-horizontal">
                 There are endless career possibilities...All the way to the
                 Moon...
               </h1>

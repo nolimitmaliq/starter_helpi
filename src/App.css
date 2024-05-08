@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: #221f1f;
+  background-color: rgb(42, 40, 40);
   margin-bottom: 0rem;
 }
 
@@ -52,6 +52,7 @@
   text-shadow: 12px 12px 12px black; /* Add black outline */
   z-index: 1; /* Ensure header is above the stars */
   margin: 0 auto;
+  animation: typing 2s steps(18);
 }
 
 .caption {
@@ -259,8 +260,56 @@ form button {
   font-size: 20px;
   margin-right: 10px;
   text-align: center;
+  color: white;
 }
 
+.brand:hover {
+  box-shadow: inset 100px 0 0 0 #ae0eb7;
+}
+.brand1 {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  text-align: center;
+  color: white;
+}
+
+.brand1:hover {
+  box-shadow: inset 100px 0 0 0 #1b027f;
+}
+
+@keyframes fadeInHorizontal {
+  from {
+    opacity: 0;
+    transform: translateX(
+      -100%
+    ); /* Move the text outside of the viewport from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Move the text back to its original position */
+  }
+}
+
+.fade-in-horizontal {
+  animation: fadeInHorizontal 9.5s ease-in-out;
+}
+
+.brand2 {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  margin-right: 10px;
+  text-align: center;
+  color: white;
+}
+
+.brand2:hover {
+  box-shadow: inset 100px 0 0 0 #000000;
+}
 .App-link {
   color: #ffffff;
 }
@@ -518,7 +567,7 @@ form button {
 }
 
 .QuizBody {
-  background: #221f1f;
+  background: rgb(42, 40, 40);
   color: white;
 
   /* height: 70vh; */
