@@ -137,14 +137,14 @@ export function Footer(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand1" />
             </a>
             <a
               href="https://github.com/nolimitmaliq"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faGithub} className="brand" />
+              <FontAwesomeIcon icon={faGithub} className="brand2" />
             </a>
           </p>
           <p>
@@ -161,14 +161,14 @@ export function Footer(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand1" />
             </a>
             <a
               href="https://github.com/ujjwalaa7"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faGithub} className="brand" />
+              <FontAwesomeIcon icon={faGithub} className="brand2" />
             </a>
           </p>
           <p>
@@ -185,14 +185,14 @@ export function Footer(): JSX.Element {
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faLinkedinIn} className="brand" />
+              <FontAwesomeIcon icon={faLinkedinIn} className="brand1" />
             </a>
             <a
               href="https://github.com/rahul5400"
               target="_blank"
               rel="noreferrer"
             >
-              <FontAwesomeIcon icon={faGithub} className="brand" />
+              <FontAwesomeIcon icon={faGithub} className="brand2" />
             </a>
           </p>
         </div>
