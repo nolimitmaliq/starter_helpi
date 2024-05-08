@@ -15,7 +15,7 @@ export function Results({ careers }: Careers) {
           <Spinner></Spinner>
         ) : (
           careers.map((career, index) => (
-            <Card key={index} className="career-card">
+            <Card key={index}>
               <Card className="Seperate-Careers">
                 <Card.Body>
                   <Card.Text>{career}</Card.Text>

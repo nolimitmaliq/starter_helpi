@@ -3,8 +3,6 @@ import { Button, Form } from "react-bootstrap";
 import "./Quizzes.css";
 import Chat from "./openai";
 
-// import "./App.css";
-
 interface career {
   changeTab: (career: string) => void;
   careers: string[];
@@ -138,6 +136,8 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
   const [selectedOptions, setSelectedOptions] = useState<string[]>(
     new Array(questions.length).fill("")
   );
+  const [visible, setVisible] = useState<boolean>(true);
+  const [errorMessage, setErrorMessage] = useState("");
   useEffect(() => {
     console.log(selectedOptions);
   }, [selectedOptions]);
@@ -174,7 +174,6 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
     localStorage.setItem(QUIZKEY, JSON.stringify(final));
     console.log(localStorage.getItem(QUIZKEY));
   }
-
   const [progress, setProgress] = useState(0);
   const handleNextClick = () => {
     if (progress < 81) {
@@ -197,8 +196,32 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
     return "#7a2048";
   };
   function handleNext() {
-    handleNextClick();
-    NextQuestion();
+    let isValid = false;
+    const error = "You need at least one option";
+    setVisible(!visible);
+
+    if (questions[currentQuestion].type === "multipleChoice") {
+      // For multiple choice and text box, check if the answer is not empty
+      isValid = selectedOptions[currentQuestion].trim() !== "";
+    } else if (questions[currentQuestion].type === "textbox") {
+      if (selectedOptions[currentQuestion].length > 20) {
+        isValid = true;
+      } else {
+        setErrorMessage("You need at least 20 characters");
+        return;
+      }
+    } else if (questions[currentQuestion].type === "checkbox") {
+      // For checkbox, check if the concatenated string of options is not empty
+      isValid =
+        selectedOptions[currentQuestion].trim().replace(/,\s*$/, "") !== "";
+    }
+
+    if (isValid) {
+      handleNextClick();
+      NextQuestion();
+    } else {
+      setErrorMessage(error);
+    }
   }
   function handlePrev() {
     handlePreviousClick();
@@ -220,7 +243,9 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
         <div className="progress-label">{progress}%</div>
       </div>
       <div className="StaticBackground">
-        <h1>{questions[currentQuestion].question}</h1>
+        <h1 style={{ marginTop: "0px" }}>
+          {questions[currentQuestion].question}
+        </h1>
         {questions[currentQuestion].type === "multipleChoice" && (
           <div>
             {questions[currentQuestion].options.map((option) => (
@@ -258,7 +283,6 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
             <Form.Label
               style={{
                 display: "block",
-                // marginBottom: "10px",
                 color: "white",
                 fontSize: "25px",
                 textAlign: "center",
@@ -290,9 +314,6 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
           onClick={handlePrev}
           disabled={currentQuestion === 0}
           className="button"
-          style={{
-            right: "20px",
-          }}
         >
           Previous
         </Button>
@@ -316,6 +337,17 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
           >
             Next
           </Button>
+        )}
+        {!visible && (
+          <div
+            style={{
+              color: "red",
+              textAlign: "center",
+              marginTop: "10px",
+            }}
+          >
+            {errorMessage}
+          </div>
         )}
       </div>
     </div>
