@@ -283,6 +283,7 @@ export function HomePage(): JSX.Element {
               }}
             >
               <h1>Welcome to Career-Way!</h1>
+              <PlanetComponent></PlanetComponent>
               <h1 className="caption fade-in-horizontal">
                 There are endless career possibilities...All the way to the
                 Moon...
@@ -366,7 +367,6 @@ export function HomePage(): JSX.Element {
                 </>
               )}
             </div>
-            <PlanetComponent></PlanetComponent>
           </div>
         )}
       </div>
