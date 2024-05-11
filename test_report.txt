@@ -34,6 +34,28 @@ FAIL src/App.test.tsx
                   [36m<h1>[39m
                     [0mWelcome to Career-Way![0m
                   [36m</h1>[39m
+                  [36m<div[39m
+                    [33mclass[39m=[32m"planet-container"[39m
+                  [36m>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Planet 1"[39m
+                      [33mclass[39m=[32m"planet"[39m
+                      [33msrc[39m=[32m"Spinning_Mars.gif"[39m
+                      [33mstyle[39m=[32m"position: absolute; top: 900px; left: 0%; width: 250px; height: 250px;"[39m
+                    [36m/>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Planet 2"[39m
+                      [33mclass[39m=[32m"planet"[39m
+                      [33msrc[39m=[32m"planet3.jpg"[39m
+                      [33mstyle[39m=[32m"position: absolute; top: 900px; left: 80%; width: 250px; height: 270px;"[39m
+                    [36m/>[39m
+                    [36m<img[39m
+                      [33malt[39m=[32m"Planet 2"[39m
+                      [33mclass[39m=[32m"planet"[39m
+                      [33msrc[39m=[32m"milkyway.jpg"[39m
+                      [33mstyle[39m=[32m"position: absolute; top: 1280px; left: 80%; width: 300px; height: 200px;"[39m
+                    [36m/>[39m
+                  [36m</div>[39m
                   [36m<h1[39m
                     [33mclass[39m=[32m"caption fade-in-horizontal"[39m
                   [36m>[39m
@@ -127,29 +149,7 @@ FAIL src/App.test.tsx
                         [33maria-hidden[39m=[32m"true"[39m
                         [33mclass[39m=[32m"img-slider-img"[39m
                         [33msrc[39m=[32m"psychologist.jpg"[39m
-                      [36m/>[39m
-                    [36m</div>[39m
-                    [36m<button[39m
-                      [33maria-label[39m=[32m"Previous Image"[39m
-                      [33mclass[39m=[32m"img-slider-btn"[39m
-                      [33mstyle[39m=[32m"left: 100px; bottom: 190px;"[39m
-                    [36m>[39m
-                      [36m<svg[39m
-                        [33maria-hidden[39m=[32m"true"[39m
-                        [33mclass[39m=[32m"lucide lucide-arrow-big-left "[39m
-                        [33mfill[39m=[32m"none"[39m
-                        [33mheight[39m=[32m"24"[39m
-                        [33mstroke[39m=[32m"currentColor"[39m
-                        [33mstroke-linecap[39m=[32m"round"[39m
-                        [33mstroke-linejoin[39m=[32m"round"[39m
-                        [33mstroke-width[39m=[32m"2"[39m
-                        [33mviewBox[39m=[32m"0 0 24 24"[39m
-                        [33mwidth[39m=[32m"24"[39m
-                        [33mxmlns[39m=[32m"http://www.w3.org/2000/svg"[39m
-                      [36m>[39m
-                        [36m<path[39m
-                          [33md[39m=[32m"M18 15h-6v4l-7-7 7-7v4h6v6z"[39m
-                        [36m/>...
+                      [36m/>[...
 
        5 | test("renders learn react link", () => {
        6 |   render(<App />);
@@ -189,7 +189,7 @@ All files             |   22.51 |    11.49 |   13.88 |   22.97 |
  BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 11-35                    
  CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 4-19                     
  DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 7-28                     
- HomePage_Buttons.tsx |   76.08 |    58.33 |   45.45 |   77.27 | 53,59-65,224-227,349-360 
+ HomePage_Buttons.tsx |   76.08 |    58.33 |   45.45 |   77.27 | 53,59-65,224-227,350-361 
  PlanetComponent.tsx  |     100 |      100 |     100 |     100 |                          
  Results.tsx          |       0 |        0 |       0 |       0 | 10-18                    
  Spinner.tsx          |      50 |        0 |       0 |      50 | 8                        
@@ -203,5 +203,5 @@ All files             |   22.51 |    11.49 |   13.88 |   22.97 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.851 s
+Time:        3.669 s
 Ran all test suites.
