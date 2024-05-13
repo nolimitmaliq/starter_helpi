@@ -462,9 +462,7 @@ form button {
 .Career-Quiz2:hover,
 .Basic-Quiz:hover,
 .Basic-Quiz:focus {
-  background-color: var(
-    --accent-color
-  ); /* Change background to blue on hover/focus */
+  background-color: var(--accent-color);
   color: rgb(18, 17, 17); /* Change text color to white on hover/focus */
   z-index: 1;
 }
