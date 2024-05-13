@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (146 ms)
+  ✕ renders learn react link (149 ms)
 
   ● renders learn react link
 
@@ -184,24 +184,24 @@ go away.[0m
 ----------------------|---------|----------|---------|---------|--------------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s        
 ----------------------|---------|----------|---------|---------|--------------------------
-All files             |   22.51 |    11.49 |   13.88 |   22.97 |                          
+All files             |   20.63 |    10.52 |   12.82 |   21.07 |                          
  App.tsx              |     100 |      100 |     100 |     100 |                          
  BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 11-35                    
  CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 4-19                     
  DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 7-28                     
  HomePage_Buttons.tsx |   76.08 |    58.33 |   45.45 |   77.27 | 53,59-65,224-227,350-361 
  PlanetComponent.tsx  |     100 |      100 |     100 |     100 |                          
- Results.tsx          |       0 |        0 |       0 |       0 | 10-18                    
+ Results.tsx          |       0 |        0 |       0 |       0 | 16-76                    
  Spinner.tsx          |      50 |        0 |       0 |      50 | 8                        
  basicQues.tsx        |    3.17 |        0 |       0 |    3.22 | 135-270                  
  detailedQues.tsx     |    4.16 |        0 |       0 |    4.34 | 20-136                   
  image2.tsx           |   18.51 |       20 |   21.42 |   21.73 | 22-52,126-127            
  index.tsx            |       0 |      100 |     100 |       0 | 8-22                     
- openai.tsx           |   21.05 |    16.66 |       0 |   21.05 | 8,29-75                  
+ openai.tsx           |   21.05 |    16.66 |       0 |   21.05 | 8,29-80                  
  reportWebVitals.ts   |       0 |        0 |       0 |       0 | 3-10                     
 ----------------------|---------|----------|---------|---------|--------------------------
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.745 s
+Time:        3.818 s
 Ran all test suites.
