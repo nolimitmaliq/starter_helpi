@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/starter_helpi/static/css/main.34bb420a.css",
+    "main.css": "/starter_helpi/static/css/main.9c62bf66.css",
     "main.js": "/starter_helpi/static/js/main.49d5e7d2.js",
     "static/js/453.bad6c33a.chunk.js": "/starter_helpi/static/js/453.bad6c33a.chunk.js",
     "static/media/Spinning_Mars.gif": "/starter_helpi/static/media/Spinning_Mars.84878dbd099a331b43b3.gif",
@@ -16,12 +16,12 @@
     "static/media/image 4.jpg": "/starter_helpi/static/media/image 4.1c2fdf5ed0a2ce9006d9.jpg",
     "static/media/planet3.jpg": "/starter_helpi/static/media/planet3.4a74a6d6cdfb48fcd2e5.jpg",
     "index.html": "/starter_helpi/index.html",
-    "main.34bb420a.css.map": "/starter_helpi/static/css/main.34bb420a.css.map",
+    "main.9c62bf66.css.map": "/starter_helpi/static/css/main.9c62bf66.css.map",
     "main.49d5e7d2.js.map": "/starter_helpi/static/js/main.49d5e7d2.js.map",
     "453.bad6c33a.chunk.js.map": "/starter_helpi/static/js/453.bad6c33a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34bb420a.css",
+    "static/css/main.9c62bf66.css",
     "static/js/main.49d5e7d2.js"
   ]
 }
