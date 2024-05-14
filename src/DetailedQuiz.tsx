@@ -8,7 +8,6 @@ export function DetailedQuestion() {
   const [tab, setTab] = useState<string>("detailed");
   const [changeTab, setChangeTab] = useState<string>("detailed");
   const [careers, setCareers] = useState<string[]>([]);
-
   return (
     <>
       {tab === "home" ? (

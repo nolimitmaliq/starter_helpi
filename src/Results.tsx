@@ -20,7 +20,9 @@ function DropDown({ careerName, careerBody }: drop): JSX.Element {
 
   return (
     <div>
-      <h1 onClick={() => setShowBody(!showBody)}>{careerName}</h1>
+      <h1 style={{ marginTop: "0px" }} onClick={() => setShowBody(!showBody)}>
+        {careerName}
+      </h1>
       {showBody && (
         <div className={`body ${showBody ? "expanded" : ""}`}>
           {lines.map((line, index) => (
@@ -72,7 +74,7 @@ export function Results({ careers }: Careers) {
       <div className="Results-Title">Results</div>
       <div className="Results">
         {careers.length === 0 ? (
-          <Spinner />
+          <Spinner></Spinner>
         ) : (
           results.map((result, index) => (
             <Card key={index}>
