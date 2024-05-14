@@ -69,11 +69,13 @@ export function DetailedQues({
     setVisible(!visible);
     if (answers[qIndex].length < 20) {
       setErrorMessage(error);
+      return false;
     } else {
       setErrorMessage("");
       handleNextClick();
       nextQuestion();
       setRocketPosition(progress + 20); // Move the rocket forward based on progress
+      return true;
     }
   }
 
@@ -82,6 +84,7 @@ export function DetailedQues({
     prevQuestion();
     setRocketPosition(progress - 20); // Set rocket position based on progress for the previous question
   }
+
   function saveData() {
     const final = Question.map((Question, index) => ({
       question: Question,
@@ -130,7 +133,7 @@ export function DetailedQues({
       <Button onClick={handlePrev} disabled={qIndex === 0} className="button">
         Previous
       </Button>
-      {qIndex === Question.length - 1 ? (
+      {qIndex === Question.length - 1 && answers[qIndex].length > 20 ? (
         <Chat
           questionAndAnswer={QUIZKEY2}
           onSaveData={saveData}
