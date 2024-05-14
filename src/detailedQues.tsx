@@ -11,12 +11,19 @@ const Question = [
   "What aspects of your current job or experience do you find most challenging? Why?",
   "How important is it that your career has an impact on society?",
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
-  "Which professional achievements or experiences have brought you the most satisfaction and why?",
   "What role does teamwork play in your current job, and how do you contribute to a positive team environment?",
 ];
-
+interface career {
+  changeTab: (career: string) => void;
+  careers: string[];
+  setCareers: (career: string[]) => void;
+}
 const QUIZKEY2 = "quiz2";
-export function DetailedQues(): JSX.Element {
+export function DetailedQues({
+  changeTab,
+  careers,
+  setCareers,
+}: career): JSX.Element {
   const [visible, setVisible] = useState<boolean>(true);
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
@@ -57,7 +64,6 @@ export function DetailedQues(): JSX.Element {
       setRocketPosition(progress - 20); // Adjust rocket position based on progress
     }
   };
-
   function handleNext() {
     const error = "You need at least 20 characters";
     setVisible(!visible);
@@ -128,13 +134,9 @@ export function DetailedQues(): JSX.Element {
         <Chat
           questionAndAnswer={QUIZKEY2}
           onSaveData={saveData}
-          setChangeTab={function (career: string): void {
-            throw new Error("Function not implemented.");
-          }}
-          careers={[]}
-          setCareers={function (career: string[]): void {
-            throw new Error("Function not implemented.");
-          }}
+          setChangeTab={changeTab}
+          careers={careers}
+          setCareers={setCareers}
         ></Chat>
       ) : (
         <Button
