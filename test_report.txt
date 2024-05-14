@@ -3,7 +3,7 @@
 > react-scripts test --coverage
 
 FAIL src/App.test.tsx
-  ✕ renders learn react link (142 ms)
+  ✕ renders learn react link (141 ms)
 
   ● renders learn react link
 
@@ -184,17 +184,17 @@ go away.[0m
 ----------------------|---------|----------|---------|---------|--------------------------
 File                  | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s        
 ----------------------|---------|----------|---------|---------|--------------------------
-All files             |   20.47 |     9.34 |   13.15 |    20.9 |                          
+All files             |   19.25 |     7.75 |   12.82 |   19.61 |                          
  App.tsx              |     100 |      100 |     100 |     100 |                          
  BasicQuiz.tsx        |       0 |        0 |       0 |       0 | 11-35                    
  CareerQuiz.tsx       |       0 |      100 |       0 |       0 | 4-19                     
- DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 8-31                     
+ DetailedQuiz.tsx     |       0 |        0 |       0 |       0 | 8-30                     
  HomePage_Buttons.tsx |   76.08 |    58.33 |   45.45 |   77.27 | 53,59-65,224-227,350-361 
  PlanetComponent.tsx  |     100 |      100 |     100 |     100 |                          
- Results.tsx          |       0 |        0 |       0 |       0 | 16-78                    
+ Results.tsx          |       0 |        0 |       0 |       0 | 16-80                    
  Spinner.tsx          |      50 |        0 |       0 |      50 | 12                       
- basicQues.tsx        |    3.17 |        0 |       0 |    3.22 | 135-270                  
- detailedQues.tsx     |    4.16 |        0 |       0 |    4.34 | 27-101                   
+ basicQues.tsx        |    2.85 |        0 |       0 |    2.89 | 147-298                  
+ detailedQues.tsx     |     3.5 |        0 |       0 |    3.63 | 34-121                   
  image2.tsx           |   18.51 |       20 |   21.42 |   21.73 | 22-52,126-127            
  index.tsx            |       0 |      100 |     100 |       0 | 8-22                     
  openai.tsx           |   21.05 |    16.66 |       0 |   21.05 | 8,29-79                  
@@ -203,5 +203,5 @@ All files             |   20.47 |     9.34 |   13.15 |    20.9 |
 Test Suites: 1 failed, 1 total
 Tests:       1 failed, 1 total
 Snapshots:   0 total
-Time:        3.822 s
+Time:        3.681 s
 Ran all test suites.
