@@ -347,7 +347,8 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
         >
           Previous
         </Button>
-        {currentQuestion === questions.length - 1 ? (
+        {currentQuestion === questions.length - 1 &&
+        selectedOptions[currentQuestion].trim() !== "" ? (
           <Chat
             questionAndAnswer={QUIZKEY}
             setChangeTab={changeTab}

@@ -17,11 +17,14 @@ const Question = [
   "What aspects of your current job or experience do you find most challenging? Why?",
   "How important is it that your career has an impact on society?",
   "What skills do you believe are essential for success in your field, and which of these skills would you like to develop further?",
-  "Which professional achievements or experiences have brought you the most satisfaction and why?",
   "What role does teamwork play in your current job, and how do you contribute to a positive team environment?",
   "Is there any additional information that could help achieve a better result?",
 ];
-
+interface career {
+  changeTab: (career: string) => void;
+  careers: string[];
+  setCareers: (career: string[]) => void;
+}
 const QUIZKEY2 = "quiz2";
 export function DetailedQues({
   changeTab,
@@ -78,12 +81,12 @@ export function DetailedQues({
       setRocketPosition(progress - 11); // Adjust rocket position based on progress
     }
   };
-
   function handleNext() {
     const error = "You need at least 10 characters";
     setVisible(!visible);
     if (answers[qIndex].length < 9) {
       setErrorMessage(error);
+      return false;
     } else {
       setErrorMessage("");
       handleNextClick();
@@ -101,6 +104,7 @@ export function DetailedQues({
     prevQuestion();
     setRocketPosition(progress - 11); // Set rocket position based on progress for the previous question
   }
+
   function saveData() {
     const final = Question.map((Question, index) => ({
       question: Question,
