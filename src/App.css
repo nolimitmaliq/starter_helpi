@@ -536,8 +536,8 @@ form button {
 }
 
 .container {
-  position: absolute;
-  top: 11px;
+  /* position: absolute; */
+  top: 300px;
   right: 14px;
   width: auto;
   margin: 20px;
@@ -547,7 +547,7 @@ form button {
 }
 
 .progress-bar {
-  width: 150px;
+  width: 500px;
   height: 10px;
   border-radius: 10px;
   background-color: white;
@@ -556,7 +556,7 @@ form button {
 .progress-bar-fill {
   height: 100%;
   border-radius: 10px;
-  background-color: #27207a;
+  background: linear-gradient(45deg, gray, black);
   transition: width 0.5s ease-out;
 }
 .progress-label {

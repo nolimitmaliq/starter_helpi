@@ -29,6 +29,11 @@ let questions: Question[] = [
     ],
   },
   {
+    question: "How long do you plan to attend college for?",
+    type: "multipleChoice",
+    options: ["No College", "Bachelor's Degree", "Masters Degree", "PHD"],
+  },
+  {
     question: "What Subjects are you most interested in?",
     type: "checkbox",
     options: [
@@ -49,6 +54,12 @@ let questions: Question[] = [
     question: "What are some of your hobbies and interests?",
     type: "checkbox",
     options: ["Sports", "Video Games", "Writing", "Music"],
+  },
+  {
+    question:
+      "If your hobbies or interests were not listed, what other areas are you interested in?",
+    type: "textbox",
+    options: [],
   },
   {
     question: "How would you like to work?",
@@ -123,9 +134,10 @@ let questions: Question[] = [
     ],
   },
   {
-    question: "How long do you plan to attend college for?",
-    type: "multipleChoice",
-    options: ["No College", "Bachelor's Degree", "Masters Degree", "PHD"],
+    question:
+      "Is there any additional information that could help achieve a better result?",
+    type: "textbox",
+    options: [],
   },
 ];
 //LOCALSTORAGE
@@ -141,6 +153,20 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
   useEffect(() => {
     console.log(selectedOptions);
   }, [selectedOptions]);
+  useEffect(() => {
+    // Update the progress bar based on the current question index
+    if (
+      currentQuestion === questions.length - 1 &&
+      selectedOptions[currentQuestion].length > 4
+    ) {
+      setProgress(100);
+    } else if (
+      currentQuestion === questions.length - 1 &&
+      selectedOptions[currentQuestion].length <= 4
+    ) {
+      setProgress(91);
+    }
+  }, [currentQuestion, selectedOptions]);
   const NextQuestion = () => {
     setCurrentQuestion(currentQuestion + 1);
   };
@@ -176,19 +202,21 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
   }
   const [progress, setProgress] = useState(0);
   const handleNextClick = () => {
-    if (progress < 81) {
-      setProgress(progress + 8);
+    if (progress < 90) {
+      setProgress(progress + 7);
     }
-    if (progress === 80) {
+    if (progress === 91) {
       setProgress(100);
     }
   };
 
   const handlePreviousClick = () => {
-    if (progress > 0) {
-      setProgress(progress - 8);
+    if (progress > 0 && progress !== 100) {
+      setProgress(progress - 7);
+    } else if (progress === 100) {
+      setProgress(91);
     }
-    if (progress === 20) {
+    if (progress === 9) {
       setProgress(0);
     }
   };
@@ -205,10 +233,10 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
       // For multiple choice and text box, check if the answer is not empty
       isValid = selectedOptions[currentQuestion].trim() !== "";
     } else if (questions[currentQuestion].type === "textbox") {
-      if (selectedOptions[currentQuestion].length > 20) {
+      if (selectedOptions[currentQuestion].length > 4) {
         isValid = true;
       } else {
-        setErrorMessage("You need at least 20 characters");
+        setErrorMessage("You need at least 5 characters");
         return;
       }
     } else if (questions[currentQuestion].type === "checkbox") {

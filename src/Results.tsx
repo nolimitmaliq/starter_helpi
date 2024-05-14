@@ -20,14 +20,18 @@ function DropDown({ careerName, careerBody }: drop): JSX.Element {
 
   return (
     <div>
-      <h1 onClick={() => setShowBody(!showBody)}>{careerName}</h1>
+      <h1 style={{ marginTop: "0px" }} onClick={() => setShowBody(!showBody)}>
+        {careerName}
+      </h1>
       {showBody && (
-        <div>
+        <div className={`body ${showBody ? "expanded" : ""}`}>
           {lines.map((line, index) => (
             <Card key={index}>
               <Card className="Seperate-Careers">
-                <Card.Body>
-                  <Card.Text>{line}</Card.Text>
+                <Card.Body className="Seperate-Careers2">
+                  <Card.Text style={{ whiteSpace: "pre-wrap" }}>
+                    {line.replace(/\*\*/gm, "").split("-").join("\n")}
+                  </Card.Text>
                 </Card.Body>
               </Card>
             </Card>
@@ -52,7 +56,7 @@ export function Results({ careers }: Careers) {
         body = "";
       } else {
         const careerNum = parseInt(career[0]);
-        if (!isNaN(careerNum)) {
+        if (!isNaN(careerNum) || career[0] === "#") {
           title = career;
         } else {
           body += career;
@@ -70,14 +74,17 @@ export function Results({ careers }: Careers) {
       <div className="Results-Title">Results</div>
       <div className="Results">
         {careers.length === 0 ? (
-          <Spinner />
+          <Spinner></Spinner>
         ) : (
           results.map((result, index) => (
             <Card key={index}>
               <Card className="Seperate-Careers">
                 <Card.Body>
                   <DropDown
-                    careerName={result.careerName}
+                    careerName={result.careerName
+                      .substr(3)
+                      .replace(/\*\*/g, "")
+                      .replace(/:/g, "")}
                     careerBody={result.careerBody}
                   />
                 </Card.Body>
