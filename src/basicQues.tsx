@@ -74,7 +74,7 @@ let questions: Question[] = [
       "Agree",
       "Neutral",
       "Disagree",
-      "Strogly Disagree",
+      "Strongly Disagree",
     ],
   },
   {
@@ -85,7 +85,7 @@ let questions: Question[] = [
       "Agree",
       "Neutral",
       "Disagree",
-      "Strogly Disagree",
+      "Strongly Disagree",
     ],
   },
   {
@@ -96,7 +96,7 @@ let questions: Question[] = [
       "Agree",
       "Neutral",
       "Disagree",
-      "Strogly Disagree",
+      "Strongly Disagree",
     ],
   },
   {
@@ -108,7 +108,7 @@ let questions: Question[] = [
       "Agree",
       "Neutral",
       "Disagree",
-      "Strogly Disagree",
+      "Strongly Disagree",
     ],
   },
   {
@@ -119,7 +119,7 @@ let questions: Question[] = [
       "Agree",
       "Neutral",
       "Disagree",
-      "Strogly Disagree",
+      "Strongly Disagree",
     ],
   },
   {
