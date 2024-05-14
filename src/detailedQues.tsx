@@ -4,6 +4,12 @@ import "./Quizzes.css";
 import Rocket from "./Rocket16.jpg";
 import Chat from "./openai";
 
+interface career {
+  changeTab: (career: string) => void;
+  careers: string[];
+  setCareers: (career: string[]) => void;
+}
+
 const Question = [
   "What are your top 5 skills?",
   "What are your main goals for your career and how do you plan to achieve them?",
@@ -16,7 +22,11 @@ const Question = [
 ];
 
 const QUIZKEY2 = "quiz2";
-export function DetailedQues(): JSX.Element {
+export function DetailedQues({
+  changeTab,
+  careers,
+  setCareers,
+}: career): JSX.Element {
   const [visible, setVisible] = useState<boolean>(true);
   const [qIndex, setQIndex] = useState(0); // Tracks the current question index
   const [answers, setAnswers] = useState<string[]>(
@@ -64,6 +74,7 @@ export function DetailedQues(): JSX.Element {
     if (answers[qIndex].length < 20) {
       setErrorMessage(error);
     } else {
+      setErrorMessage("");
       handleNextClick();
       nextQuestion();
       setRocketPosition(progress + 20); // Move the rocket forward based on progress
@@ -126,14 +137,10 @@ export function DetailedQues(): JSX.Element {
       {qIndex === Question.length - 1 ? (
         <Chat
           questionAndAnswer={QUIZKEY2}
+          setChangeTab={changeTab}
+          careers={careers}
+          setCareers={setCareers}
           onSaveData={saveData}
-          setChangeTab={function (career: string): void {
-            throw new Error("Function not implemented.");
-          }}
-          careers={[]}
-          setCareers={function (career: string[]): void {
-            throw new Error("Function not implemented.");
-          }}
         ></Chat>
       ) : (
         <Button
@@ -148,7 +155,7 @@ export function DetailedQues(): JSX.Element {
           Next
         </Button>
       )}
-      {!visible && (
+      {!visible && errorMessage && (
         <div style={{ color: "red", textAlign: "center", marginTop: "10px" }}>
           {errorMessage}
         </div>

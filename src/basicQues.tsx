@@ -196,6 +196,7 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
     return "#7a2048";
   };
   function handleNext() {
+    // setErrorMessage("");
     let isValid = false;
     const error = "You need at least one option";
     setVisible(!visible);
@@ -217,6 +218,7 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
     }
 
     if (isValid) {
+      setErrorMessage("");
       handleNextClick();
       NextQuestion();
     } else {
@@ -333,12 +335,13 @@ export function BasicQues({ changeTab, careers, setCareers }: career) {
             style={{
               left: "20px",
               margin: "24px auto",
+              cursor: "hover",
             }}
           >
             Next
           </Button>
         )}
-        {!visible && (
+        {!visible && errorMessage && (
           <div
             style={{
               color: "red",

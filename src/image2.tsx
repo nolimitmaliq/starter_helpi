@@ -42,6 +42,7 @@ export function ChangeImages({
       return index - 1;
     });
   }
+
   function handleClick() {
     showNextImage();
     showNextProf();
@@ -111,7 +112,7 @@ export function ChangeImages({
           position: "absolute",
           bottom: "9rem",
           left: "50%",
-          translate: "-50%",
+          transform: "translate(-50%, -50%)",
           display: "flex",
           gap: ".25rem",
         }}
@@ -120,8 +121,11 @@ export function ChangeImages({
           <button
             key={index}
             className="img-slider-dot-btn"
-            aria-label={`Previous Image ${index + 1}`}
-            onClick={() => setImageIndex(index)}
+            aria-label={`Image ${index + 1}`}
+            onClick={() => {
+              setImageIndex(index);
+              setProfIndex(index);
+            }}
           >
             {index === imageIndex ? (
               <CircleDot aria-hidden />
