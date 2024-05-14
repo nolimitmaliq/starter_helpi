@@ -12,7 +12,7 @@ export function Results({ careers }: Careers) {
       <div className="Results-Title">Results</div>
       <div className="Results">
         {careers.length === 0 ? (
-          <Spinner></Spinner>
+          <Spinner />
         ) : (
           careers.map((career, index) => (
             <Card key={index}>
