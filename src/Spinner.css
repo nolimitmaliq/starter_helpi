@@ -33,6 +33,6 @@
 
 @keyframes moveRocket {
   100% {
-    transform: translate(-50%, -50%) rotate(-360deg); /* Move the rocket and rotate in the opposite direction of the spinner */
+    transform: translate(-50%, -50%) rotate(360deg); /* Move the rocket and rotate in the opposite direction of the spinner */
   }
 }

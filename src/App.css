@@ -267,7 +267,7 @@ form button {
 }
 
 .brand1:hover {
-  box-shadow: inset 100px 0 0 0 #9c0a25;
+  box-shadow: inset 100px 0 0 0 #1b027f;
 }
 
 @keyframes fadeInHorizontal {
@@ -298,7 +298,7 @@ form button {
 }
 
 .brand2:hover {
-  box-shadow: inset 100px 0 0 0 #4e9399;
+  box-shadow: inset 100px 0 0 0 #045057;
 }
 .App-link {
   color: #ffffff;
@@ -550,7 +550,7 @@ form button {
   width: 150px;
   height: 10px;
   border-radius: 10px;
-  background-color: #e6e6e6;
+  background-color: white;
 }
 
 .progress-bar-fill {
@@ -563,7 +563,7 @@ form button {
   margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
-  color: #916767;
+  color: whitesmoke;
 }
 .White {
   background-color: rgb(0, 0, 0);
