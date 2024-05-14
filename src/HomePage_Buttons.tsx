@@ -189,7 +189,7 @@ export function Footer(): JSX.Element {
             <FontAwesomeIcon icon={faEnvelope} className="icon" />
             <input
               type="email"
-              placeholder="Enter Your Email Addreess"
+              placeholder="Enter Your Email Address"
               required
             ></input>
             <button type="submit">

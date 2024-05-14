@@ -145,32 +145,10 @@
   cursor: pointer;
 }
 .button:hover {
-  box-shadow: inset 300px 0 0 0 #0b0b0b;
+  box-shadow: inset 300px 0 0 0 #161616;
 }
 .A {
   top: 10px;
-}
-
-.button1 {
-  width: 400px;
-  height: 30px;
-  font-size: 18px; /* Increase font size */
-  border-radius: 20px; /* Add rounded corners */
-  text-decoration: none;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: white;
-  border-top: 2px solid white;
-  background-color: #23235d;
-  position: relative;
-  text-align: center;
-  justify-content: space-evenly;
-  box-shadow: inset 0 0 0 0 white;
-  transition: ease-out 0.6s;
-  outline: none;
-  cursor: pointer;
-}
-.button1:hover {
-  box-shadow: inset 400px 0 0 0 #0b0b0b;
 }
 
 .Header-Background {
@@ -183,7 +161,7 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
 }
 
@@ -306,7 +284,7 @@ form button {
 }
 
 .fade-in-horizontal {
-  animation: fadeInHorizontal 9.5s ease-in-out;
+  animation: fadeInHorizontal 2.5s ease-in-out;
 }
 
 .brand2 {
@@ -320,7 +298,7 @@ form button {
 }
 
 .brand2:hover {
-  box-shadow: inset 100px 0 0 0 #000000;
+  box-shadow: inset 100px 0 0 0 #045057;
 }
 .App-link {
   color: #ffffff;
@@ -468,9 +446,9 @@ form button {
 }
 
 .Career-Quiz2 {
-  --background-color: #23235d; /* Light grey background as the starting color */
-  --accent-color: #09090b; /* Blue color for hover/focus effect */
-  --border-radius: 30px; /* Rounded corners */
+  --background-color: #ffffff; /* Light grey background as the starting color */
+  --accent-color: #766868; /* Blue color for hover/focus effect */
+  --border-radius: 20px; /* Rounded corners */
   background-color: var(--background-color); /* Initial background color */
   margin: 1rem auto;
   padding: 16px;
@@ -479,18 +457,16 @@ form button {
   cursor: pointer;
   border-radius: var(--border-radius);
   transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   align-items: center;
-  color: white;
 }
 
 .Career-Quiz2:hover,
 .Basic-Quiz:hover,
 .Basic-Quiz:focus {
-  background-color: var(
-    --accent-color
-  ); /* Change background to blue on hover/focus */
-  color: rgb(255, 250, 250); /* Change text color to white on hover/focus */
+  background-color: var(--accent-color);
+  color: rgb(18, 17, 17); /* Change text color to white on hover/focus */
   z-index: 1;
 }
 
@@ -574,7 +550,7 @@ form button {
   width: 150px;
   height: 10px;
   border-radius: 10px;
-  background-color: #e6e6e6;
+  background-color: white;
 }
 
 .progress-bar-fill {
@@ -587,7 +563,7 @@ form button {
   margin-top: 10px;
   font-size: 24px;
   font-weight: bold;
-  color: #916767;
+  color: whitesmoke;
 }
 .White {
   background-color: rgb(0, 0, 0);
