@@ -13,4 +13,14 @@
 }
 .Seperate-Careers {
   border-top: 1px solid gray;
+  cursor: pointer;
+}
+.body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease; /* Adjust the duration and easing as needed */
+}
+
+.body.expanded {
+  max-height: 1000px; /* Or any other large enough value to accommodate the content */
 }

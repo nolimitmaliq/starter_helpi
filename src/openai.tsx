@@ -35,9 +35,8 @@ export default function Chat({
             content: `We constructed a set of questions, multiple choice, checkbox, short responses and long respones. 
               Our goal is to try and provide 5 best possible career paths based on the user responses to the questions with an 
               explaination about the careers including a detailed discription of what they will do in that field, their average salary, 
-              possible path to their career, an indeed link and a linkdIn link to potential jobs and potential networking oppurtunities. 
-              Have all of the information outputted within the same part of the card for typecript css. 
-              Remove any all #tags and aestheric"
+              possible path to their career. Have all of the information outputted within the same part of the card for typecript css.  There should
+              be a period after each category. Also full words, do not shorten the words.
               `,
           },
           {
@@ -45,7 +44,7 @@ export default function Chat({
             content: `Here are my questions and and answers:${QandA}`,
           },
         ],
-        model: "gpt-3.5-turbo",
+        model: "gpt-4-turbo",
       });
 
       // Extracting career paths from API response
