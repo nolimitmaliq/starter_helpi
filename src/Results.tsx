@@ -56,7 +56,7 @@ export function Results({ careers }: Careers) {
         body = "";
       } else {
         const careerNum = parseInt(career[0]);
-        if (!isNaN(careerNum) || career[0] === "#") {
+        if (!isNaN(careerNum) || career[0] === "#" || career[0] === "*") {
           title = career;
         } else {
           body += career;

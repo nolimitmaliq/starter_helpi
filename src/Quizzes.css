@@ -140,6 +140,8 @@
   transition: left 0.5s ease; /* Adjust duration as necessary */
 }
 
+/* Submit button------------------------------------------------------------------------------------------- */
+
 .Submit-button {
   margin-top: 10px;
   width: 150px;
@@ -166,4 +168,26 @@
 .Submit-button-right {
   left: 20px;
   margin: 24px auto;
+}
+
+/* Progress bar --------------------------------------------------------------------------------------------- */
+
+.progress-bar {
+  width: 500px;
+  height: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  background: linear-gradient(45deg, gray, black);
+  transition: width 0.5s ease-out;
+}
+.progress-label {
+  margin-top: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: whitesmoke;
 }
