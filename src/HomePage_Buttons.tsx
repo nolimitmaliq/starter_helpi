@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Form } from "react-bootstrap";
 import "./App.css";
+import "./Images.css";
 import { BasicQuiz, DetailedQuiz } from "./CareerQuiz";
 import { ChangeImages } from "./image2";
 import { BasicQuestion } from "./BasicQuiz";
