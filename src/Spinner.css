@@ -22,7 +22,7 @@
     -50%
   ); /* Center the rocket exactly on top of the spinner */
   font-size: 60px; /* Adjust the size of the rocket */
-  animation: moveRocket 1s linear infinite; /* Rocket animation */
+  animation: moveRocket 0.75s linear infinite; /* Rocket animation */
 }
 
 @keyframes spin {

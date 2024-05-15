@@ -152,7 +152,7 @@ export function DetailedQues({
             style={{
               margin: "20px auto",
               height: "200px",
-              width: "700px",
+              width: "75%",
               border: "1px solid gray",
               background: "black",
               color: "white",
