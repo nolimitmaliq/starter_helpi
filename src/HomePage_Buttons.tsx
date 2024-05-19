@@ -236,7 +236,7 @@ export function HomePage(): JSX.Element {
     const body = document.querySelector("body");
     if (!body) throw new Error("Body element not found!");
 
-    const numberOfStars = 100; // Set the desired number of stars
+    const numberOfStars = 100; // Setting the number of stars
     const sideMargin = 20; // Define the margin from the sides of the screen
 
     for (let i = 0; i < numberOfStars; i++) {
@@ -261,13 +261,11 @@ export function HomePage(): JSX.Element {
       body.appendChild(star);
     }
 
-    return () => {
-      // Cleanup code if needed
-    };
+    return () => {};
   }, []); // Empty dependency array ensures that this effect runs only once on mount
   return (
     <div className="home-page-container">
-      <div className="stars-container">{/* Stars will be appended here */}</div>
+      <div className="stars-container"></div>
       <div className="home-page-content">
         {tab === "basic" ? (
           <BasicQuestion />

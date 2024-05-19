@@ -1,7 +1,6 @@
-// PlanetComponent.tsx
 import React from "react";
-import Planet1Image from "./Spinning_Mars.gif"; // Import planet 1 image
-import Planet2Image from "./planet3.jpg"; // Import planet 2 image
+import Planet1Image from "./Spinning_Mars.gif";
+import Planet2Image from "./planet3.jpg";
 import MilkyWayImage from "./milkyway.jpg";
 
 const PlanetComponent: React.FC = () => {
@@ -13,9 +12,9 @@ const PlanetComponent: React.FC = () => {
         className="planet"
         style={{
           position: "absolute",
-          top: "900px",
+          top: "900px", //essentially positioning images in the homescreeen
           left: "0%",
-          width: "250px", // Adjust size as necessary
+          width: "250px",
           height: "250px",
         }}
       />
@@ -27,7 +26,7 @@ const PlanetComponent: React.FC = () => {
           position: "absolute",
           top: "900px",
           left: "80%",
-          width: "250px", // Adjust size as necessary
+          width: "250px",
           height: "270px",
         }}
       />
@@ -40,12 +39,10 @@ const PlanetComponent: React.FC = () => {
           position: "absolute",
           top: "1280px",
           left: "80%",
-          width: "300px", // Adjust size as necessary
+          width: "300px",
           height: "200px",
         }}
       />
-
-      {/* Add more planet images as needed */}
     </div>
   );
 };
