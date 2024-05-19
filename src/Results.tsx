@@ -15,7 +15,6 @@ interface drop {
 function DropDown({ careerName, careerBody }: drop): JSX.Element {
   const [showBody, setShowBody] = useState<boolean>(false);
 
-  // Split the career body into separate lines
   const lines = careerBody.split("\n");
 
   return (
